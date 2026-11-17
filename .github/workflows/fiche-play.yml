@@ -1,0 +1,18 @@
+name: Fiche Google Play (une langue, à la main)
+on:
+  workflow_dispatch:
+    inputs:
+      langue: {description: "Langue de la fiche (ex. ja-JP)", required: true, default: "ja-JP"}
+permissions:
+  contents: read
+jobs:
+  fiche:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: {repository: ricocrocher-collab/solfito, token: "${{ secrets.SOLFITO_PAT }}", path: src, sparse-checkout: outils/play}
+      - run: pip install -q requests google-auth
+      - run: python outils/play/fiche.py "${{ inputs.langue }}"
+        env:
+          GOOGLE_PLAY_JSON: ${{ secrets.GOOGLE_PLAY_JSON }}
