@@ -1,0 +1,175 @@
+# Mise en ligne de solfito.com, GRATUITE (dépôt public) : toutes les 20 min, si le dossier site/ du dépôt privé solfito a changé,
+# on refait exactement ce que faisait .github/workflows/deploy.yml de solfito, puis on note le commit envoyé dans deploye.txt.
+# Secrets : SOLFITO_PAT (lecture du dépôt solfito), FTP_SERVER, FTP_USERNAME, FTP_PASSWORD, FTP_DIR, GSC_SERVICE_ACCOUNT (facultatif).
+name: Mise en ligne de solfito.com
+on:
+  # schedule: - cron "*/20 * * * *"   (activé après le premier test réussi)
+  workflow_dispatch:
+concurrency: {group: deploy-solfito, cancel-in-progress: false}
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults: {run: {working-directory: src}}
+    steps:
+      - uses: actions/checkout@v5
+        with: {path: robot}
+      - uses: actions/checkout@v5
+        with: {repository: ricocrocher-collab/solfito, token: "${{ secrets.SOLFITO_PAT }}", path: src, fetch-depth: 0}
+      - name: Le site a-t-il changé ?
+        id: chg
+        run: |
+          avant=$(cat ../robot/deploye.txt 2>/dev/null || true)
+          if [ -n "$avant" ] && git diff --quiet "$avant" HEAD -- site; then echo "faire=0" >> $GITHUB_OUTPUT; echo "Rien de nouveau."; else echo "faire=1" >> $GITHUB_OUTPUT; fi
+          echo "avant=${avant:-HEAD~1}" >> $GITHUB_OUTPUT
+      - name: Vérifier la version (index.html, sw.js et feuille de style cohérents)
+        if: steps.chg.outputs.faire == '1'
+        run: |
+          set -e
+          css=$(grep -o 'css/style-[0-9]*\.css' site/index.html | head -1)
+          v=$(echo "$css" | grep -o '[0-9]*')
+          test -f "site/$css" || { echo "::error::$css est appelé par index.html mais n'existe pas"; exit 1; }
+          grep -q "VERSION=\"notea-$v\"" site/sw.js || { echo "::error::sw.js n'a pas VERSION=\"notea-$v\""; exit 1; }
+          if grep -o '?v=[0-9]*' site/index.html | grep -v "?v=$v\$" | grep -q .; then echo "::error::index.html contient des ?v= différents de $v"; exit 1; fi
+          echo "Version $v : OK"
+      # v495 : tout le JavaScript de l'appli est collé en UN fichier (site/js/solfito.js). Le fichier est déjà dans le dépôt ;
+      # on le refabrique ici par sécurité (si on a oublié de le faire, le site n'est jamais mis en ligne avec un vieux code).
+      - name: Assembler site/js/solfito.js (compressé avec esbuild)
+        if: steps.chg.outputs.faire == '1'
+        run: |
+          cd outils/bundle && npm ci --no-audit --no-fund && cd ../..
+          node outils/bundle/construire.js
+      # v605 : la feuille de style est compressée ici seulement (dans le dépôt elle reste lisible) : ~400 → ~360 ko.
+      # Elle bloque le premier affichage de la page, contrairement au JavaScript (« defer »).
+      - name: Compresser site/css/style-XXX.css (esbuild)
+        if: steps.chg.outputs.faire == '1'
+        run: node outils/bundle/compresser-css.js
+      # Appli Android (Capacitor) : paquet de mise à jour automatique du contenu (site/app-bundle/, envoyé avec le reste par le FTP ci-dessous).
+      # Ne bloque JAMAIS la mise en ligne : si cette étape échoue, le site est envoyé normalement (l'appli garde alors son contenu actuel).
+      - name: Fabriquer le paquet de mise à jour de l'appli Android
+        if: steps.chg.outputs.faire == '1'
+        continue-on-error: true
+        run: |
+          set -e
+          rm -rf site/app-bundle
+          cd appli-android
+          npm ci --no-audit --no-fund
+          node outils/fabriquer-ota.js
+          cd ..
+          cat site/app-bundle/version.json
+          # jamais de cache sur ces fichiers
+          printf 'Header set Cache-Control "no-store"\n' > site/app-bundle/.htaccess
+      - name: Envoyer les fichiers modifiés
+        if: steps.chg.outputs.faire == '1'
+        id: ftp1
+        continue-on-error: true   # v397 : le FTP de Hostinger coupe parfois la connexion (« Timeout control socket ») : on réessaie une fois
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./src/site/
+          server-dir: ${{ secrets.FTP_DIR || './' }}
+          # « tout_renvoyer » : sans fichier d'état connu, tout est renvoyé (rien n'est supprimé du serveur)
+          state-name: .ftp-deploy-sync-state.json
+          # v605 : les fichiers sources js/NN-nom.js (~170 fichiers, 1,4 Mo) ne sont plus envoyés : le site n'appelle que js/solfito.js
+          # (+ js/00-theme.js, gardé). Ceux déjà en ligne sont supprimés du serveur au prochain envoi.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.DS_Store
+            app-bundle/**
+            js/ordre.json
+            js/00-[!t]*.js
+            js/0[1-9]-*.js
+            js/[1-9][0-9]-*.js
+            js/[1-9][0-9][0-9]-*.js
+      - name: Envoyer les fichiers modifiés (2e essai)
+        id: ftp2
+        if: steps.chg.outputs.faire == '1' && steps.ftp1.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./src/site/
+          server-dir: ${{ secrets.FTP_DIR || './' }}
+          # « tout_renvoyer » : sans fichier d'état connu, tout est renvoyé (rien n'est supprimé du serveur)
+          state-name: .ftp-deploy-sync-state.json
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.DS_Store
+            app-bundle/**
+            js/ordre.json
+            js/00-[!t]*.js
+            js/0[1-9]-*.js
+            js/[1-9][0-9]-*.js
+            js/[1-9][0-9][0-9]-*.js
+      # IndexNow : prévient Bing, Yandex… (donc Ecosia, DuckDuckGo) des pages modifiées. Ne bloque jamais la mise en ligne.
+      - name: Prévenir les moteurs de recherche (IndexNow)
+        if: steps.chg.outputs.faire == '1'
+        continue-on-error: true
+        run: |
+          python3 outils/indexnow/prevenir.py "${{ steps.chg.outputs.avant }}" "$(git rev-parse HEAD)" || true
+      # Google : renvoie le sitemap à Search Console (API, compte de service). Ne bloque jamais la mise en ligne.
+      - name: Prévenir Google (sitemap)
+        if: steps.chg.outputs.faire == '1'
+        continue-on-error: true
+        env:
+          GSC_SERVICE_ACCOUNT: ${{ secrets.GSC_SERVICE_ACCOUNT }}
+        run: |
+          pip install -q google-auth requests
+          python3 outils/seo/google-sitemap.py
+      # v397 : vérifie que le site en ligne sert bien la version envoyée (sinon la mise en ligne est signalée en rouge)
+      - name: Vérifier que le site en ligne est à jour
+        if: steps.chg.outputs.faire == '1'
+        run: |
+          v=$(grep -o 'css/style-[0-9]*\.css' site/index.html | head -1 | grep -o '[0-9]*')
+          ok=0
+          for i in 1 2 3 4 5 6; do
+            live=$(curl -fsS --max-time 20 "https://solfito.com/?t=$(date +%s)" | grep -o 'css/style-[0-9]*\.css' | head -1 | grep -o '[0-9]*' || true)
+            if [ "$live" = "$v" ]; then ok=1; break; fi
+            echo "Essai $i : le site affiche la version '$live', attendue '$v'"; sleep 15
+          done
+          [ "$ok" = "1" ] || { echo "::error::solfito.com n'affiche pas la version $v"; exit 1; }
+          echo "Le site en ligne est bien à la version $v"
+      # v504 : le paquet de mise à jour de l'appli Android (~18 Mo) est envoyé APRÈS le site, dans son propre envoi : une coupure du FTP de Hostinger
+      # (« ECONNRESET ») ne bloque plus la mise en ligne du site (avant, elle faisait échouer toute la mise en ligne). 2 essais ; si les deux échouent,
+      # le site est quand même à jour et l'appli Android garde son contenu actuel (relancer le workflow pour réessayer).
+      - name: Envoyer le paquet de l'appli Android
+        if: steps.chg.outputs.faire == '1'
+        id: ota1
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./src/site/app-bundle/
+          server-dir: ${{ secrets.FTP_DIR || './' }}app-bundle/
+          state-name: .ftp-deploy-sync-state-ota.json
+      - name: Envoyer le paquet de l'appli Android (2e essai)
+        if: steps.chg.outputs.faire == '1' && steps.ota1.outcome == 'failure'
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./src/site/app-bundle/
+          server-dir: ${{ secrets.FTP_DIR || './' }}app-bundle/
+          state-name: .ftp-deploy-sync-state-ota.json
+      - name: Noter le commit envoyé
+        if: steps.chg.outputs.faire == '1'
+        working-directory: robot
+        run: |
+          git -C ../src rev-parse HEAD > deploye.txt
+          git config user.name "solfito-robot" && git config user.email "actions@users.noreply.github.com"
+          git add deploye.txt && git commit -qm "Site mis en ligne : $(cat deploye.txt | cut -c1-7)" && git push -q
