@@ -969,7 +969,11 @@
    "½ temps",
    "1 temps ½"
   ],
-  "fait": {},
+  "fait": {
+   "youtube": "2026-11-17",
+   "facebook": "2026-11-17",
+   "instagram": "2026-11-17"
+  },
   "verif": {
    "ok": true,
    "note": 5,
@@ -983,6 +987,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
+  },
+  "yt_trad": "2026-11-17",
+  "com": {
+   "youtube": "2026-11-17",
+   "facebook": "2026-11-17"
   }
  },
  {
