@@ -8,7 +8,7 @@ on:
       forcer: {description: "Numéro de la vidéo à publier tout de suite (ex. 05) ; vide = celle du jour", required: false, default: ""}
 permissions:
   contents: write
-concurrency: {group: planning-reseaux, cancel-in-progress: false}
+concurrency: {group: robot-ecrit, cancel-in-progress: false}
 jobs:
   publier:
     runs-on: ubuntu-latest

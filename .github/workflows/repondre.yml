@@ -1,0 +1,28 @@
+name: Réponses automatiques (commentaires + avis Google Play)
+on:
+  schedule:
+    - cron: "17 */2 * * *"   # toutes les 2 heures
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: {group: robot-ecrit, cancel-in-progress: false}
+jobs:
+  repondre:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests google-auth
+      - run: python outils/reseaux/repondre.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          GOOGLE_PLAY_JSON: ${{ secrets.GOOGLE_PLAY_JSON }}
+      - if: always()
+        run: |
+          git config user.name "solfito-robot" && git config user.email "actions@users.noreply.github.com"
+          git add outils/reseaux/repondus.json 2>/dev/null; git diff --cached --quiet && exit 0
+          git commit -qm "Réponses automatiques du $(date +%F)"
+          for i in 1 2 3 4; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep $((i*5)); done; exit 1
