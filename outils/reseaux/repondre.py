@@ -11,7 +11,7 @@ MAX = 25; n = 0
 G = "https://graph.facebook.com/v21.0"
 MODELES = ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash"]
 
-CONSIGNE = """Tu es la personne qui gère Solfito (appli et site solfito.com pour apprendre le solfège et le piano en jouant, avec Mélo, la petite note violette).
+CONSIGNE = """Tu es l'équipe de Solfito (ne dis jamais que tu es une IA ou un assistant). Tu gères Solfito (appli et site solfito.com pour apprendre le solfège et le piano en jouant, avec Mélo, la petite note violette).
 Tu réponds à un {quoi}. Règles :
 - réponds dans la langue du message, tutoiement, 1 ou 2 phrases courtes, chaleureux et naturel, 1 émoji au plus ;
 - si c'est une réponse au quiz de la vidéo, dis si c'est juste en t'appuyant sur les bonnes réponses données ci-dessous (ne les invente jamais) ;
@@ -49,14 +49,29 @@ def local(invite):   # IA gratuite sans clé : Qwen 2.5 (3B) avec Ollama, sur la
     except Exception as e:
         print("IA locale indisponible :", e); return None
 
+def court(texte, contexte):   # réponses très courtes (« 1 », « 3/3 🎉 », « 2 ») : réponse toute faite, sans IA
+    import re
+    t = texte.strip()
+    m = re.fullmatch(r"\D{0,6}([0-3])\s*/\s*3\D{0,6}", t)
+    if m: return {"3": "Bravo, 3 sur 3 ! 🎉", "2": "2 sur 3, bien joué ! 👏 Tu y es presque.", "1": "1 sur 3, c'est un début ! 💪 Tu feras mieux à la prochaine.",
+                  "0": "Pas facile, hein ? 😄 Retente ta chance à la prochaine vidéo !"}[m.group(1)]
+    if re.fullmatch(r"\W*[1-4]\W*", t): return "Merci d'avoir joué ! 🎹 La réponse est à la fin de la vidéo 😉"
+    if not re.search(r"[A-Za-zÀ-ÿ]{2}", t): return None if not re.search(r"\S", t) else "Merci ! 🎹"
+    return False
+
+MOTS_INTERDITS = ("qwen", "alibaba", "assistant", "intelligence artificielle", " ia ", "je ne peux pas", "i cannot", "as an ai", "modèle de langage")
+
 def ia(quoi, texte, auteur, contexte):
     q = quiz(texte, contexte)
     if q: return q
+    c = court(texte, contexte)
+    if c is not False: return c
     cle = os.environ.get("GEMINI_API_KEY", "")
     if not cle:
         t = local(CONSIGNE.format(quoi=quoi, texte=texte[:1500], auteur=auteur or "quelqu'un", contexte=contexte or "aucun"))
         if t is None: return False
         t = t.strip().strip('"«» ')
+        if any(m in " " + t.lower() + " " for m in MOTS_INTERDITS): print("réponse de l'IA écartée :", t[:120]); return None
         return None if (not t or "SKIP" in t[:8].upper()) else t[:600]
     corps = {"contents": [{"parts": [{"text": CONSIGNE.format(quoi=quoi, texte=texte[:1500], auteur=auteur or "quelqu'un", contexte=contexte or "aucun")}]}],
              "generationConfig": {"temperature": 0.6, "maxOutputTokens": 300}}
