@@ -120,6 +120,7 @@ def youtube():
     for vid in titres:   # vidéo par vidéo (allThreadsRelatedToChannelId en oublie)
         th += requests.get(API + "commentThreads", headers=h, timeout=30, params={"part": "snippet,replies", "videoId": vid,
                            "maxResults": 50, "textFormat": "plainText"}).json().get("items", [])
+        if os.environ.get("ESSAI"): print("vidéo", titres[vid][:40], "->", len(th), "fils", flush=True)
     for t in th:
         top = t["snippet"]["topLevelComment"]; s = top["snippet"]
         if (s.get("authorChannelId") or {}).get("value") == moi: continue
