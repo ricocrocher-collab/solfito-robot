@@ -165,13 +165,14 @@ def meta():
 # ---- Google Play ----
 def play():
     js = os.environ.get("GOOGLE_PLAY_JSON", "").strip()
-    if not js: return
+    if not js: print("Google Play : secret GOOGLE_PLAY_JSON absent"); return
     from google.oauth2 import service_account
     from google.auth.transport.requests import Request
     cr = service_account.Credentials.from_service_account_info(json.loads(js), scopes=["https://www.googleapis.com/auth/androidpublisher"]); cr.refresh(Request())
     h = {"Authorization": "Bearer " + cr.token}; A = "https://androidpublisher.googleapis.com/androidpublisher/v3/applications/com.solfito.app/reviews"
     r = requests.get(A, headers=h, params={"maxResults": 50}, timeout=30)
     if r.status_code != 200: print("Google Play :", r.status_code, r.text[:200]); return
+    print("Google Play : connecté,", len(r.json().get("reviews", [])), "avis récents")
     for rv in r.json().get("reviews", []):
         cs = rv.get("comments", [])
         u = next((c["userComment"] for c in cs if "userComment" in c), None)
