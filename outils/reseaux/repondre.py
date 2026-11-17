@@ -113,9 +113,13 @@ def youtube():
     sys.path.insert(0, os.path.join(ICI, "..", "youtube")); from publier import jeton
     h = {"Authorization": "Bearer " + jeton()}; API = "https://www.googleapis.com/youtube/v3/"
     moi = requests.get(API + "channels?part=id&mine=true", headers=h, timeout=30).json()["items"][0]["id"]
-    th = requests.get(API + "commentThreads", headers=h, timeout=30, params={"part": "snippet,replies", "allThreadsRelatedToChannelId": moi,
-                      "maxResults": 50, "order": "time", "textFormat": "plainText"}).json().get("items", [])
-    titres = {}
+    up = requests.get(API + "channels?part=contentDetails&mine=true", headers=h, timeout=30).json()["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+    vids = requests.get(API + "playlistItems", headers=h, params={"part": "snippet", "playlistId": up, "maxResults": 30}, timeout=30).json().get("items", [])
+    titres = {v["snippet"]["resourceId"]["videoId"]: v["snippet"]["title"] for v in vids}
+    th = []
+    for vid in titres:   # vidéo par vidéo (allThreadsRelatedToChannelId en oublie)
+        th += requests.get(API + "commentThreads", headers=h, timeout=30, params={"part": "snippet,replies", "videoId": vid,
+                           "maxResults": 50, "textFormat": "plainText"}).json().get("items", [])
     for t in th:
         top = t["snippet"]["topLevelComment"]; s = top["snippet"]
         if (s.get("authorChannelId") or {}).get("value") == moi: continue
