@@ -342,7 +342,7 @@
   }
  },
  {
-  "fichier": "site/videos/reseaux/22.mp4",
+  "fichier": "videos/v2-22.mp4",
   "date": "2026-12-28",
   "titre": "Et en clé de FA ?",
   "legende": "Et en clé de FA ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédefa #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -357,10 +357,11 @@
    "voix": "Et en clé de fin Un sol C'est un my Le piège Un ré Ton score sur trois En commentaire",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/23.mp4",
+  "fichier": "videos/v2-23.mp4",
   "date": "2026-12-30",
   "titre": "Ça monte ou ça descend ?",
   "legende": "Ça monte ou ça descend ? 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -378,10 +379,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/24.mp4",
+  "fichier": "videos/v2-24.mp4",
   "date": "2027-01-01",
   "titre": "Rythme : 3/3 ?",
   "legende": "Rythme : 3/3 ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -398,7 +400,8 @@
    "voix": "Rhythme 3 sur 3 Quatre temps Un demi-temps Un temps et demi, le point ajoute la moitié Ton score sur 3 en commentaire",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
   "fichier": "site/videos/reseaux/25.mp4",
@@ -422,7 +425,7 @@
   }
  },
  {
-  "fichier": "site/videos/reseaux/26.mp4",
+  "fichier": "videos/v2-26.mp4",
   "date": "2026-11-19",
   "titre": "Ça monte ou ça descend ?",
   "legende": "Ça monte ou ça descend ? 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -440,10 +443,11 @@
    "voix": "Ça monte ou ça descend ? Ça descend bien sûr. Ça descend bien sûr. Le piège, ça monte. Ton score sur 3 en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/27.mp4",
+  "fichier": "videos/v2-27.mp4",
   "date": "2026-11-21",
   "titre": "Ça dure combien ?",
   "legende": "Ça dure combien ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -463,10 +467,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/28.mp4",
+  "fichier": "videos/v2-28.mp4",
   "date": "2026-11-23",
   "titre": "Tu sais lire ÇA ?",
   "legende": "Tu sais lire ÇA ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédesol #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -486,10 +491,11 @@
    "voix": "Tu sais lire ça ? Un ré Un fa Et la dernière Ainsi Ton score sur 3 en commentaire",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/29.mp4",
+  "fichier": "videos/v2-29.mp4",
   "date": "2026-11-25",
   "titre": "Monte ou descend ? Écoute",
   "legende": "Monte ou descend ? Écoute 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -512,10 +518,11 @@
    "voix": "Montre ou descend ? Ça descend bien sûr. Ça monte bien sûr. Le piège, ça descend. Ton score sur 3 en commentaire ?",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/30.mp4",
+  "fichier": "videos/v2-30.mp4",
   "date": "2026-11-27",
   "titre": "Rythme : 3/3 ?",
   "legende": "Rythme : 3/3 ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -535,10 +542,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/31.mp4",
+  "fichier": "videos/v2-31.mp4",
   "date": "2026-11-29",
   "titre": "3 notes. Tu tiens ?",
   "legende": "3 notes. Tu tiens ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédesol #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -558,10 +566,11 @@
    "voix": "Trois notes. Tu tiens ? Mi. C'est un mi. C'est un sol. Le piège, un dos. Ton score sur trois. En commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/32.mp4",
+  "fichier": "videos/v2-32.mp4",
   "date": "2026-12-01",
   "titre": "Monte ou descend ? Écoute",
   "legende": "Monte ou descend ? Écoute 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -584,10 +593,11 @@
    "voix": "Montes ou descends ? Ça descend. Ça monte. Ça monte à peine. Ton score sur 3 ? En commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/33.mp4",
+  "fichier": "videos/v2-33.mp4",
   "date": "2026-12-03",
   "titre": "Ça dure combien ?",
   "legende": "Ça dure combien ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -605,10 +615,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/34.mp4",
+  "fichier": "videos/v2-34.mp4",
   "date": "2026-12-05",
   "titre": "Tu sais lire ÇA ?",
   "legende": "Tu sais lire ÇA ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédesol #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -631,10 +642,11 @@
    "voix": "Tu sais lire ça ? Un là Un mi Et la dernière, un dos Ton score sur 3 en commentaire",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/35.mp4",
+  "fichier": "videos/v2-35.mp4",
   "date": "2026-12-07",
   "titre": "Ça monte ou ça descend ?",
   "legende": "Ça monte ou ça descend ? 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -657,10 +669,11 @@
    "voix": "Ça monte ou ça descend ? Ça descend ! Ça monte ! Ça monte à peine ! Ton score sur 3 en commentaire !",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/36.mp4",
+  "fichier": "videos/v2-36.mp4",
   "date": "2026-12-09",
   "titre": "Ça dure combien ?",
   "legende": "Ça dure combien ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -683,10 +696,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/37.mp4",
+  "fichier": "videos/v2-37.mp4",
   "date": "2026-12-11",
   "titre": "3 notes. Tu tiens ?",
   "legende": "3 notes. Tu tiens ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédesol #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -706,10 +720,11 @@
    "voix": "Trois notes tu tiens, un ré, c'est un là, le piège, un dos, ton score sur trois en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/38.mp4",
+  "fichier": "videos/v2-38.mp4",
   "date": "2026-12-13",
   "titre": "Ça monte ou ça descend ?",
   "legende": "Ça monte ou ça descend ? 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -732,10 +747,11 @@
    "voix": "Ça monte ou ça descend ? Ça descend bien sûr. Ça monte. Ça monte à peine. Ton score sur 3 en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/39.mp4",
+  "fichier": "videos/v2-39.mp4",
   "date": "2026-12-15",
   "titre": "Combien de temps ?",
   "legende": "Combien de temps ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -758,10 +774,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/40.mp4",
+  "fichier": "videos/v2-40.mp4",
   "date": "2026-12-17",
   "titre": "Et en clé de FA ?",
   "legende": "Et en clé de FA ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédefa #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -781,10 +798,11 @@
    "voix": "Et en clé de fin, c'est un si. Un là. Le piège, un ré. Ton score sur trois en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/41.mp4",
+  "fichier": "videos/v2-41.mp4",
   "date": "2026-12-19",
   "titre": "Ça monte ou ça descend ?",
   "legende": "Ça monte ou ça descend ? 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -807,10 +825,11 @@
    "voix": "Ça monte ou ça descend ? Ça descend ? Ça monte ! Ça monte, à peine ! Ton score sur 3, en commentaire !",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/42.mp4",
+  "fichier": "videos/v2-42.mp4",
   "date": "2026-12-21",
   "titre": "Combien de temps ?",
   "legende": "Combien de temps ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -833,10 +852,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/43.mp4",
+  "fichier": "videos/v2-43.mp4",
   "date": "2026-12-23",
   "titre": "Tu sais lire ÇA ?",
   "legende": "Tu sais lire ÇA ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédesol #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -859,10 +879,11 @@
    "voix": "Tu sais lire ça ? Fa, c'est un fa. Mi, c'est un mi. Le piège, un dos. Ton score sur trois, en commentaire ?",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/44.mp4",
+  "fichier": "videos/v2-44.mp4",
   "date": "2026-12-25",
   "titre": "Test d'oreille : 3/3 ?",
   "legende": "Test d'oreille : 3/3 ? 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -885,10 +906,11 @@
    "voix": "Teste d'oreille, ça descend, ça monte, ça descend à peine. Ton score sur 3 en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/45.mp4",
+  "fichier": "videos/v2-45.mp4",
   "date": "2026-12-27",
   "titre": "Rythme : 3/3 ?",
   "legende": "Rythme : 3/3 ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -908,10 +930,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/46.mp4",
+  "fichier": "videos/v2-46.mp4",
   "date": "2026-12-29",
   "titre": "Et en clé de FA ?",
   "legende": "Et en clé de FA ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédefa #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -931,10 +954,11 @@
    "voix": "Et en clé de Fa, un ré, Fa, c'est un Fa, et la dernière, ainsi ton score sur trois en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/47.mp4",
+  "fichier": "videos/v2-47.mp4",
   "date": "2026-12-31",
   "titre": "Ça monte ou ça descend ?",
   "legende": "Ça monte ou ça descend ? 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -957,7 +981,8 @@
    "voix": "Ça monte ou ça descend ? Ça monte. Ça descend bien sûr. Le piège, ça descend. Ton score sur trois, en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
   "fichier": "site/videos/reseaux/48.mp4",
@@ -995,7 +1020,7 @@
   }
  },
  {
-  "fichier": "site/videos/reseaux/49.mp4",
+  "fichier": "videos/v2-49.mp4",
   "date": "2026-11-18",
   "titre": "Et en clé de FA ?",
   "legende": "Et en clé de FA ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédefa #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1016,10 +1041,11 @@
    "voix": "Et en clé de Fa, un Fa. C'est un sol ? Le piège. Ainsi, ton score sur trois en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/50.mp4",
+  "fichier": "videos/v2-50.mp4",
   "date": "2026-11-19",
   "titre": "Monte ou descend ? Écoute",
   "legende": "Monte ou descend ? Écoute 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1037,10 +1063,11 @@
    "voix": "Montes ou descends ? Ça descend bien sûr ! Ça descend bien sûr ! Ça monte à peine ! Ton score sur 3 en commentaire !",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/51.mp4",
+  "fichier": "videos/v2-51.mp4",
   "date": "2026-11-20",
   "titre": "Rythme : 3/3 ?",
   "legende": "Rythme : 3/3 ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1060,10 +1087,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/52.mp4",
+  "fichier": "videos/v2-52.mp4",
   "date": "2026-11-21",
   "titre": "Test d'oreille : 3/3 ?",
   "legende": "Test d'oreille : 3/3 ? 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1085,10 +1113,11 @@
    "voix": "Teste d'oreille, ça descend bien sûr, ça monte bien sûr, ça monte à peine. Ton score sur 3 en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/53.mp4",
+  "fichier": "videos/v2-53.mp4",
   "date": "2026-11-22",
   "titre": "Ça dure combien ?",
   "legende": "Ça dure combien ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1111,10 +1140,11 @@
    "voix": "Ça dure combien ? Quatre temps. Un temps. Trois temps. Le point ajoute la moitié. Ton score sur trois en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/54.mp4",
+  "fichier": "videos/v2-54.mp4",
   "date": "2026-11-23",
   "titre": "Combien de temps ?",
   "legende": "Combien de temps ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1137,10 +1167,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/55.mp4",
+  "fichier": "videos/v2-55.mp4",
   "date": "2026-11-24",
   "titre": "Rythme : 3/3 ?",
   "legende": "Rythme : 3/3 ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1160,10 +1191,11 @@
    "voix": "Rhythme 3 sur 3 Deux temps Un temps Un temps et demi Le point ajoute la moitié Ton score sur 3 en commentaire",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/56.mp4",
+  "fichier": "videos/v2-56.mp4",
   "date": "2026-11-25",
   "titre": "Combien de temps ?",
   "legende": "Combien de temps ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1183,10 +1215,11 @@
    "voix": "Combien de temps ? Deux temps ? Un demi-temps ? Un temps et demi, le point ajoute la moitié. Ton score sur trois en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/57.mp4",
+  "fichier": "videos/v2-57.mp4",
   "date": "2026-11-26",
   "titre": "Joyeux ou triste ?",
   "legende": "Joyeux ou triste ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1210,10 +1243,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/58.mp4",
+  "fichier": "videos/v2-58.mp4",
   "date": "2026-11-27",
   "titre": "Majeur ou mineur ?",
   "legende": "Majeur ou mineur ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1237,10 +1271,11 @@
    "voix": "Majeur ou mineur ? Mineur un peu triste ? Mi mineur, ça sonne triste ? Majeur, comme un sourire ? Ton score sur trois, en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/59.mp4",
+  "fichier": "videos/v2-59.mp4",
   "date": "2026-11-28",
   "titre": "Majeur ou mineur ?",
   "legende": "Majeur ou mineur ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1264,10 +1299,11 @@
    "voix": "Majeur ou mineur ? Mineur, un peu triste ? La mineur, ça sonne triste ? Ces sols majeurs, joyeux ! Ton score sur 3, en commentaire !",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/60.mp4",
+  "fichier": "videos/v2-60.mp4",
   "date": "2026-11-29",
   "titre": "Joyeux ou triste ?",
   "legende": "Joyeux ou triste ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1291,10 +1327,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/61.mp4",
+  "fichier": "videos/v2-61.mp4",
   "date": "2026-11-30",
   "titre": "Écoute cet accord",
   "legende": "Écoute cet accord 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1318,10 +1355,11 @@
    "voix": "Écoute bien cet accord. C'est sol majeur, joyeux. C'est la mineure plus triste. Mineure un peu triste ? Ton score sur 3 en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/62.mp4",
+  "fichier": "videos/v2-62.mp4",
   "date": "2026-12-01",
   "titre": "Écoute cet accord",
   "legende": "Écoute cet accord 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1345,10 +1383,11 @@
    "voix": "Écoute bien cet accord. Mineur, un peu triste ? Major, comme un sourire. Mi mineur, ça sonne triste. Ton score sur trois en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/63.mp4",
+  "fichier": "videos/v2-63.mp4",
   "date": "2026-12-02",
   "titre": "Majeur ou mineur ?",
   "legende": "Majeur ou mineur ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1371,10 +1410,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/64.mp4",
+  "fichier": "videos/v2-64.mp4",
   "date": "2026-12-03",
   "titre": "Joyeux ou triste ?",
   "legende": "Joyeux ou triste ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1395,10 +1435,11 @@
    "voix": "Joyeux ou triste ? Sol majeur, ça sonne joyeux ? Mi mineur, ça sonne triste ? Do majeur, ça sonne joyeux ? Ton score sur trois, en commentaire !",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/65.mp4",
+  "fichier": "videos/v2-65.mp4",
   "date": "2026-12-04",
   "titre": "Majeur ou mineur ?",
   "legende": "Majeur ou mineur ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1419,10 +1460,11 @@
    "voix": "Majeur ou mineur ? Cérés mineurs, plus tristes. Mi mineur, ça sonne triste. Ces dos majeurs, joyeux. Ton score sur trois, en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/66.mp4",
+  "fichier": "videos/v2-66.mp4",
   "date": "2026-12-05",
   "titre": "Joyeux ou triste ?",
   "legende": "Joyeux ou triste ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1446,10 +1488,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/67.mp4",
+  "fichier": "videos/v2-67.mp4",
   "date": "2026-12-06",
   "titre": "Majeur ou mineur ?",
   "legende": "Majeur ou mineur ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1473,10 +1516,11 @@
    "voix": "Majeur ou mineur ? C'est sol majeur joyeux ! Majeur comme un sourire ! La mineur, ça sonne triste ! Ton score sur trois ? En commentaire ?",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/68.mp4",
+  "fichier": "videos/v2-68.mp4",
   "date": "2026-12-07",
   "titre": "Majeur ou mineur ?",
   "legende": "Majeur ou mineur ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1500,10 +1544,11 @@
    "voix": "Majeur ou mineur ? Mineur un peu triste. Majeur comme un sourire. Ré mineur, ça sonne triste. Ton score sur trois en commentaire ?",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/69.mp4",
+  "fichier": "videos/v2-69.mp4",
   "date": "2026-12-08",
   "titre": "Joyeux ou triste ?",
   "legende": "Joyeux ou triste ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1524,10 +1569,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/70.mp4",
+  "fichier": "videos/v2-70.mp4",
   "date": "2026-12-09",
   "titre": "Joyeux ou triste ?",
   "legende": "Joyeux ou triste ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1551,10 +1597,11 @@
    "voix": "Joyeux ou triste ? Sol majeur, ça sonne joyeux. Majeur comme un sourire. C'est ré-mineur, plus triste. Ton score sur 3 en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/71.mp4",
+  "fichier": "videos/v2-71.mp4",
   "date": "2026-12-10",
   "titre": "Majeur ou mineur ?",
   "legende": "Majeur ou mineur ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1577,10 +1624,11 @@
    "voix": "majeur ou mineur ? Mineur, un peu triste. Mineur, un peu triste. Majeur, comme un sourire. Ton score sur 3 ? En commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/72.mp4",
+  "fichier": "videos/v2-72.mp4",
   "date": "2026-12-11",
   "titre": "Écoute cet accord",
   "legende": "Écoute cet accord 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1604,10 +1652,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/73.mp4",
+  "fichier": "videos/v2-73.mp4",
   "date": "2026-12-12",
   "titre": "Majeur ou mineur ?",
   "legende": "Majeur ou mineur ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1631,10 +1680,11 @@
    "voix": "Majeur ou mineur ? Ré mineur, ça sonne triste ? Mineur, un peu triste ? Sol majeur, ça sonne joyeux ? Ton score sur 3 en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/74.mp4",
+  "fichier": "videos/v2-74.mp4",
   "date": "2026-12-13",
   "titre": "Majeur ou mineur ?",
   "legende": "Majeur ou mineur ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1658,10 +1708,11 @@
    "voix": "majeur ou mineur majeur comme un sourire sol majeur, ça sonne joyeux c'est mi-mineur, plus triste ton score sur trois ? en commentaire ?",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/75.mp4",
+  "fichier": "videos/v2-75.mp4",
   "date": "2026-12-14",
   "titre": "Joyeux ou triste ?",
   "legende": "Joyeux ou triste ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1685,10 +1736,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/76.mp4",
+  "fichier": "videos/v2-76.mp4",
   "date": "2026-12-15",
   "titre": "Joyeux ou triste ?",
   "legende": "Joyeux ou triste ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1712,10 +1764,11 @@
    "voix": "Joyeux ou triste ? Mineur, un peu triste ! C'est do majeur, joyeux ! Sol majeur, ça sonne joyeux ! Ton score sur trois en commentaire !",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/77.mp4",
+  "fichier": "videos/v2-77.mp4",
   "date": "2026-12-16",
   "titre": "Écoute cet accord",
   "legende": "Écoute cet accord 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1736,10 +1789,11 @@
    "voix": "Écoute bien cet accord. C'est sol majeur, joyeux. Mineur un peu triste. C'est la mineur plus triste. Ton score sur 3 en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/78.mp4",
+  "fichier": "videos/v2-78.mp4",
   "date": "2026-12-17",
   "titre": "Majeur ou mineur ?",
   "legende": "Majeur ou mineur ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1762,10 +1816,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/79.mp4",
+  "fichier": "videos/v2-79.mp4",
   "date": "2026-12-18",
   "titre": "Joyeux ou triste ?",
   "legende": "Joyeux ou triste ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1789,10 +1844,11 @@
    "voix": "Joyeux ou triste ? Majeur comme un sourire ? Mineur un peu triste ? C'est majeur ! Ça sonne joyeux ! Ton score sur trois, en commentaire ?",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/80.mp4",
+  "fichier": "videos/v2-80.mp4",
   "date": "2026-12-19",
   "titre": "Écoute cet accord",
   "legende": "Écoute cet accord 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1816,10 +1872,11 @@
    "voix": "Écoute bien cet accord. Majeur comme un sourire. Mineur un peu triste. C'est la mineur plus triste. Ton score sur 3 en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/81.mp4",
+  "fichier": "videos/v2-81.mp4",
   "date": "2026-12-20",
   "titre": "Écoute cet accord",
   "legende": "Écoute cet accord 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1843,10 +1900,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/82.mp4",
+  "fichier": "videos/v2-82.mp4",
   "date": "2026-12-21",
   "titre": "Joyeux ou triste ?",
   "legende": "Joyeux ou triste ? 🎹 Majeur = joyeux, mineur = triste. Ton score sur 3 en commentaire 👇 #accords #solfège #piano #oreillemusicale #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1870,10 +1928,11 @@
    "voix": "Joyeux ou triste ? Majeur, comme un sourire. Ré, mineur, ça sonne triste. C'est mi-mineur, plus triste. Ton score sur trois en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/83.mp4",
+  "fichier": "videos/v2-83.mp4",
   "date": "2026-12-22",
   "titre": "Monte ou descend ? Écoute",
   "legende": "Monte ou descend ? Écoute 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1897,10 +1956,11 @@
    "voix": "Montes ou descends ? Ça monte ! Ça monte, bien sûr ! Le piège, ça descend ! Ton score sur trois en commentaire !",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/84.mp4",
+  "fichier": "videos/v2-84.mp4",
   "date": "2026-12-23",
   "titre": "Ça dure combien ?",
   "legende": "Ça dure combien ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1924,10 +1984,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/85.mp4",
+  "fichier": "videos/v2-85.mp4",
   "date": "2026-12-24",
   "titre": "Tu sais lire ÇA ?",
   "legende": "Tu sais lire ÇA ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédesol #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1951,10 +2012,11 @@
    "voix": "Tu sais lire ça ? C'est un fa, un mi, et la dernière. Un seul. Ton score sur 3 en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/86.mp4",
+  "fichier": "videos/v2-86.mp4",
   "date": "2026-12-25",
   "titre": "Tu sais lire ÇA ?",
   "legende": "Tu sais lire ÇA ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédesol #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -1975,10 +2037,11 @@
    "voix": "Tu sais lire ça ? Un FA ! Do ? C'est un DO ? Le piège ? Un SOL ! Ton score sur 3, en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/87.mp4",
+  "fichier": "videos/v2-87.mp4",
   "date": "2026-12-26",
   "titre": "Ça dure combien ?",
   "legende": "Ça dure combien ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -2002,10 +2065,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/88.mp4",
+  "fichier": "videos/v2-88.mp4",
   "date": "2026-12-27",
   "titre": "Test d'oreille : 3/3 ?",
   "legende": "Test d'oreille : 3/3 ? 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -2024,10 +2088,11 @@
    "voix": "Teste d'oreille, ça descend bien sûr, ça monte bien sûr, ça descend à peine, ton score sur 3 en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/89.mp4",
+  "fichier": "videos/v2-89.mp4",
   "date": "2026-12-28",
   "titre": "Ça monte ou ça descend ?",
   "legende": "Ça monte ou ça descend ? 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -2051,10 +2116,11 @@
    "voix": "Ça monte ou ça descend ? Ça monte ! Ça monte, bien sûr ! Ça descend ? À peine ! Ton score sur 3 en commentaire !",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/90.mp4",
+  "fichier": "videos/v2-90.mp4",
   "date": "2026-12-29",
   "titre": "Test d'oreille : 3/3 ?",
   "legende": "Test d'oreille : 3/3 ? 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -2077,10 +2143,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/91.mp4",
+  "fichier": "videos/v2-91.mp4",
   "date": "2026-12-30",
   "titre": "Tu sais lire ÇA ?",
   "legende": "Tu sais lire ÇA ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédesol #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -2101,10 +2168,11 @@
    "voix": "Tu sais lire ça ? Sol, c'est un sol. C'est un fa. Le piège, un la. Ton score sur trois en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/92.mp4",
+  "fichier": "videos/v2-92.mp4",
   "date": "2026-12-31",
   "titre": "Ça dure combien ?",
   "legende": "Ça dure combien ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -2128,10 +2196,11 @@
    "voix": "Ça dure combien ? Deux temps ? Quatre temps ? Trois temps, le point ajoute la moitié. Ton score sur trois, en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/93.mp4",
+  "fichier": "videos/v2-93.mp4",
   "date": "2027-01-01",
   "titre": "Lis ces 3 notes !",
   "legende": "Lis ces 3 notes ! 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédesol #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -2153,10 +2222,11 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/94.mp4",
+  "fichier": "videos/v2-94.mp4",
   "date": "2027-01-02",
   "titre": "Ça dure combien ?",
   "legende": "Ça dure combien ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -2180,10 +2250,11 @@
    "voix": "Ça dure combien ? Deux temps ? Quatre temps ? Un temps et demi, le point ajoute la moitié. Ton score sur trois en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/95.mp4",
+  "fichier": "videos/v2-95.mp4",
   "date": "2027-01-02",
   "titre": "Tu sais lire ÇA ?",
   "legende": "Tu sais lire ÇA ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédesol #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
@@ -2207,6 +2278,7 @@
    "voix": "Tu sais lire ça ? Sol, c'est un sol. La, c'est un la. Le piège, ainsi. Ton score sur trois, en commentaire.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
-  }
+  },
+  "voix": "benjamin-26s-un-seul-coup"
  }
 ]
