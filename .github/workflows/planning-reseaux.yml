@@ -2,6 +2,8 @@ name: Planning vidéos (YouTube + Facebook + Instagram)
 on:
   schedule:
     - cron: "17 11 * * *"   # 12 h 30 (Paris, hiver) : 2e vidéo du jour quand il y en a 2 prévues
+    - cron: "47 11 * * *"   # 2e essai de midi (GitHub saute ou retarde parfois une tâche)
+    - cron: "47 16 * * *"   # 2e essai du soir
     - cron: "17 16 * * *"   # chaque jour à 17 h 30 (heure de Paris en hiver) ; ne publie que les jours prévus dans planning.json
   workflow_dispatch:
     inputs:
