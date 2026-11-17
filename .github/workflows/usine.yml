@@ -20,6 +20,7 @@ jobs:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: |
+          cd src && python outils/usine-videos/kaggle.py etat 0 | head -c 300; echo; cd ..
           python outils/usine/auto.py recuperer
           python outils/usine/auto.py lancer
       - if: always()
