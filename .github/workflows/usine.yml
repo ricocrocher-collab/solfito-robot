@@ -1,0 +1,30 @@
+name: Usine à vidéos (Kaggle, automatique)
+on:
+  schedule:
+    - cron: "41 3 * * *"    # chaque nuit : récupère les vidéos finies, et relance si le planning a moins de 12 jours d'avance
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: {group: robot-ecrit, cancel-in-progress: false}
+jobs:
+  usine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: {repository: ricocrocher-collab/solfito, token: "${{ secrets.SOLFITO_PAT }}", path: src, sparse-checkout: "outils/usine-videos\noutils/video-hyperframes\noutils/voix/voicebox"}
+      - run: sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg >/dev/null && pip install -q pillow
+      - name: Récupérer puis lancer
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+        run: |
+          python outils/usine/auto.py recuperer
+          python outils/usine/auto.py lancer
+      - if: always()
+        run: |
+          git config user.name "solfito-robot" && git config user.email "actions@users.noreply.github.com"
+          git add videos outils/reseaux/planning.json outils/usine; git diff --cached --quiet && exit 0
+          git commit -qm "Usine à vidéos : $(date +%F)"
+          for i in 1 2 3 4; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep $((i*5)); done; exit 1

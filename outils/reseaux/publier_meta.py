@@ -50,7 +50,8 @@ def main():
         try:
             if not ig.get("id"): raise RuntimeError("aucun compte Instagram relié à la page")
             # vidéo du site (site/…) : Instagram va la chercher lui-même sur solfito.com (l'envoi direct « resumable » échouait)
-            url = os.environ.get("VIDEO_URL", "").strip() or ("https://solfito.com/" + fichier[5:] if fichier.startswith("site/") else "")
+            url = os.environ.get("VIDEO_URL", "").strip() or ("https://solfito.com/" + fichier[5:] if fichier.startswith("site/")
+                  else "https://raw.githubusercontent.com/ricocrocher-collab/solfito-robot/main/" + fichier)   # vidéos de l'usine automatique
             if url:
                 r = requests.post(f"{G}/{ig['id']}/media", data={"media_type": "REELS", "video_url": url, "caption": legende,
                                                                 "share_to_feed": "true", "access_token": tok}, timeout=60)

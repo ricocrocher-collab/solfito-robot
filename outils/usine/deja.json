@@ -1,0 +1,650 @@
+[
+ {
+  "id": "20261116-174621-fr-188",
+  "langue": "fr",
+  "notes": "sol:2,6,11",
+  "musique": "Dom:1-4-5-1:15",
+  "grille": "Dom - Fam - Solm - Dom, 120.0 BPM, Do mineur, lofi",
+  "titre": "Tu sais lire ÇA ?"
+ },
+ {
+  "id": "20261116-175438-fr-101",
+  "langue": "fr",
+  "notes": "sol:6,5,10",
+  "musique": "Mi:2-5-1-6:16",
+  "grille": "Fa#m - Si - Mi - Ré♭m, 112.5 BPM, Mi majeur, doux",
+  "titre": "Tu sais lire ÇA ?"
+ },
+ {
+  "id": "20261116-175438-fr-409",
+  "langue": "fr",
+  "notes": "sol:0,5,11",
+  "musique": "Mi♭:4-5-3-6:16",
+  "grille": "La♭ - Si♭ - Solm - Dom, 112.5 BPM, Mi♭ majeur, pop",
+  "titre": "Personne n'a 3/3"
+ },
+ {
+  "id": "20261116-175438-fr-575",
+  "langue": "fr",
+  "notes": "fa:6,7,10",
+  "musique": "Si:1-5-6-4:17",
+  "grille": "Si - Fa# - La♭m - Mi, 105.88 BPM, Si majeur, doux",
+  "titre": "Et en clé de FA ?"
+ },
+ {
+  "id": "20261116-181207-fr-r755",
+  "langue": "fr",
+  "notes": "rythme:ronde,croche,blanchep:Si",
+  "musique": "Sim:1-4-7-3:15",
+  "grille": "Sim - Mim - La - Ré, 120.0 BPM, Si mineur, pop",
+  "titre": "Ça dure combien ?"
+ },
+ {
+  "id": "20261116-181207-fr-212",
+  "langue": "fr",
+  "notes": "sol:0,3,-3",
+  "musique": "Si:1-3-4-5:17",
+  "grille": "Si - Mi♭m - Mi - Fa#, 105.88 BPM, Si majeur, pop",
+  "titre": "Tu sais lire ÇA ?"
+ },
+ {
+  "id": "20261116-181207-fr-r102",
+  "langue": "fr",
+  "notes": "rythme:ronde,blanche,blanchep:Mi",
+  "musique": "Mim:1-4-7-3:18",
+  "grille": "Mim - Lam - Ré - Sol, 100.0 BPM, Mi mineur, doux",
+  "titre": "Ça dure combien ?"
+ },
+ {
+  "id": "20261116-183515-fr-890",
+  "langue": "fr",
+  "notes": "fa:7,5,11",
+  "musique": "La♭:1-4-6-5:16",
+  "grille": "La♭ - Ré♭ - Fam - Mi♭, 112.5 BPM, La♭ majeur, lofi",
+  "titre": "Et en clé de FA ?"
+ },
+ {
+  "id": "20261116-183515-fr-o598",
+  "langue": "fr",
+  "notes": "oreille:2-8,5-2,8-9",
+  "musique": "Fa:1-5-6-4:17",
+  "grille": "Fa - Do - Rém - Si♭, 105.88 BPM, Fa majeur, lofi",
+  "titre": "Ça monte ou ça descend ?"
+ },
+ {
+  "id": "20261116-183515-fr-r732",
+  "langue": "fr",
+  "notes": "rythme:ronde,croche,noirep:Mi",
+  "musique": "Mi:6-4-1-5:18",
+  "grille": "Ré♭m - La - Mi - Si, 100.0 BPM, Mi majeur, lofi",
+  "titre": "Rythme : 3/3 ?"
+ },
+ {
+  "id": "20261116-195135-fr-607",
+  "langue": "fr",
+  "notes": "sol:6,1,11",
+  "musique": "La♭:1-6-4-5:18",
+  "grille": "La♭ - Fam - Ré♭ - Mi♭, 100.0 BPM, La♭ majeur, pop",
+  "titre": "Tu sais lire ÇA ?"
+ },
+ {
+  "id": "20261116-195135-fr-696",
+  "langue": "fr",
+  "notes": "sol:0,2,12",
+  "musique": "Do:4-5-3-6:18",
+  "grille": "Fa - Sol - Mim - Lam, 100.0 BPM, Do majeur, pop",
+  "titre": "3 notes. Tu tiens ?"
+ },
+ {
+  "id": "20261116-195135-fr-o660",
+  "langue": "fr",
+  "notes": "oreille:8-3,2-5,8-7",
+  "musique": "Do:1-5-6-4:16",
+  "grille": "Do - Sol - Lam - Fa, 112.5 BPM, Do majeur, lofi",
+  "titre": "Test d'oreille : 3/3 ?"
+ },
+ {
+  "id": "20261116-195135-fr-o834",
+  "langue": "fr",
+  "notes": "oreille:9-2,5-1,3-4",
+  "musique": "La♭:6-4-1-5:15",
+  "grille": "Fam - Ré♭ - La♭ - Mi♭, 120.0 BPM, La♭ majeur, doux",
+  "titre": "Monte ou descend ? Écoute"
+ },
+ {
+  "id": "20261116-195135-fr-r897",
+  "langue": "fr",
+  "notes": "rythme:ronde,croche,blanchep:Mi",
+  "musique": "Mi:4-5-3-6:16",
+  "grille": "La - Si - La♭m - Ré♭m, 112.5 BPM, Mi majeur, lofi",
+  "titre": "Rythme : 3/3 ?"
+ },
+ {
+  "id": "20261116-195135-fr-r949",
+  "langue": "fr",
+  "notes": "rythme:blanche,croche,blanchep:Do",
+  "musique": "Do:4-1-5-6:17",
+  "grille": "Fa - Do - Sol - Lam, 105.88 BPM, Do majeur, pop",
+  "titre": "Ça dure combien ?"
+ },
+ {
+  "id": "20261116-195135-fr-r367",
+  "langue": "fr",
+  "notes": "rythme:blanche,croche,noirep:La♭",
+  "musique": "La♭m:1-4-5-1:17",
+  "grille": "La♭m - Ré♭m - Mi♭m - La♭m, 105.88 BPM, La♭ mineur, lofi",
+  "titre": "Ça dure combien ?"
+ },
+ {
+  "id": "20261116-195135-fr-260",
+  "langue": "fr",
+  "notes": "sol:7,6,10",
+  "musique": "La♭:1-3-4-5:17",
+  "grille": "La♭ - Dom - Ré♭ - Mi♭, 105.88 BPM, La♭ majeur, doux",
+  "titre": "Lis ces 3 notes !"
+ },
+ {
+  "id": "20261116-195140-fr-r313",
+  "langue": "fr",
+  "notes": "rythme:blanche,noire,blanchep:La",
+  "musique": "Lam:1-4-7-3:17",
+  "grille": "Lam - Rém - Sol - Do, 105.88 BPM, La mineur, lofi",
+  "titre": "Rythme : 3/3 ?"
+ },
+ {
+  "id": "20261116-195140-fr-r176",
+  "langue": "fr",
+  "notes": "rythme:blanche,croche,noirep:La",
+  "musique": "La:4-5-3-6:17",
+  "grille": "Ré - Mi - Ré♭m - Fa#m, 105.88 BPM, La majeur, pop",
+  "titre": "Combien de temps ?"
+ },
+ {
+  "id": "20261116-195140-fr-o874",
+  "langue": "fr",
+  "notes": "oreille:0-7,5-2,2-1",
+  "musique": "La:4-1-5-6:17",
+  "grille": "Ré - La - Mi - Fa#m, 105.88 BPM, La majeur, doux",
+  "titre": "Ça monte ou ça descend ?"
+ },
+ {
+  "id": "20261116-195140-fr-o771",
+  "langue": "fr",
+  "notes": "oreille:10-4,1-4,5-6",
+  "musique": "Ré♭:1-6-4-5:16",
+  "grille": "Ré♭ - Si♭m - Fa# - La♭, 112.5 BPM, Ré♭ majeur, doux",
+  "titre": "Monte ou descend ? Écoute"
+ },
+ {
+  "id": "20261116-195140-fr-o229",
+  "langue": "fr",
+  "notes": "oreille:10-4,5-9,3-2",
+  "musique": "Fa:2-5-1-6:16",
+  "grille": "Solm - Do - Fa - Rém, 112.5 BPM, Fa majeur, doux",
+  "titre": "Monte ou descend ? Écoute"
+ },
+ {
+  "id": "20261116-195140-fr-109",
+  "langue": "fr",
+  "notes": "sol:6,3,12",
+  "musique": "Fam:1-6-3-7:18",
+  "grille": "Fam - Ré♭ - La♭ - Mi♭, 100.0 BPM, Fa mineur, lofi",
+  "titre": "3 notes. Tu tiens ?"
+ },
+ {
+  "id": "20261116-195140-fr-r557",
+  "langue": "fr",
+  "notes": "rythme:ronde,noire,blanchep:La",
+  "musique": "La:6-4-1-5:17",
+  "grille": "Fa#m - Ré - La - Mi, 105.88 BPM, La majeur, pop",
+  "titre": "Ça dure combien ?"
+ },
+ {
+  "id": "20261116-195140-fr-o943",
+  "langue": "fr",
+  "notes": "oreille:6-0,4-8,2-3",
+  "musique": "La:1-6-4-5:16",
+  "grille": "La - Fa#m - Ré - Mi, 112.5 BPM, La majeur, lofi",
+  "titre": "Test d'oreille : 3/3 ?"
+ },
+ {
+  "id": "20261116-195156-fr-950",
+  "langue": "fr",
+  "notes": "fa:4,6,9",
+  "musique": "Fa#:6-4-1-5:15",
+  "grille": "Mi♭m - Si - Fa# - Ré♭, 120.0 BPM, Fa# majeur, pop",
+  "titre": "Et en clé de FA ?"
+ },
+ {
+  "id": "20261116-195156-fr-r896",
+  "langue": "fr",
+  "notes": "rythme:ronde,noire,noirep:Ré",
+  "musique": "Ré:1-3-4-5:16",
+  "grille": "Ré - Fa#m - Sol - La, 112.5 BPM, Ré majeur, doux",
+  "titre": "Ça dure combien ?"
+ },
+ {
+  "id": "20261116-195156-fr-r250",
+  "langue": "fr",
+  "notes": "rythme:ronde,blanche,blanchep:Si♭",
+  "musique": "Si♭m:6-7-1-1:17",
+  "grille": "Fa# - La♭ - Si♭m - Si♭m, 105.88 BPM, Si♭ mineur, pop",
+  "titre": "Combien de temps ?"
+ },
+ {
+  "id": "20261116-195156-fr-o245",
+  "langue": "fr",
+  "notes": "oreille:7-0,4-1,5-6",
+  "musique": "Fa#m:1-4-5-1:16",
+  "grille": "Fa#m - Sim - Ré♭m - Fa#m, 112.5 BPM, Fa# mineur, pop",
+  "titre": "Ça monte ou ça descend ?"
+ },
+ {
+  "id": "20261116-195156-fr-904",
+  "langue": "fr",
+  "notes": "fa:2,1,11",
+  "musique": "Si♭:1-5-6-4:18",
+  "grille": "Si♭ - Fa - Solm - Mi♭, 100.0 BPM, Si♭ majeur, pop",
+  "titre": "Et en clé de FA ?"
+ },
+ {
+  "id": "20261116-195156-fr-r360",
+  "langue": "fr",
+  "notes": "rythme:blanche,noire,noirep:Ré",
+  "musique": "Ré:1-5-6-4:15",
+  "grille": "Ré - La - Sim - Sol, 120.0 BPM, Ré majeur, doux",
+  "titre": "Rythme : 3/3 ?"
+ },
+ {
+  "id": "20261116-195156-fr-r150",
+  "langue": "fr",
+  "notes": "rythme:blanche,ronde,blanchep:Ré",
+  "musique": "Ré:4-1-5-6:16",
+  "grille": "Sol - Ré - La - Sim, 112.5 BPM, Ré majeur, pop",
+  "titre": "Rythme : 3/3 ?"
+ },
+ {
+  "id": "20261116-195156-fr-149",
+  "langue": "fr",
+  "notes": "sol:3,0,12",
+  "musique": "Rém:1-6-3-7:15",
+  "grille": "Rém - Si♭ - Fa - Do, 120.0 BPM, Ré mineur, lofi",
+  "titre": "Tu sais lire ÇA ?"
+ },
+ {
+  "id": "20261116-195136-fr-r799",
+  "langue": "fr",
+  "notes": "rythme:ronde,blanche,noirep:Mi♭",
+  "musique": "Mi♭m:1-4-7-3:16",
+  "grille": "Mi♭m - La♭m - Ré♭ - Fa#, 112.5 BPM, Mi♭ mineur, doux",
+  "titre": "Combien de temps ?"
+ },
+ {
+  "id": "20261116-195136-fr-392",
+  "langue": "fr",
+  "notes": "fa:6,7,9",
+  "musique": "Sol:1-6-4-5:15",
+  "grille": "Sol - Mim - Do - Ré, 120.0 BPM, Sol majeur, doux",
+  "titre": "Et en clé de FA ?"
+ },
+ {
+  "id": "20261116-195136-fr-o230",
+  "langue": "fr",
+  "notes": "oreille:6-0,3-7,9-10",
+  "musique": "Sol:1-5-6-4:15",
+  "grille": "Sol - Ré - Mim - Do, 120.0 BPM, Sol majeur, doux",
+  "titre": "Ça monte ou ça descend ?"
+ },
+ {
+  "id": "20261116-195136-fr-o888",
+  "langue": "fr",
+  "notes": "oreille:8-2,1-5,9-10",
+  "musique": "Sim:1-4-5-1:16",
+  "grille": "Sim - Mim - Fa#m - Sim, 112.5 BPM, Si mineur, pop",
+  "titre": "Ça monte ou ça descend ?"
+ },
+ {
+  "id": "20261116-195136-fr-870",
+  "langue": "fr",
+  "notes": "sol:1,0,12",
+  "musique": "Si:1-3-4-5:15",
+  "grille": "Si - Mi♭m - Mi - Fa#, 120.0 BPM, Si majeur, doux",
+  "titre": "Tu sais lire ÇA ?"
+ },
+ {
+  "id": "20261116-195136-fr-o817",
+  "langue": "fr",
+  "notes": "oreille:9-3,4-7,2-3",
+  "musique": "Mi♭:6-4-1-5:17",
+  "grille": "Dom - La♭ - Mi♭ - Si♭, 105.88 BPM, Mi♭ majeur, doux",
+  "titre": "Ça monte ou ça descend ?"
+ },
+ {
+  "id": "20261116-195136-fr-r824",
+  "langue": "fr",
+  "notes": "rythme:ronde,blanche,noirep:Sol",
+  "musique": "Solm:1-4-7-3:16",
+  "grille": "Solm - Dom - Fa - Si♭, 112.5 BPM, Sol mineur, doux",
+  "titre": "Combien de temps ?"
+ },
+ {
+  "id": "20261116-195136-fr-r700",
+  "langue": "fr",
+  "notes": "rythme:ronde,noire,blanchep:Mi♭",
+  "musique": "Mi♭:4-1-5-6:15",
+  "grille": "La♭ - Mi♭ - Si♭ - Dom, 120.0 BPM, Mi♭ majeur, doux",
+  "titre": "Ça dure combien ?"
+ },
+ {
+  "id": "20261117-063108-fr-a144",
+  "langue": "fr",
+  "notes": "accords:-2,0,2",
+  "musique": "Mi♭m:1-4-7-3:17",
+  "grille": "Mi♭m - La♭m - Ré♭ - Fa#, 105.88 BPM, Mi♭ mineur, pop",
+  "titre": "Joyeux ou triste ?"
+ },
+ {
+  "id": "20261117-063108-fr-a900",
+  "langue": "fr",
+  "notes": "accords:0,-1,-2",
+  "musique": "Mi♭:4-5-3-6:15",
+  "grille": "La♭ - Si♭ - Solm - Dom, 120.0 BPM, Mi♭ majeur, doux",
+  "titre": "Joyeux ou triste ?"
+ },
+ {
+  "id": "20261117-063108-fr-a450",
+  "langue": "fr",
+  "notes": "accords:-1,0,2",
+  "musique": "Do:1-3-4-5:16",
+  "grille": "Do - Mim - Fa - Sol, 112.5 BPM, Do majeur, pop",
+  "titre": "Majeur ou mineur ?"
+ },
+ {
+  "id": "20261117-063108-fr-a973",
+  "langue": "fr",
+  "notes": "accords:2,-2,3",
+  "musique": "Mi♭m:6-7-1-1:16",
+  "grille": "Si - Ré♭ - Mi♭m - Mi♭m, 112.5 BPM, Mi♭ mineur, lofi",
+  "titre": "Majeur ou mineur ?"
+ },
+ {
+  "id": "20261117-063108-fr-a378",
+  "langue": "fr",
+  "notes": "accords:2,1,3",
+  "musique": "Fa#m:6-7-1-1:17",
+  "grille": "Ré - Mi - Fa#m - Fa#m, 105.88 BPM, Fa# mineur, pop",
+  "titre": "Joyeux ou triste ?"
+ },
+ {
+  "id": "20261117-063108-fr-a508",
+  "langue": "fr",
+  "notes": "accords:3,2,0",
+  "musique": "Do:2-5-1-6:16",
+  "grille": "Rém - Sol - Do - Lam, 112.5 BPM, Do majeur, doux",
+  "titre": "Écoute cet accord"
+ },
+ {
+  "id": "20261117-063108-fr-a717",
+  "langue": "fr",
+  "notes": "accords:2,3,0",
+  "musique": "Fa#:1-3-4-5:18",
+  "grille": "Fa# - Si♭m - Si - Ré♭, 100.0 BPM, Fa# majeur, pop",
+  "titre": "Écoute cet accord"
+ },
+ {
+  "id": "20261117-063108-fr-a856",
+  "langue": "fr",
+  "notes": "accords:3,1,-1",
+  "musique": "Mi♭:6-4-1-5:18",
+  "grille": "Dom - La♭ - Mi♭ - Si♭, 100.0 BPM, Mi♭ majeur, doux",
+  "titre": "Majeur ou mineur ?"
+ },
+ {
+  "id": "20261117-063108-fr-a534",
+  "langue": "fr",
+  "notes": "accords:-1,3,2",
+  "musique": "Do:2-5-1-6:15",
+  "grille": "Rém - Sol - Do - Lam, 120.0 BPM, Do majeur, pop",
+  "titre": "Majeur ou mineur ?"
+ },
+ {
+  "id": "20261117-063108-fr-a959",
+  "langue": "fr",
+  "notes": "accords:-1,0,-2",
+  "musique": "Fa#:6-4-1-5:16",
+  "grille": "Mi♭m - Si - Fa# - Ré♭, 112.5 BPM, Fa# majeur, pop",
+  "titre": "Majeur ou mineur ?"
+ },
+ {
+  "id": "20261117-063108-fr-a540",
+  "langue": "fr",
+  "notes": "accords:0,3,2",
+  "musique": "La:4-1-5-6:18",
+  "grille": "Ré - La - Mi - Fa#m, 100.0 BPM, La majeur, pop",
+  "titre": "Majeur ou mineur ?"
+ },
+ {
+  "id": "20261117-063108-fr-a104",
+  "langue": "fr",
+  "notes": "accords:-1,2,0",
+  "musique": "Fa#:2-5-1-6:16",
+  "grille": "La♭m - Ré♭ - Fa# - Mi♭m, 112.5 BPM, Fa# majeur, lofi",
+  "titre": "Joyeux ou triste ?"
+ },
+ {
+  "id": "20261117-063108-fr-a645",
+  "langue": "fr",
+  "notes": "accords:2,0,-2",
+  "musique": "Mi♭:1-5-6-4:17",
+  "grille": "Mi♭ - Si♭ - Dom - La♭, 105.88 BPM, Mi♭ majeur, pop",
+  "titre": "Joyeux ou triste ?"
+ },
+ {
+  "id": "20261117-063055-fr-a431",
+  "langue": "fr",
+  "notes": "accords:1,0,-2",
+  "musique": "Ré♭m:1-6-3-7:17",
+  "grille": "Ré♭m - La - Mi - Si, 105.88 BPM, Ré♭ mineur, pop",
+  "titre": "Joyeux ou triste ?"
+ },
+ {
+  "id": "20261117-063055-fr-a813",
+  "langue": "fr",
+  "notes": "accords:-1,-2,2",
+  "musique": "Si♭:4-1-5-6:17",
+  "grille": "Mi♭ - Si♭ - Fa - Solm, 105.88 BPM, Si♭ majeur, lofi",
+  "titre": "Joyeux ou triste ?"
+ },
+ {
+  "id": "20261117-063055-fr-a231",
+  "langue": "fr",
+  "notes": "accords:2,0,3",
+  "musique": "Si♭m:1-4-7-3:17",
+  "grille": "Si♭m - Mi♭m - La♭ - Ré♭, 105.88 BPM, Si♭ mineur, doux",
+  "titre": "Écoute cet accord"
+ },
+ {
+  "id": "20261117-063055-fr-a164",
+  "langue": "fr",
+  "notes": "accords:2,-1,0",
+  "musique": "Si♭:1-4-6-5:17",
+  "grille": "Si♭ - Mi♭ - Solm - Fa, 105.88 BPM, Si♭ majeur, pop",
+  "titre": "Joyeux ou triste ?"
+ },
+ {
+  "id": "20261117-063055-fr-a426",
+  "langue": "fr",
+  "notes": "accords:-1,3,2",
+  "musique": "Sol:2-5-1-6:18",
+  "grille": "Lam - Ré - Sol - Mim, 100.0 BPM, Sol majeur, doux",
+  "titre": "Majeur ou mineur ?"
+ },
+ {
+  "id": "20261117-063055-fr-a561",
+  "langue": "fr",
+  "notes": "accords:2,-2,-1",
+  "musique": "Sol:4-5-3-6:15",
+  "grille": "Do - Ré - Sim - Mim, 120.0 BPM, Sol majeur, lofi",
+  "titre": "Joyeux ou triste ?"
+ },
+ {
+  "id": "20261117-063055-fr-a798",
+  "langue": "fr",
+  "notes": "accords:1,-2,-1",
+  "musique": "Ré♭m:1-4-5-1:15",
+  "grille": "Ré♭m - Fa#m - La♭m - Ré♭m, 120.0 BPM, Ré♭ mineur, pop",
+  "titre": "Écoute cet accord"
+ },
+ {
+  "id": "20261117-063055-fr-a894",
+  "langue": "fr",
+  "notes": "accords:-2,2,0",
+  "musique": "Si♭:6-4-1-5:17",
+  "grille": "Solm - Mi♭ - Si♭ - Fa, 105.88 BPM, Si♭ majeur, lofi",
+  "titre": "Majeur ou mineur ?"
+ },
+ {
+  "id": "20261117-063055-fr-a985",
+  "langue": "fr",
+  "notes": "accords:3,-2,-1",
+  "musique": "Si♭m:1-6-3-7:18",
+  "grille": "Si♭m - Fa# - Ré♭ - La♭, 100.0 BPM, Si♭ mineur, lofi",
+  "titre": "Majeur ou mineur ?"
+ },
+ {
+  "id": "20261117-063055-fr-a203",
+  "langue": "fr",
+  "notes": "accords:-2,0,3",
+  "musique": "Sol:1-4-6-5:18",
+  "grille": "Sol - Do - Mim - Ré, 100.0 BPM, Sol majeur, pop",
+  "titre": "Écoute cet accord"
+ },
+ {
+  "id": "20261117-063055-fr-a889",
+  "langue": "fr",
+  "notes": "accords:3,0,1",
+  "musique": "Si♭m:6-7-1-1:18",
+  "grille": "Fa# - La♭ - Si♭m - Si♭m, 100.0 BPM, Si♭ mineur, pop",
+  "titre": "Majeur ou mineur ?"
+ },
+ {
+  "id": "20261117-063055-fr-a842",
+  "langue": "fr",
+  "notes": "accords:2,3,-2",
+  "musique": "Mi:4-1-5-6:18",
+  "grille": "La - Mi - Si - Ré♭m, 100.0 BPM, Mi majeur, lofi",
+  "titre": "Joyeux ou triste ?"
+ },
+ {
+  "id": "20261117-063055-fr-a549",
+  "langue": "fr",
+  "notes": "accords:1,-2,3",
+  "musique": "Si♭:1-4-6-5:15",
+  "grille": "Si♭ - Mi♭ - Solm - Fa, 120.0 BPM, Si♭ majeur, pop",
+  "titre": "Écoute cet accord"
+ },
+ {
+  "id": "20261117-063108-fr-r789",
+  "langue": "fr",
+  "notes": "rythme:blanche,noire,blanchep:Fa",
+  "musique": "Fam:1-6-3-7:16",
+  "grille": "Fam - Ré♭ - La♭ - Mi♭, 112.5 BPM, Fa mineur, lofi",
+  "titre": "Ça dure combien ?"
+ },
+ {
+  "id": "20261117-063108-fr-o791",
+  "langue": "fr",
+  "notes": "oreille:0-5,0-3,1-0",
+  "musique": "Ré:1-6-4-5:16",
+  "grille": "Ré - Sim - Sol - La, 112.5 BPM, Ré majeur, lofi",
+  "titre": "Monte ou descend ? Écoute"
+ },
+ {
+  "id": "20261117-063108-fr-543",
+  "langue": "fr",
+  "notes": "sol:8,5,9",
+  "musique": "Fa:2-5-1-6:17",
+  "grille": "Solm - Do - Fa - Rém, 105.88 BPM, Fa majeur, pop",
+  "titre": "Tu sais lire ÇA ?"
+ },
+ {
+  "id": "20261117-063108-fr-324",
+  "langue": "fr",
+  "notes": "sol:1,7,9",
+  "musique": "La♭:1-4-6-5:15",
+  "grille": "La♭ - Ré♭ - Fam - Mi♭, 120.0 BPM, La♭ majeur, pop",
+  "titre": "Tu sais lire ÇA ?"
+ },
+ {
+  "id": "20261117-063108-fr-r750",
+  "langue": "fr",
+  "notes": "rythme:blanche,ronde,noirep:Ré",
+  "musique": "Ré:1-5-6-4:18",
+  "grille": "Ré - La - Sim - Sol, 100.0 BPM, Ré majeur, pop",
+  "titre": "Ça dure combien ?"
+ },
+ {
+  "id": "20261117-063108-fr-o198",
+  "langue": "fr",
+  "notes": "oreille:10-4,4-7,5-4",
+  "musique": "Ré:4-5-3-6:15",
+  "grille": "Sol - La - Fa#m - Sim, 120.0 BPM, Ré majeur, doux",
+  "titre": "Test d'oreille : 3/3 ?"
+ },
+ {
+  "id": "20261117-063108-fr-753",
+  "langue": "fr",
+  "notes": "sol:2,3,11",
+  "musique": "Ré:1-3-4-5:18",
+  "grille": "Ré - Fa#m - Sol - La, 100.0 BPM, Ré majeur, pop",
+  "titre": "Tu sais lire ÇA ?"
+ },
+ {
+  "id": "20261117-063108-fr-r992",
+  "langue": "fr",
+  "notes": "rythme:blanche,ronde,noirep:La♭",
+  "musique": "La♭:1-6-4-5:16",
+  "grille": "La♭ - Fam - Ré♭ - Mi♭, 112.5 BPM, La♭ majeur, pop",
+  "titre": "Ça dure combien ?"
+ },
+ {
+  "id": "20261117-063108-fr-r717",
+  "langue": "fr",
+  "notes": "rythme:blanche,ronde,blanchep:Fa",
+  "musique": "Fa:1-6-4-5:16",
+  "grille": "Fa - Rém - Si♭ - Do, 112.5 BPM, Fa majeur, pop",
+  "titre": "Ça dure combien ?"
+ },
+ {
+  "id": "20261117-063108-fr-o113",
+  "langue": "fr",
+  "notes": "oreille:1-6,2-6,6-5",
+  "musique": "La♭m:6-7-1-1:18",
+  "grille": "Mi - Fa# - La♭m - La♭m, 100.0 BPM, La♭ mineur, doux",
+  "titre": "Ça monte ou ça descend ?"
+ },
+ {
+  "id": "20261117-063108-fr-115",
+  "langue": "fr",
+  "notes": "sol:2,1,12",
+  "musique": "Si:2-5-1-6:17",
+  "grille": "Ré♭m - Fa# - Si - La♭m, 105.88 BPM, Si majeur, lofi",
+  "titre": "Lis ces 3 notes !"
+ },
+ {
+  "id": "20261117-063108-fr-320",
+  "langue": "fr",
+  "notes": "sol:2,1,-4",
+  "musique": "Si:4-1-5-6:16",
+  "grille": "Mi - Si - Fa# - La♭m, 112.5 BPM, Si majeur, lofi",
+  "titre": "Tu sais lire ÇA ?"
+ },
+ {
+  "id": "20261117-063108-fr-o274",
+  "langue": "fr",
+  "notes": "oreille:2-9,7-4,8-7",
+  "musique": "Fam:1-4-5-1:16",
+  "grille": "Fam - Si♭m - Dom - Fam, 112.5 BPM, Fa mineur, doux",
+  "titre": "Test d'oreille : 3/3 ?"
+ }
+]
