@@ -3,6 +3,8 @@ on:
   schedule:
     - cron: "17 */2 * * *"   # toutes les 2 heures
   workflow_dispatch:
+    inputs:
+      essai: {description: "Essai : affiche les réponses sans les envoyer", type: boolean, default: false}
 permissions:
   contents: write
 concurrency: {group: robot-ecrit, cancel-in-progress: false}
@@ -12,6 +14,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: pip install -q requests google-auth
+      - uses: actions/cache@v4
+        with: {path: ~/.ollama/models, key: ollama-qwen2.5-3b}
+      - name: IA gratuite (Ollama + Qwen 2.5 3B)
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh >/dev/null 2>&1
+          (ollama serve >/dev/null 2>&1 &) ; sleep 5
+          ollama pull qwen2.5:3b >/dev/null 2>&1 && echo "IA prête"
       - run: python outils/reseaux/repondre.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -20,6 +29,7 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
           GOOGLE_PLAY_JSON: ${{ secrets.GOOGLE_PLAY_JSON }}
+          ESSAI: ${{ inputs.essai && '1' || '' }}
       - if: always()
         run: |
           git config user.name "solfito-robot" && git config user.email "actions@users.noreply.github.com"

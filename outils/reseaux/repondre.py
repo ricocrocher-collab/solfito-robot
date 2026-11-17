@@ -1,5 +1,5 @@
 """Réponses AUTOMATIQUES (sans validation, demande du propriétaire le 17 nov.) aux commentaires YouTube, Facebook, Instagram
-et aux avis Google Play. Les textes sont écrits par Gemini (secret GEMINI_API_KEY, offre gratuite).
+et aux avis Google Play. Réponses : quiz vérifié sans IA ; sinon IA locale gratuite Qwen 2.5 3B (Ollama, sans clé) ; Gemini seulement si GEMINI_API_KEY existe.
 Chaque commentaire / avis n'est traité qu'une fois (outils/reseaux/repondus.json). Au plus MAX réponses par passage.
 Secrets : GEMINI_API_KEY ; YT_CLIENT_ID / YT_CLIENT_SECRET / YT_REFRESH_TOKEN ; META_PAGE_TOKEN ; GOOGLE_PLAY_JSON (compte de service, facultatif)."""
 import json, os, sys, time, datetime, requests
@@ -23,9 +23,41 @@ Contexte : {contexte}
 Message de {auteur} : « {texte} »
 Écris seulement la réponse."""
 
+NOTES = ["DO", "RE", "MI", "FA", "SOL", "LA", "SI"]
+def notes_de(t):   # noms de notes écrits dans un commentaire (« mi ré la », « Mi-Ré-La »…)
+    import re, unicodedata
+    t = "".join(c for c in unicodedata.normalize("NFD", t.upper()) if unicodedata.category(c) != "Mn")
+    return [m for m in re.findall(r"\b(DO|RE|MI|FA|SOL|LA|SI)\b", t)]
+
+def quiz(texte, contexte):   # réponse sûre (sans IA) quand quelqu'un donne des notes à un quiz « lis ces notes »
+    if "bonnes réponses dans l'ordre : " not in (contexte or ""): return None
+    att = [notes_de(a)[0] if notes_de(a) else None for a in contexte.split("bonnes réponses dans l'ordre : ")[1].split(", ")]
+    if None in att: return None
+    dit = notes_de(texte)
+    if len(dit) < 2: return None
+    bon = sum(1 for a, b in zip(att, dit) if a == b)
+    sol = ", ".join(a.replace("RE", "RÉ") for a in att)
+    if bon == len(att): return "Bravo, 3 sur 3 ! 🎉 Tu lis super bien les notes."
+    if bon: return f"Presque ! {bon} sur {len(att)} 👏 Les bonnes réponses : {sol}."
+    return f"Bien essayé ! Les bonnes réponses : {sol} 🎹 Tu feras mieux à la prochaine !"
+
+def local(invite):   # IA gratuite sans clé : Qwen 2.5 (3B) avec Ollama, sur la machine GitHub (dépôt public = gratuit)
+    try:
+        r = requests.post("http://localhost:11434/api/generate", json={"model": "qwen2.5:3b", "prompt": invite, "stream": False,
+                          "options": {"temperature": 0.5, "num_predict": 120}}, timeout=300)
+        return r.json().get("response", "").strip() if r.status_code == 200 else None
+    except Exception as e:
+        print("IA locale indisponible :", e); return None
+
 def ia(quoi, texte, auteur, contexte):
+    q = quiz(texte, contexte)
+    if q: return q
     cle = os.environ.get("GEMINI_API_KEY", "")
-    if not cle: return None
+    if not cle:
+        t = local(CONSIGNE.format(quoi=quoi, texte=texte[:1500], auteur=auteur or "quelqu'un", contexte=contexte or "aucun"))
+        if t is None: return False
+        t = t.strip().strip('"«» ')
+        return None if (not t or "SKIP" in t[:8].upper()) else t[:600]
     corps = {"contents": [{"parts": [{"text": CONSIGNE.format(quoi=quoi, texte=texte[:1500], auteur=auteur or "quelqu'un", contexte=contexte or "aucun")}]}],
              "generationConfig": {"temperature": 0.6, "maxOutputTokens": 300}}
     for m in MODELES:
@@ -35,7 +67,7 @@ def ia(quoi, texte, auteur, contexte):
             except Exception: continue
             return None if (not t or "SKIP" in t[:8]) else t[:900]
         print("Gemini", m, r.status_code, r.text[:120], flush=True); time.sleep(2)
-    return None
+    return False
 
 def contexte_video(titre):
     titre = (titre or "").replace(" #Shorts", "").strip().lower()
@@ -51,8 +83,9 @@ def traiter(k, quoi, texte, auteur, ctx, envoyer):
     global n
     if k in fait or n >= MAX or not (texte or "").strip(): return
     rep = ia(quoi, texte, auteur, ctx)
-    if rep is None and os.environ.get("GEMINI_API_KEY"): noter(k); print("ignoré :", texte[:80]); return
-    if rep is None: return
+    if rep is False: return
+    if rep is None: noter(k); print("ignoré :", texte[:80]); return
+    if os.environ.get("ESSAI"): print(f"[ESSAI {k.split(':')[0]}] {texte[:90]!r} -> {rep!r}", flush=True); return
     try:
         ok = envoyer(rep)
     except Exception as e:
