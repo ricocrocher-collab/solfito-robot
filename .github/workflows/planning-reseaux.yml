@@ -1,0 +1,31 @@
+name: Planning vidéos (YouTube + Facebook + Instagram)
+on:
+  schedule:
+    - cron: "30 11 * * *"   # 12 h 30 (Paris, hiver) : 2e vidéo du jour quand il y en a 2 prévues
+    - cron: "30 16 * * *"   # chaque jour à 17 h 30 (heure de Paris en hiver) ; ne publie que les jours prévus dans planning.json
+  workflow_dispatch:
+    inputs:
+      forcer: {description: "Numéro de la vidéo à publier tout de suite (ex. 05) ; vide = celle du jour", required: false, default: ""}
+permissions:
+  contents: write
+concurrency: {group: planning-reseaux, cancel-in-progress: false}
+jobs:
+  publier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests
+      - run: python outils/reseaux/planning.py
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          FORCER: ${{ inputs.forcer }}
+      - if: always()
+        run: |
+          git config user.name "solfito-planning" && git config user.email "actions@users.noreply.github.com"
+          git add outils/reseaux/planning.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Planning vidéos : publication du $(date +%F)"
+          for i in 1 2 3 4; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep $((i*5)); done; exit 1
