@@ -1,0 +1,23 @@
+name: Tester les jetons (ne publie rien)
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests
+      - name: Meta (page + Instagram)
+        continue-on-error: true
+        run: python outils/reseaux/publier_meta.py
+        env: {META_PAGE_TOKEN: "${{ secrets.META_PAGE_TOKEN }}"}
+      - name: YouTube
+        continue-on-error: true
+        run: |
+          cd outils/youtube && python -c "
+          import requests; from publier import jeton
+          r = requests.get('https://www.googleapis.com/youtube/v3/channels?part=snippet&mine=true', headers={'Authorization': 'Bearer ' + jeton()}, timeout=30).json()
+          print('Chaîne YouTube :', r['items'][0]['snippet']['title'])"
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
