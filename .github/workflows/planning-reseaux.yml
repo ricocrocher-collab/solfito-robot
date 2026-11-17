@@ -1,8 +1,8 @@
 name: Planning vidéos (YouTube + Facebook + Instagram)
 on:
   schedule:
-    - cron: "30 11 * * *"   # 12 h 30 (Paris, hiver) : 2e vidéo du jour quand il y en a 2 prévues
-    - cron: "30 16 * * *"   # chaque jour à 17 h 30 (heure de Paris en hiver) ; ne publie que les jours prévus dans planning.json
+    - cron: "17 11 * * *"   # 12 h 30 (Paris, hiver) : 2e vidéo du jour quand il y en a 2 prévues
+    - cron: "17 16 * * *"   # chaque jour à 17 h 30 (heure de Paris en hiver) ; ne publie que les jours prévus dans planning.json
   workflow_dispatch:
     inputs:
       forcer: {description: "Numéro de la vidéo à publier tout de suite (ex. 05) ; vide = celle du jour", required: false, default: ""}
