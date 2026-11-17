@@ -1,0 +1,21 @@
+name: Stats quotidiennes (onglet Admin « Tout » + bilan du lundi)
+on:
+  schedule:
+    - cron: "7 5 * * *"   # chaque jour vers 6 h (Paris, hiver)
+  workflow_dispatch:
+permissions:
+  contents: read
+  id-token: write   # jeton OIDC de GitHub : la fonction Supabase stats-robot vérifie qu'il vient bien de ce dépôt (aucun secret partagé)
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests google-auth
+      - run: python outils/stats/collecter.py
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          GOOGLE_PLAY_JSON: ${{ secrets.GOOGLE_PLAY_JSON }}
