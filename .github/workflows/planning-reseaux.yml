@@ -1,12 +1,12 @@
 name: Planning vidéos (YouTube + Facebook + Instagram)
 on:
   schedule:
-    # 18 nov. : lancé à 12 h 30, 15 h 30, 17 h 30 et 20 h 30 PILE par Supabase (pg_cron « robot-poster », voir jeton-supabase.yml).
+    # 18 nov. (propriétaire) : lancé à 0 h, 8 h, 12 h et 17 h PILE (Paris) par Supabase (pg_cron « robot-poster », voir jeton-supabase.yml).
     # Ces horaires GitHub (souvent en retard) ne sont plus que des secours : planning.py ne poste jamais plus de 4 vidéos par jour.
-    - cron: "47 11 * * *"   # secours de midi
-    - cron: "47 14 * * *"   # secours de 15 h 30
-    - cron: "47 16 * * *"   # secours de 17 h 30
-    - cron: "47 19 * * *"   # secours de 20 h 30
+    - cron: "20 23 * * *"   # secours de minuit (heure d'hiver)
+    - cron: "20 7 * * *"    # secours de 8 h
+    - cron: "20 11 * * *"   # secours de midi
+    - cron: "20 16 * * *"   # secours de 17 h
   workflow_dispatch:
     inputs:
       forcer: {description: "Numéro de la vidéo à publier tout de suite (ex. 05) ; vide = celle du jour", required: false, default: ""}
