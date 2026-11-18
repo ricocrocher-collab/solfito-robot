@@ -16,6 +16,62 @@
   }
  },
  {
+  "fichier": "site/videos/reseaux/25.mp4",
+  "date": "2026-11-17",
+  "titre": "Lis ces 3 notes !",
+  "legende": "Lis ces 3 notes ! 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédesol #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
+  "attendu": [
+   "MI",
+   "RÉ",
+   "LA"
+  ],
+  "fait": {
+   "youtube": "2026-11-17",
+   "facebook": "2026-11-17",
+   "instagram": "2026-11-17"
+  },
+  "yt_trad": "2026-11-17",
+  "com": {
+   "youtube": "2026-11-17",
+   "facebook": "2026-11-17"
+  }
+ },
+ {
+  "fichier": "site/videos/reseaux/48.mp4",
+  "date": "2026-11-17",
+  "titre": "Ça dure combien ?",
+  "legende": "Ça dure combien ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
+  "attendu": [
+   "2 temps",
+   "½ temps",
+   "1 temps ½"
+  ],
+  "fait": {
+   "youtube": "2026-11-17",
+   "facebook": "2026-11-17",
+   "instagram": "2026-11-17"
+  },
+  "verif": {
+   "ok": true,
+   "note": 5,
+   "problemes": [
+    "la question est lisible sur la 1ère image",
+    "les réponses affichées correspondent aux réponses attendues",
+    "aucun texte ne dépasse de l'écran ni n'est coupé, pas d'écran vide",
+    "la voix dit des phrases cohérentes avec l'écran (pas de charabia)"
+   ],
+   "voix": "Ça dure combien ? Deux temps. Un demi-temps ? Un temps et demi ? Le point ajoute la moitié. Ton score sur trois. En commentaire.",
+   "le": "2026-11-17",
+   "modele": "kaggle-qwen2.5-vl-3b + whisper",
+   "doute": true
+  },
+  "yt_trad": "2026-11-17",
+  "com": {
+   "youtube": "2026-11-17",
+   "facebook": "2026-11-17"
+  }
+ },
+ {
   "fichier": "site/videos/reseaux/02.mp4",
   "date": "2026-11-18",
   "titre": "Test d'oreille ? 90 % ratent la 3ᵉ",
@@ -64,6 +120,24 @@
   }
  },
  {
+  "fichier": "videos/tuto-01.mp4",
+  "date": "2026-11-18",
+  "titre": "Lettre à Élise au piano 🎹 Tu sais la jouer ?",
+  "legende": "Lettre à Élise (Beethoven). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Lettre à Élise — Beethoven (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-01.mp4",
+  "date": "2026-11-18",
+  "titre": "Pourquoi on dit DO RÉ MI ? Un moine l'a inventé",
+  "legende": "Pourquoi on dit DO RÉ MI ?\nDo, ré, mi viennent d'un hymne latin du Moyen Âge (Guido d'Arezzo).\n#musique #anecdote #solfito #solfege #histoiredelamusique",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Wikipédia « Guido d'Arezzo » / « Solfège » ; hymne Ut queant laxis"
+ },
+ {
   "fichier": "site/videos/reseaux/04.mp4",
   "date": "2026-11-19",
   "titre": "Devine la chanson avec seulement 8 notes",
@@ -94,6 +168,23 @@
   }
  },
  {
+  "fichier": "videos/tuto-02.mp4",
+  "date": "2026-11-19",
+  "titre": "Gymnopédie n°1 de Satie 🎹 Le plus apaisant ?",
+  "legende": "Gymnopédie n°1 (Satie). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
+  "type": "tuto",
+  "fait": {},
+  "source": "Gymnopédie n°1 — Satie (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-02.mp4",
+  "date": "2026-11-19",
+  "titre": "Le SI vient d'un saint ! L'origine de la 7e note",
+  "legende": "Le SI, il vient d'où ?\nLe si vient des initiales de Sancte Iohannes (saint Jean).\n#musique #anecdote #solfito #solfege #notes",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "site/videos/reseaux/06.mp4",
   "date": "2026-11-20",
   "titre": "Joyeux ou triste ?",
@@ -120,6 +211,23 @@
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
   }
+ },
+ {
+  "fichier": "videos/tuto-03.mp4",
+  "date": "2026-11-20",
+  "titre": "Clair de lune de Debussy 🌙 Ça te donne des frissons ?",
+  "legende": "Clair de lune (Debussy). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Clair de lune — Debussy (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-03.mp4",
+  "date": "2026-11-20",
+  "titre": "Pourquoi « piano » ? Le nom cache un secret",
+  "legende": "Pourquoi « PIANO » ?\nPiano vient de « gravicembalo col piano e forte » (Cristofori, vers 1700).\n#musique #anecdote #solfito #piano #histoiredelamusique",
+  "type": "anecdote",
+  "fait": {}
  },
  {
   "fichier": "site/videos/reseaux/08.mp4",
@@ -150,6 +258,23 @@
   }
  },
  {
+  "fichier": "videos/tuto-04.mp4",
+  "date": "2026-11-21",
+  "titre": "Prélude en do de Bach 🎹 Joue ça en 20 secondes",
+  "legende": "Prélude en do (Bach). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
+  "type": "tuto",
+  "fait": {},
+  "source": "Prélude en do — Bach (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-04.mp4",
+  "date": "2026-11-21",
+  "titre": "Un piano, combien de touches ? Pas 100 !",
+  "legende": "Un piano, combien de touches ?\n52 touches blanches + 36 noires = 88 touches.\n#musique #anecdote #solfito #piano #apprendrelepiano",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "site/videos/reseaux/10.mp4",
   "date": "2026-11-22",
   "titre": "Teste ton oreille",
@@ -178,6 +303,23 @@
   }
  },
  {
+  "fichier": "videos/tuto-05.mp4",
+  "date": "2026-11-22",
+  "titre": "Menuet en sol 🎹 Niveau facile ou difficile ?",
+  "legende": "Menuet en sol (Petzold / Bach). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Menuet en sol — Petzold / Bach (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-05.mp4",
+  "date": "2026-11-22",
+  "titre": "Le LA vibre combien de fois par seconde ?",
+  "legende": "Le LA, il vibre combien ?\nLe la de référence vibre 440 fois par seconde (440 Hz), normalisé en 1939.\n#musique #anecdote #solfito #solfege #accordage",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "site/videos/reseaux/12.mp4",
   "date": "2026-11-23",
   "titre": "Tout le monde dit Ré… et toi ?",
@@ -204,6 +346,23 @@
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
   }
+ },
+ {
+  "fichier": "videos/tuto-06.mp4",
+  "date": "2026-11-23",
+  "titre": "Marche turque de Mozart 🎹 Tu suis le rythme ?",
+  "legende": "Marche turque (Mozart). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
+  "type": "tuto",
+  "fait": {},
+  "source": "Marche turque — Mozart (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-06.mp4",
+  "date": "2026-11-23",
+  "titre": "Beethoven était SOURD quand il a écrit ça",
+  "legende": "Beethoven sourd, il compose ?\nLa 9e symphonie (1824) a été créée alors que Beethoven était presque totalement sourd.\n#musique #anecdote #solfito #beethoven #classique",
+  "type": "anecdote",
+  "fait": {}
  },
  {
   "fichier": "site/videos/reseaux/14.mp4",
@@ -243,6 +402,23 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   }
+ },
+ {
+  "fichier": "videos/tuto-07.mp4",
+  "date": "2026-11-24",
+  "titre": "The Entertainer au piano 🎹 Tu reconnais cet air ?",
+  "legende": "The Entertainer (Joplin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "The Entertainer — Joplin (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-07.mp4",
+  "date": "2026-11-24",
+  "titre": "Un Stradivarius vaut combien ? Le prix est fou",
+  "legende": "Un Stradivarius, ça vaut combien ?\nEn 2011, le Stradivarius « Lady Blunt » est parti à près de 10 millions de livres.\n#musique #anecdote #solfito #violon #stradivarius",
+  "type": "anecdote",
+  "fait": {}
  },
  {
   "fichier": "site/videos/reseaux/16.mp4",
@@ -286,6 +462,23 @@
   }
  },
  {
+  "fichier": "videos/tuto-08.mp4",
+  "date": "2026-11-25",
+  "titre": "Maple Leaf Rag de Joplin 🎹 Trop rapide pour toi ?",
+  "legende": "Maple Leaf Rag (Joplin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
+  "type": "tuto",
+  "fait": {},
+  "source": "Maple Leaf Rag — Joplin (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-08.mp4",
+  "date": "2026-11-25",
+  "titre": "Bach a eu combien d'enfants ? Tu vas être surpris",
+  "legende": "Bach, combien d'enfants ?\nBach a eu 20 enfants (7 + 13) ; plusieurs sont devenus compositeurs.\n#musique #anecdote #solfito #bach #classique",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "site/videos/reseaux/18.mp4",
   "date": "2026-11-26",
   "titre": "Toi aussi tu bloques toujours au même endroit ?",
@@ -324,6 +517,23 @@
   }
  },
  {
+  "fichier": "videos/tuto-10.mp4",
+  "date": "2026-11-26",
+  "titre": "Arabesque n°1 de Debussy 🎹 Tu oses essayer ?",
+  "legende": "Arabesque n°1 (Debussy). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
+  "type": "tuto",
+  "fait": {},
+  "source": "Arabesque n°1 — Debussy (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-09.mp4",
+  "date": "2026-11-26",
+  "titre": "Où est le violon de Paganini ? Dans une mairie !",
+  "legende": "Le violon de Paganini : où ?\nLe violon « Il Cannone » de Paganini est légué à Gênes, où il est conservé (et parfois joué).\n#musique #anecdote #solfito #violon #paganini",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "site/videos/reseaux/20.mp4",
   "date": "2026-11-27",
   "titre": "Il a dit Si… et toi ?",
@@ -358,6 +568,23 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   }
+ },
+ {
+  "fichier": "videos/tuto-11.mp4",
+  "date": "2026-11-27",
+  "titre": "Valse minute de Chopin 🎹 Ça va trop vite ?",
+  "legende": "Valse minute (Chopin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Valse minute — Chopin (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-10.mp4",
+  "date": "2026-11-27",
+  "titre": "Le piano préféré de Chopin ? Une marque française",
+  "legende": "Le piano préféré de Chopin ?\nChopin jouait surtout sur des pianos Pleyel, jusqu'à son dernier concert parisien (1848).\n#musique #anecdote #solfito #chopin #piano",
+  "type": "anecdote",
+  "fait": {}
  },
  {
   "fichier": "videos/v2-22.mp4",
@@ -401,6 +628,23 @@
   "voix": "benjamin-26s-un-seul-coup"
  },
  {
+  "fichier": "videos/tuto-12.mp4",
+  "date": "2026-11-28",
+  "titre": "Prélude op. 28 n°4 de Chopin 🎹 Tu ressens ça aussi ?",
+  "legende": "Prélude op. 28 n°4 (Chopin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
+  "type": "tuto",
+  "fait": {},
+  "source": "Prélude op. 28 n°4 — Chopin (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-11.mp4",
+  "date": "2026-11-28",
+  "titre": "Qui a inventé le « récital » ? Un pianiste star",
+  "legende": "Qui a inventé le « récital » ?\nFranz Liszt a popularisé le récital de piano solo (Londres, 1840).\n#musique #anecdote #solfito #liszt #piano",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "videos/v2-24.mp4",
   "date": "2026-11-29",
   "titre": "Rythme : 3/3 ?",
@@ -420,27 +664,6 @@
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   },
   "voix": "benjamin-26s-un-seul-coup"
- },
- {
-  "fichier": "site/videos/reseaux/25.mp4",
-  "date": "2026-11-17",
-  "titre": "Lis ces 3 notes !",
-  "legende": "Lis ces 3 notes ! 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédesol #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
-  "attendu": [
-   "MI",
-   "RÉ",
-   "LA"
-  ],
-  "fait": {
-   "youtube": "2026-11-17",
-   "facebook": "2026-11-17",
-   "instagram": "2026-11-17"
-  },
-  "yt_trad": "2026-11-17",
-  "com": {
-   "youtube": "2026-11-17",
-   "facebook": "2026-11-17"
-  }
  },
  {
   "fichier": "videos/v2-26.mp4",
@@ -463,6 +686,23 @@
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   },
   "voix": "benjamin-26s-un-seul-coup"
+ },
+ {
+  "fichier": "videos/tuto-13.mp4",
+  "date": "2026-11-29",
+  "titre": "Rêverie de Schumann 🎹 Un moment doux",
+  "legende": "Rêverie (Schumann). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Rêverie — Schumann (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-12.mp4",
+  "date": "2026-11-29",
+  "titre": "Pourquoi Vivaldi s'appelait « le prêtre roux » ?",
+  "legende": "Vivaldi, pourquoi le « prêtre roux » ?\nVivaldi, prêtre aux cheveux roux, était surnommé « il prete rosso ».\n#musique #anecdote #solfito #vivaldi #classique",
+  "type": "anecdote",
+  "fait": {}
  },
  {
   "fichier": "videos/v2-27.mp4",
@@ -511,6 +751,23 @@
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   },
   "voix": "benjamin-26s-un-seul-coup"
+ },
+ {
+  "fichier": "videos/tuto-15.mp4",
+  "date": "2026-11-30",
+  "titre": "Sonate Pathétique de Beethoven 🎹 Ça te fait quoi ?",
+  "legende": "Sonate Pathétique (Beethoven). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Sonate Pathétique — Beethoven (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-13.mp4",
+  "date": "2026-11-30",
+  "titre": "Haydn te fait sursauter avec un seul accord",
+  "legende": "Haydn cache une surprise ?\nLa symphonie nº 94 de Haydn s'appelle « La Surprise » : un accord très fort dans un passage très doux.\n#musique #anecdote #solfito #haydn #classique",
+  "type": "anecdote",
+  "fait": {}
  },
  {
   "fichier": "videos/v2-29.mp4",
@@ -564,6 +821,23 @@
   "voix": "benjamin-26s-un-seul-coup"
  },
  {
+  "fichier": "videos/tuto-16.mp4",
+  "date": "2026-12-01",
+  "titre": "Prélude op. 28 n°20 de Chopin 🎹",
+  "legende": "Prélude op. 28 n°20 (Chopin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
+  "type": "tuto",
+  "fait": {},
+  "source": "Prélude op. 28 n°20 — Chopin (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-14.mp4",
+  "date": "2026-12-01",
+  "titre": "Satie a écrit un morceau à répéter 840 fois",
+  "legende": "Un morceau à jouer 840 fois ?\n« Vexations » de Satie se répète 840 fois ; la 1re exécution complète (1963) a duré plus de 18 h.\n#musique #anecdote #solfito #satie #musiquebizarre",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "videos/v2-31.mp4",
   "date": "2026-12-02",
   "titre": "3 notes. Tu tiens ?",
@@ -615,6 +889,23 @@
   "voix": "benjamin-26s-un-seul-coup"
  },
  {
+  "fichier": "videos/tuto-17.mp4",
+  "date": "2026-12-02",
+  "titre": "Gymnopédie n°2 de Satie 🎹 Tu la connais ?",
+  "legende": "Gymnopédie n°2 (Satie). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Gymnopédie n°2 — Satie (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-15.mp4",
+  "date": "2026-12-02",
+  "titre": "« Brille, petite étoile » : le vrai compositeur ?",
+  "legende": "« Brille, petite étoile » : de qui ?\nLa mélodie est une chanson française de 1761 d'auteur inconnu ; Mozart en a fait 12 variations.\n#musique #anecdote #solfito #mozart #chansonenfant",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "videos/v2-33.mp4",
   "date": "2026-12-03",
   "titre": "Ça dure combien ?",
@@ -662,6 +953,23 @@
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   },
   "voix": "benjamin-26s-un-seul-coup"
+ },
+ {
+  "fichier": "videos/tuto-18.mp4",
+  "date": "2026-12-03",
+  "titre": "Gymnopédie n°3 de Satie 🎹 La plus triste ?",
+  "legende": "Gymnopédie n°3 (Satie). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
+  "type": "tuto",
+  "fait": {},
+  "source": "Gymnopédie n°3 — Satie (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-16.mp4",
+  "date": "2026-12-03",
+  "titre": "Un morceau de silence ? C'est vrai, il existe",
+  "legende": "Un morceau de silence ?\n« 4′33″ » de John Cage (1952) : quatre minutes trente-trois de silence au piano.\n#musique #anecdote #solfito #johncage #musiquebizarre",
+  "type": "anecdote",
+  "fait": {}
  },
  {
   "fichier": "videos/v2-35.mp4",
@@ -718,6 +1026,23 @@
   "voix": "benjamin-26s-un-seul-coup"
  },
  {
+  "fichier": "videos/tuto-19.mp4",
+  "date": "2026-12-04",
+  "titre": "Menuet de Bach 🎹 Un air vieux de 300 ans",
+  "legende": "Menuet en sol mineur (Bach). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Menuet en sol mineur — Bach (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-17.mp4",
+  "date": "2026-12-04",
+  "titre": "La symphonie de Schubert jouée 43 ans plus tard",
+  "legende": "La symphonie inachevée : créée quand ?\nL'« Inachevée » de Schubert (1822) n'est créée qu'en 1865, 37 ans après sa mort.\n#musique #anecdote #solfito #schubert #classique",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "videos/v2-37.mp4",
   "date": "2026-12-05",
   "titre": "3 notes. Tu tiens ?",
@@ -769,6 +1094,23 @@
   "voix": "benjamin-26s-un-seul-coup"
  },
  {
+  "fichier": "videos/tuto-20.mp4",
+  "date": "2026-12-05",
+  "titre": "Musette de Bach 🎹 Tu sais la jouer ?",
+  "legende": "Musette en ré (Bach). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
+  "type": "tuto",
+  "fait": {},
+  "source": "Musette en ré — Bach (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-18.mp4",
+  "date": "2026-12-05",
+  "titre": "Le métronome existe depuis quand ? Beethoven l'a adopté",
+  "legende": "Le métronome, c'est de quand ?\nLe métronome est breveté par Mälzel en 1815 ; Beethoven l'utilise dès 1817.\n#musique #anecdote #solfito #metronome #tempo",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "videos/v2-39.mp4",
   "date": "2026-12-06",
   "titre": "Combien de temps ?",
@@ -818,6 +1160,23 @@
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   },
   "voix": "benjamin-26s-un-seul-coup"
+ },
+ {
+  "fichier": "videos/tuto-21.mp4",
+  "date": "2026-12-06",
+  "titre": "Ave Maria de Schubert 🎹 Tu connais cet air ?",
+  "legende": "Ave Maria (Schubert). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Ave Maria — Schubert (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-19.mp4",
+  "date": "2026-12-06",
+  "titre": "Qui donne le LA à tout l'orchestre ? Pas le violon",
+  "legende": "Qui donne le LA à l'orchestre ?\nDans un orchestre, c'est le hautbois qui donne le la pour l'accordage.\n#musique #anecdote #solfito #orchestre #hautbois",
+  "type": "anecdote",
+  "fait": {}
  },
  {
   "fichier": "videos/v2-41.mp4",
@@ -874,6 +1233,23 @@
   "voix": "benjamin-26s-un-seul-coup"
  },
  {
+  "fichier": "videos/tuto-22.mp4",
+  "date": "2026-12-07",
+  "titre": "Berceuse de Schubert 🎹 Pour s'endormir",
+  "legende": "Berceuse (Schubert). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
+  "type": "tuto",
+  "fait": {},
+  "source": "Berceuse — Schubert (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-20.mp4",
+  "date": "2026-12-07",
+  "titre": "Un chef d'orchestre mort à cause de sa canne !",
+  "legende": "Un chef d'orchestre tué par sa canne ?\nLully s'est blessé le pied avec sa canne de direction ; la plaie infectée l'a tué (1687).\n#musique #anecdote #solfito #lully #histoiredelamusique",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "videos/v2-43.mp4",
   "date": "2026-12-08",
   "titre": "Tu sais lire ÇA ?",
@@ -928,6 +1304,23 @@
   "voix": "benjamin-26s-un-seul-coup"
  },
  {
+  "fichier": "videos/tuto-23.mp4",
+  "date": "2026-12-08",
+  "titre": "Valse de Brahms 🎹 Tu la reconnais ?",
+  "legende": "Valse op. 39 n°15 (Brahms). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Valse op. 39 n°15 — Brahms (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-21.mp4",
+  "date": "2026-12-08",
+  "titre": "Haendel a fait jouer un orchestre sur la Tamise",
+  "legende": "Haendel joue sur un bateau ?\nEn 1717, Haendel a présenté sa « Water Music » depuis une barge sur la Tamise, pour le roi George Ier.\n#musique #anecdote #solfito #haendel #baroque",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "videos/v2-45.mp4",
   "date": "2026-12-09",
   "titre": "Rythme : 3/3 ?",
@@ -976,6 +1369,23 @@
   "voix": "benjamin-26s-un-seul-coup"
  },
  {
+  "fichier": "videos/tuto-24.mp4",
+  "date": "2026-12-09",
+  "titre": "Fantaisie-Impromptu de Chopin 🎹 Impossible à jouer ?",
+  "legende": "Fantaisie-Impromptu (Chopin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
+  "type": "tuto",
+  "fait": {},
+  "source": "Fantaisie-Impromptu — Chopin (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-22.mp4",
+  "date": "2026-12-09",
+  "titre": "Clair de lune de Debussy : d'où vient le titre ?",
+  "legende": "Qui a inspiré Clair de lune ?\nLe titre « Clair de lune » vient d'un poème de Paul Verlaine.\n#musique #anecdote #solfito #debussy #piano",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "videos/v2-47.mp4",
   "date": "2026-12-10",
   "titre": "Ça monte ou ça descend ?",
@@ -1003,41 +1413,6 @@
   "voix": "benjamin-26s-un-seul-coup"
  },
  {
-  "fichier": "site/videos/reseaux/48.mp4",
-  "date": "2026-11-17",
-  "titre": "Ça dure combien ?",
-  "legende": "Ça dure combien ? 🎼 Ton score sur 3 en commentaire 👇 #rythme #solfège #piano #apprendrelapiano #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
-  "attendu": [
-   "2 temps",
-   "½ temps",
-   "1 temps ½"
-  ],
-  "fait": {
-   "youtube": "2026-11-17",
-   "facebook": "2026-11-17",
-   "instagram": "2026-11-17"
-  },
-  "verif": {
-   "ok": true,
-   "note": 5,
-   "problemes": [
-    "la question est lisible sur la 1ère image",
-    "les réponses affichées correspondent aux réponses attendues",
-    "aucun texte ne dépasse de l'écran ni n'est coupé, pas d'écran vide",
-    "la voix dit des phrases cohérentes avec l'écran (pas de charabia)"
-   ],
-   "voix": "Ça dure combien ? Deux temps. Un demi-temps ? Un temps et demi ? Le point ajoute la moitié. Ton score sur trois. En commentaire.",
-   "le": "2026-11-17",
-   "modele": "kaggle-qwen2.5-vl-3b + whisper",
-   "doute": true
-  },
-  "yt_trad": "2026-11-17",
-  "com": {
-   "youtube": "2026-11-17",
-   "facebook": "2026-11-17"
-  }
- },
- {
   "fichier": "videos/v2-49.mp4",
   "date": "2026-12-10",
   "titre": "Et en clé de FA ?",
@@ -1061,6 +1436,23 @@
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   },
   "voix": "benjamin-26s-un-seul-coup"
+ },
+ {
+  "fichier": "videos/tuto-26.mp4",
+  "date": "2026-12-10",
+  "titre": "Marche des soldats de bois 🎹 Tu marches au pas ?",
+  "legende": "Marche des soldats de bois (Tchaïkovski). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
+  "type": "tuto",
+  "fait": {},
+  "source": "Marche des soldats de bois — Tchaïkovski (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-23.mp4",
+  "date": "2026-12-10",
+  "titre": "Qui est « Élise » dans Pour Élise ? Personne ne sait",
+  "legende": "Qui est Élise ?\nPour Élise est publiée en 1867, 40 ans après la mort de Beethoven ; l'identité d'Élise reste un mystère.\n#musique #anecdote #solfito #beethoven #piano",
+  "type": "anecdote",
+  "fait": {}
  },
  {
   "fichier": "videos/v2-50.mp4",
@@ -1107,6 +1499,23 @@
    "doute": true
   },
   "voix": "benjamin-26s-un-seul-coup"
+ },
+ {
+  "fichier": "videos/tuto-30.mp4",
+  "date": "2026-12-11",
+  "titre": "Lettre à Élise, la suite 🎹 Tu la connais ?",
+  "legende": "Lettre à Élise (suite) (Beethoven). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
+  "type": "tuto",
+  "fait": {},
+  "source": "Lettre à Élise (suite) — Beethoven (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-24.mp4",
+  "date": "2026-12-11",
+  "titre": "De vrais canons dans une œuvre de Tchaïkovski !",
+  "legende": "De vrais canons dans l'orchestre ?\nL'Ouverture 1812 de Tchaïkovski (1880) demande des coups de canon dans la partition.\n#musique #anecdote #solfito #tchaikovski #classique",
+  "type": "anecdote",
+  "fait": {}
  },
  {
   "fichier": "videos/v2-52.mp4",
@@ -1162,6 +1571,23 @@
   "voix": "benjamin-26s-un-seul-coup"
  },
  {
+  "fichier": "videos/tuto-031.mp4",
+  "date": "2026-12-12",
+  "titre": "Les Saisons : janvier de Tchaïkovski 🎹 Tu oses essayer ?",
+  "legende": "Les Saisons : janvier (Tchaïkovski). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Les Saisons : janvier — Tchaïkovski (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-25.mp4",
+  "date": "2026-12-12",
+  "titre": "La plus vieille flûte du monde a 40 000 ans",
+  "legende": "La plus vieille flûte du monde ?\nUne flûte en os de vautour, trouvée à Hohle Fels (Allemagne), a environ 40 000 ans.\n#musique #anecdote #solfito #prehistoire #flute",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "videos/v2-54.mp4",
   "date": "2026-12-13",
   "titre": "Combien de temps ?",
@@ -1211,6 +1637,23 @@
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   },
   "voix": "benjamin-26s-un-seul-coup"
+ },
+ {
+  "fichier": "videos/tuto-032.mp4",
+  "date": "2026-12-13",
+  "titre": "Sonate Pathétique (rondo) de Beethoven 🎶 Trop rapide pour toi ?",
+  "legende": "Sonate Pathétique (rondo) (Beethoven). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Sonate Pathétique (rondo) — Beethoven (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-26.mp4",
+  "date": "2026-12-13",
+  "titre": "Un morceau qui dure 639 ans : il joue en ce moment",
+  "legende": "Un morceau qui dure 639 ans ?\nORGAN²/ASLSP de John Cage se joue à Halberstadt depuis 2001 et finira en 2640 (639 ans).\n#musique #anecdote #solfito #johncage #musiquebizarre",
+  "type": "anecdote",
+  "fait": {}
  },
  {
   "fichier": "videos/v2-56.mp4",
@@ -1263,6 +1706,23 @@
    "doute": true
   },
   "voix": "benjamin-26s-un-seul-coup"
+ },
+ {
+  "fichier": "videos/tuto-033.mp4",
+  "date": "2026-12-14",
+  "titre": "Sonate La Tempête de Beethoven 🎹 Facile ou difficile ?",
+  "legende": "Sonate La Tempête (Beethoven). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Sonate La Tempête — Beethoven (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-27.mp4",
+  "date": "2026-12-14",
+  "titre": "Le Requiem de Mozart : qui l'a terminé ?",
+  "legende": "Le Requiem de Mozart, qui l'a fini ?\nLe Requiem, laissé inachevé à la mort de Mozart (1791), est terminé par son élève Franz Xaver Süssmayr.\n#musique #anecdote #solfito #mozart #requiem",
+  "type": "anecdote",
+  "fait": {}
  },
  {
   "fichier": "videos/v2-58.mp4",
@@ -1321,6 +1781,23 @@
   "voix": "benjamin-26s-un-seul-coup"
  },
  {
+  "fichier": "videos/tuto-034.mp4",
+  "date": "2026-12-15",
+  "titre": "Wall Street Rag de Joplin 🎹 Tu l'as déjà joué ?",
+  "legende": "Wall Street Rag (Joplin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Wall Street Rag — Joplin (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-28.mp4",
+  "date": "2026-12-15",
+  "titre": "La clé de sol, c'est en fait une lettre",
+  "legende": "La clé de SOL, c'est quoi ?\nLa clé de sol est un G décoré (et la clé de fa un F décoré).\n#musique #anecdote #solfito #solfege #clefdesol",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "videos/v2-60.mp4",
   "date": "2026-12-16",
   "titre": "Joyeux ou triste ?",
@@ -1375,6 +1852,23 @@
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   },
   "voix": "benjamin-26s-un-seul-coup"
+ },
+ {
+  "fichier": "videos/tuto-035.mp4",
+  "date": "2026-12-16",
+  "titre": "Intermezzo op. 118 n°2 de Brahms ✨ Facile ou difficile ?",
+  "legende": "Intermezzo op. 118 n°2 (Brahms). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "Intermezzo op. 118 n°2 — Brahms (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-29.mp4",
+  "date": "2026-12-16",
+  "titre": "Un piano a combien de cordes ? Bien plus que 88",
+  "legende": "Un piano, combien de cordes ?\nUn piano a environ 230 cordes (jusqu'à 3 par note aiguë).\n#musique #anecdote #solfito #piano #apprendrelepiano",
+  "type": "anecdote",
+  "fait": {}
  },
  {
   "fichier": "videos/v2-62.mp4",
@@ -1432,6 +1926,23 @@
   "voix": "benjamin-26s-un-seul-coup"
  },
  {
+  "fichier": "videos/tuto-036.mp4",
+  "date": "2026-12-17",
+  "titre": "La Mort d'Åse de Grieg 🎹 Tu l'as déjà joué ?",
+  "legende": "La Mort d'Åse (Grieg). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "La Mort d'Åse — Grieg (domaine public)"
+ },
+ {
+  "fichier": "videos/anecdote-30.mp4",
+  "date": "2026-12-17",
+  "titre": "Les 4 Saisons de Vivaldi cachent des poèmes",
+  "legende": "Les 4 Saisons : des poèmes cachés ?\nChaque concerto des Quatre Saisons est accompagné d'un sonnet qui décrit orages, oiseaux, chien qui aboie…\n#musique #anecdote #solfito #vivaldi #baroque",
+  "type": "anecdote",
+  "fait": {}
+ },
+ {
   "fichier": "videos/v2-64.mp4",
   "date": "2026-12-18",
   "titre": "Joyeux ou triste ?",
@@ -1480,6 +1991,15 @@
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   },
   "voix": "benjamin-26s-un-seul-coup"
+ },
+ {
+  "fichier": "videos/tuto-037.mp4",
+  "date": "2026-12-18",
+  "titre": "La Bergeronnette de Burgmüller ✨ Tu oses essayer ?",
+  "legende": "La Bergeronnette (Burgmüller). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
+  "type": "tuto",
+  "fait": {},
+  "source": "La Bergeronnette — Burgmüller (domaine public)"
  },
  {
   "fichier": "videos/v2-66.mp4",
@@ -2298,293 +2818,5 @@
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   },
   "voix": "benjamin-26s-un-seul-coup"
- },
- {
-  "fichier": "videos/tuto-01.mp4",
-  "date": "2026-11-18",
-  "titre": "Lettre à Élise au piano 🎹 Tu sais la jouer ?",
-  "legende": "Lettre à Élise (Beethoven). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Lettre à Élise — Beethoven (domaine public)"
- },
- {
-  "fichier": "videos/tuto-02.mp4",
-  "date": "2026-11-19",
-  "titre": "Gymnopédie n°1 de Satie 🎹 Le plus apaisant ?",
-  "legende": "Gymnopédie n°1 (Satie). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
-  "type": "tuto",
-  "fait": {},
-  "source": "Gymnopédie n°1 — Satie (domaine public)"
- },
- {
-  "fichier": "videos/tuto-03.mp4",
-  "date": "2026-11-20",
-  "titre": "Clair de lune de Debussy 🌙 Ça te donne des frissons ?",
-  "legende": "Clair de lune (Debussy). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Clair de lune — Debussy (domaine public)"
- },
- {
-  "fichier": "videos/tuto-04.mp4",
-  "date": "2026-11-21",
-  "titre": "Prélude en do de Bach 🎹 Joue ça en 20 secondes",
-  "legende": "Prélude en do (Bach). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
-  "type": "tuto",
-  "fait": {},
-  "source": "Prélude en do — Bach (domaine public)"
- },
- {
-  "fichier": "videos/tuto-05.mp4",
-  "date": "2026-11-22",
-  "titre": "Menuet en sol 🎹 Niveau facile ou difficile ?",
-  "legende": "Menuet en sol (Petzold / Bach). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Menuet en sol — Petzold / Bach (domaine public)"
- },
- {
-  "fichier": "videos/tuto-06.mp4",
-  "date": "2026-11-23",
-  "titre": "Marche turque de Mozart 🎹 Tu suis le rythme ?",
-  "legende": "Marche turque (Mozart). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
-  "type": "tuto",
-  "fait": {},
-  "source": "Marche turque — Mozart (domaine public)"
- },
- {
-  "fichier": "videos/tuto-07.mp4",
-  "date": "2026-11-24",
-  "titre": "The Entertainer au piano 🎹 Tu reconnais cet air ?",
-  "legende": "The Entertainer (Joplin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "The Entertainer — Joplin (domaine public)"
- },
- {
-  "fichier": "videos/tuto-08.mp4",
-  "date": "2026-11-25",
-  "titre": "Maple Leaf Rag de Joplin 🎹 Trop rapide pour toi ?",
-  "legende": "Maple Leaf Rag (Joplin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
-  "type": "tuto",
-  "fait": {},
-  "source": "Maple Leaf Rag — Joplin (domaine public)"
- },
- {
-  "fichier": "videos/tuto-10.mp4",
-  "date": "2026-11-26",
-  "titre": "Arabesque n°1 de Debussy 🎹 Tu oses essayer ?",
-  "legende": "Arabesque n°1 (Debussy). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
-  "type": "tuto",
-  "fait": {},
-  "source": "Arabesque n°1 — Debussy (domaine public)"
- },
- {
-  "fichier": "videos/tuto-11.mp4",
-  "date": "2026-11-27",
-  "titre": "Valse minute de Chopin 🎹 Ça va trop vite ?",
-  "legende": "Valse minute (Chopin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Valse minute — Chopin (domaine public)"
- },
- {
-  "fichier": "videos/tuto-12.mp4",
-  "date": "2026-11-28",
-  "titre": "Prélude op. 28 n°4 de Chopin 🎹 Tu ressens ça aussi ?",
-  "legende": "Prélude op. 28 n°4 (Chopin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
-  "type": "tuto",
-  "fait": {},
-  "source": "Prélude op. 28 n°4 — Chopin (domaine public)"
- },
- {
-  "fichier": "videos/tuto-13.mp4",
-  "date": "2026-11-29",
-  "titre": "Rêverie de Schumann 🎹 Un moment doux",
-  "legende": "Rêverie (Schumann). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Rêverie — Schumann (domaine public)"
- },
- {
-  "fichier": "videos/tuto-15.mp4",
-  "date": "2026-11-30",
-  "titre": "Sonate Pathétique de Beethoven 🎹 Ça te fait quoi ?",
-  "legende": "Sonate Pathétique (Beethoven). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Sonate Pathétique — Beethoven (domaine public)"
- },
- {
-  "fichier": "videos/tuto-16.mp4",
-  "date": "2026-12-01",
-  "titre": "Prélude op. 28 n°20 de Chopin 🎹",
-  "legende": "Prélude op. 28 n°20 (Chopin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
-  "type": "tuto",
-  "fait": {},
-  "source": "Prélude op. 28 n°20 — Chopin (domaine public)"
- },
- {
-  "fichier": "videos/tuto-17.mp4",
-  "date": "2026-12-02",
-  "titre": "Gymnopédie n°2 de Satie 🎹 Tu la connais ?",
-  "legende": "Gymnopédie n°2 (Satie). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Gymnopédie n°2 — Satie (domaine public)"
- },
- {
-  "fichier": "videos/tuto-18.mp4",
-  "date": "2026-12-03",
-  "titre": "Gymnopédie n°3 de Satie 🎹 La plus triste ?",
-  "legende": "Gymnopédie n°3 (Satie). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
-  "type": "tuto",
-  "fait": {},
-  "source": "Gymnopédie n°3 — Satie (domaine public)"
- },
- {
-  "fichier": "videos/tuto-19.mp4",
-  "date": "2026-12-04",
-  "titre": "Menuet de Bach 🎹 Un air vieux de 300 ans",
-  "legende": "Menuet en sol mineur (Bach). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Menuet en sol mineur — Bach (domaine public)"
- },
- {
-  "fichier": "videos/tuto-20.mp4",
-  "date": "2026-12-05",
-  "titre": "Musette de Bach 🎹 Tu sais la jouer ?",
-  "legende": "Musette en ré (Bach). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
-  "type": "tuto",
-  "fait": {},
-  "source": "Musette en ré — Bach (domaine public)"
- },
- {
-  "fichier": "videos/tuto-21.mp4",
-  "date": "2026-12-06",
-  "titre": "Ave Maria de Schubert 🎹 Tu connais cet air ?",
-  "legende": "Ave Maria (Schubert). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Ave Maria — Schubert (domaine public)"
- },
- {
-  "fichier": "videos/tuto-22.mp4",
-  "date": "2026-12-07",
-  "titre": "Berceuse de Schubert 🎹 Pour s'endormir",
-  "legende": "Berceuse (Schubert). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
-  "type": "tuto",
-  "fait": {},
-  "source": "Berceuse — Schubert (domaine public)"
- },
- {
-  "fichier": "videos/tuto-23.mp4",
-  "date": "2026-12-08",
-  "titre": "Valse de Brahms 🎹 Tu la reconnais ?",
-  "legende": "Valse op. 39 n°15 (Brahms). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Valse op. 39 n°15 — Brahms (domaine public)"
- },
- {
-  "fichier": "videos/tuto-24.mp4",
-  "date": "2026-12-09",
-  "titre": "Fantaisie-Impromptu de Chopin 🎹 Impossible à jouer ?",
-  "legende": "Fantaisie-Impromptu (Chopin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
-  "type": "tuto",
-  "fait": {},
-  "source": "Fantaisie-Impromptu — Chopin (domaine public)"
- },
- {
-  "fichier": "videos/tuto-26.mp4",
-  "date": "2026-12-10",
-  "titre": "Marche des soldats de bois 🎹 Tu marches au pas ?",
-  "legende": "Marche des soldats de bois (Tchaïkovski). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
-  "type": "tuto",
-  "fait": {},
-  "source": "Marche des soldats de bois — Tchaïkovski (domaine public)"
- },
- {
-  "fichier": "videos/tuto-30.mp4",
-  "date": "2026-12-11",
-  "titre": "Lettre à Élise, la suite 🎹 Tu la connais ?",
-  "legende": "Lettre à Élise (suite) (Beethoven). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
-  "type": "tuto",
-  "fait": {},
-  "source": "Lettre à Élise (suite) — Beethoven (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-01.mp4",
-  "date": "2026-11-18",
-  "titre": "Pourquoi on dit DO RÉ MI ? Un moine l'a inventé",
-  "legende": "Pourquoi on dit DO RÉ MI ?\nDo, ré, mi viennent d'un hymne latin du Moyen Âge (Guido d'Arezzo).\n#musique #anecdote #solfito #solfege #histoiredelamusique",
-  "type": "anecdote",
-  "fait": {},
-  "source": "Wikipédia « Guido d'Arezzo » / « Solfège » ; hymne Ut queant laxis"
- },
- {
-  "fichier": "videos/tuto-031.mp4",
-  "date": "2026-12-12",
-  "titre": "Les Saisons : janvier de Tchaïkovski 🎹 Tu oses essayer ?",
-  "legende": "Les Saisons : janvier (Tchaïkovski). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Les Saisons : janvier — Tchaïkovski (domaine public)"
- },
- {
-  "fichier": "videos/tuto-032.mp4",
-  "date": "2026-12-13",
-  "titre": "Sonate Pathétique (rondo) de Beethoven 🎶 Trop rapide pour toi ?",
-  "legende": "Sonate Pathétique (rondo) (Beethoven). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Sonate Pathétique (rondo) — Beethoven (domaine public)"
- },
- {
-  "fichier": "videos/tuto-033.mp4",
-  "date": "2026-12-14",
-  "titre": "Sonate La Tempête de Beethoven 🎹 Facile ou difficile ?",
-  "legende": "Sonate La Tempête (Beethoven). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Sonate La Tempête — Beethoven (domaine public)"
- },
- {
-  "fichier": "videos/tuto-034.mp4",
-  "date": "2026-12-15",
-  "titre": "Wall Street Rag de Joplin 🎹 Tu l'as déjà joué ?",
-  "legende": "Wall Street Rag (Joplin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Wall Street Rag — Joplin (domaine public)"
- },
- {
-  "fichier": "videos/tuto-035.mp4",
-  "date": "2026-12-16",
-  "titre": "Intermezzo op. 118 n°2 de Brahms ✨ Facile ou difficile ?",
-  "legende": "Intermezzo op. 118 n°2 (Brahms). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "Intermezzo op. 118 n°2 — Brahms (domaine public)"
- },
- {
-  "fichier": "videos/tuto-036.mp4",
-  "date": "2026-12-17",
-  "titre": "La Mort d'Åse de Grieg 🎹 Tu l'as déjà joué ?",
-  "legende": "La Mort d'Åse (Grieg). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "La Mort d'Åse — Grieg (domaine public)"
- },
- {
-  "fichier": "videos/tuto-037.mp4",
-  "date": "2026-12-18",
-  "titre": "La Bergeronnette de Burgmüller ✨ Tu oses essayer ?",
-  "legende": "La Bergeronnette (Burgmüller). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
-  "type": "tuto",
-  "fait": {},
-  "source": "La Bergeronnette — Burgmüller (domaine public)"
  }
 ]
