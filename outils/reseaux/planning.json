@@ -125,8 +125,17 @@
   "titre": "Lettre à Élise au piano 🎹 Tu sais la jouer ?",
   "legende": "Lettre à Élise (Beethoven). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
   "type": "tuto",
-  "fait": {},
-  "source": "Lettre à Élise — Beethoven (domaine public)"
+  "fait": {
+   "youtube": "2026-11-18",
+   "facebook": "2026-11-18",
+   "instagram": "2026-11-18"
+  },
+  "source": "Lettre à Élise — Beethoven (domaine public)",
+  "yt_trad": "2026-11-18",
+  "com": {
+   "youtube": "2026-11-18",
+   "facebook": "2026-11-18"
+  }
  },
  {
   "fichier": "videos/anecdote-01.mp4",
