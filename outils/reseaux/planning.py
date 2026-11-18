@@ -19,13 +19,15 @@ dues = [x for x in plan if (x["fichier"].endswith(force + ".mp4") if force else 
 # jamais une vidéo refusée par la vérification Gemini (verifier_videos.py), sauf publication forcée
 if not force: dues = [x for x in dues if (x.get("verif") or {}).get("ok", True) is not False]
 # créneaux (17 nov. : GitHub a lancé le robot de 17 h 30 à 1 h du matin) : une vidéo neuve seulement entre 12 h et 22 h (Paris),
-# et une seule avant 17 h ; une vidéo déjà commencée (un réseau a échoué) peut être finie à toute heure. Lancement à la main : pas de limite.
-if not force and os.environ.get("GITHUB_EVENT_NAME") == "schedule":
+# et une seule avant 17 h, deux au plus par jour ; une vidéo déjà commencée (un réseau a échoué) peut être finie à toute heure.
+# 18 nov. : lancé par Supabase à 12 h 30 / 17 h 30 pile (workflow_dispatch) ; les crons GitHub restent en secours. Numéro forcé : pas de limite.
+if not force:
     h = datetime.datetime.now(zoneinfo.ZoneInfo("Europe/Paris")).hour
     deja_auj = sum(1 for v in plan if auj in v.get("fait", {}).values())
     neuve = lambda v: not v.get("fait")
     if h < 12 or h >= 22: dues = [v for v in dues if not neuve(v)]
     elif h < 17 and deja_auj >= 1: dues = [v for v in dues if not neuve(v)]
+    elif deja_auj >= 2: dues = [v for v in dues if not neuve(v)]
 if not dues:
     print("Rien à publier maintenant (" + auj + ")."); sys.exit(0)
 x = sorted(dues, key=lambda v: v["date"])[0]
