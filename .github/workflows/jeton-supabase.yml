@@ -1,6 +1,7 @@
 name: Envoyer le jeton du robot à Supabase (à la main, une fois)
 # Supabase (pg_cron, à l'heure exacte) lance « Planning vidéos » à 12 h 30 et 17 h 30 (Paris) avec ce jeton.
-# À relancer seulement si le secret ROBOT_PAT change. Le jeton ne passe jamais par un fichier ni le chat.
+# Secret ROBOT_PAT de CE dépôt : jeton GitHub « fine-grained », dépôt solfito-robot seulement, permission Actions : Read and write.
+# À relancer après chaque création/changement du secret ROBOT_PAT. Le jeton ne passe jamais par un fichier ni le chat.
 on: workflow_dispatch
 permissions: {id-token: write, contents: read}
 jobs:
