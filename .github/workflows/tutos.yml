@@ -1,7 +1,6 @@
 name: Usine à tutos piano (automatique)
 on:
-  schedule:
-    - cron: "23 2 * * *"    # chaque nuit : s'il reste moins de 10 tutos au planning, en fabrique 7 (gratuit : dépôt public)
+  # 18 nov. : lancé à l'heure exacte par Supabase (pg_cron « robot-tutos », fonction robot_lancer) ; plus d'horaire GitHub.
   workflow_dispatch:
     inputs:
       forcer:

@@ -1,7 +1,6 @@
 name: Réponses automatiques (commentaires + avis Google Play)
 on:
-  schedule:
-    - cron: "17 */2 * * *"   # toutes les 2 heures
+  # 18 nov. : lancé à l'heure exacte par Supabase (pg_cron « robot-repondre », fonction robot_lancer) ; plus d'horaire GitHub.
   workflow_dispatch:
     inputs:
       essai: {description: "Essai : affiche les réponses sans les envoyer", type: boolean, default: false}

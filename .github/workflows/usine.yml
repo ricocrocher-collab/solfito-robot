@@ -1,7 +1,6 @@
 name: Usine à vidéos (Kaggle, automatique)
 on:
-  schedule:
-    - cron: "41 3 * * *"    # chaque nuit : récupère les vidéos finies, et relance si le planning a moins de 12 jours d'avance
+  # 18 nov. : lancé à l'heure exacte par Supabase (pg_cron « robot-usine », fonction robot_lancer) ; plus d'horaire GitHub.
   workflow_dispatch:
 permissions:
   contents: write

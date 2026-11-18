@@ -3,8 +3,7 @@
 # Secrets : SOLFITO_PAT (lecture du dépôt solfito), FTP_SERVER, FTP_USERNAME, FTP_PASSWORD, FTP_DIR, GSC_SERVICE_ACCOUNT (facultatif).
 name: Mise en ligne de solfito.com
 on:
-  schedule:
-    - cron: "*/20 * * * *"   # vérifie toutes les 20 min ; ne fait rien si site/ n'a pas changé (activé le 18 nov. après le test réussi)
+  # 18 nov. : lancé à l'heure exacte par Supabase (pg_cron « robot-site », fonction robot_lancer) ; plus d'horaire GitHub.
   workflow_dispatch:
 concurrency: {group: deploy-solfito, cancel-in-progress: false}
 permissions:

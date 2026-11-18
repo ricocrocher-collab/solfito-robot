@@ -1,7 +1,6 @@
 name: Anecdotes Mélo (Kaggle voix + rendu, automatique)
 on:
-  schedule:
-    - cron: "53 1 * * *"    # chaque nuit : récupère les anecdotes finies, et relance s'il reste moins de 10 anecdotes à venir
+  # 18 nov. : lancé à l'heure exacte par Supabase (pg_cron « robot-anecdotes », fonction robot_lancer) ; plus d'horaire GitHub.
   workflow_dispatch:
 permissions:
   contents: write

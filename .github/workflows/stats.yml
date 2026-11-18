@@ -1,7 +1,6 @@
 name: Stats quotidiennes (onglet Admin « Tout » + bilan du lundi)
 on:
-  schedule:
-    - cron: "7 5 * * *"   # chaque jour vers 6 h (Paris, hiver)
+  # 18 nov. : lancé à l'heure exacte par Supabase (pg_cron « robot-stats », fonction robot_lancer) ; plus d'horaire GitHub.
   workflow_dispatch:
 permissions:
   contents: read
