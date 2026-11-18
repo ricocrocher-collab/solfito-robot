@@ -1,6 +1,6 @@
 """Usine à vidéos AUTOMATIQUE (dépôt public solfito-robot, minutes gratuites).
-  python outils/usine/auto.py lancer      -> s'il reste moins de RESERVE jours de vidéos au planning : 2 calculs Kaggle (2 x 7 vidéos)
-  python outils/usine/auto.py recuperer   -> quand les calculs sont finis : vidéos dans videos/NNN.mp4 + planning (2 par jour à la suite)
+  python outils/usine/auto.py lancer      -> s'il reste moins de RESERVE jours de vidéos au planning : 4 calculs Kaggle (4 x 7 vidéos)
+  python outils/usine/auto.py recuperer   -> quand les calculs sont finis : vidéos dans videos/NNN.mp4 + planning (4 par jour à la suite)
 Le code de l'usine vient du dépôt privé solfito (copié dans src/ par le workflow, secret SOLFITO_PAT).
 Secrets : KAGGLE_USERNAME / KAGGLE_KEY. Une vidéo dont une phrase de voix est mal relue par Whisper (< 0,6) est écartée."""
 import json, os, sys, glob, shutil, subprocess, datetime
@@ -8,7 +8,7 @@ R = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 SRC = os.path.join(R, "src", "outils", "usine-videos")
 P = os.path.join(R, "outils", "reseaux", "planning.json"); E = os.path.join(R, "outils", "usine", "etat.json")
 DEJA = os.path.join(R, "outils", "usine", "deja.json")
-PARTS, PAR_CALCUL, RESERVE = 2, 7, 12
+PARTS, PAR_CALCUL, RESERVE = 4, 7, 12   # 18 nov. : 4 vidéos/jour -> 4 calculs Kaggle de 7 (28 vidéos)
 plan = json.load(open(P, encoding="utf-8")); etat = json.load(open(E)) if os.path.exists(E) else {}
 auj = datetime.date.today()
 def k(*a): return subprocess.run([sys.executable, os.path.join(SRC, "kaggle.py"), *a], capture_output=True, text=True, cwd=os.path.join(R, "src"))
@@ -40,7 +40,7 @@ elif sys.argv[1] == "recuperer":
         sc = os.path.join(dos, "voix", "scores.json")
         if os.path.exists(sc) and min([v["score"] for v in json.load(open(sc, encoding="utf-8")).values()] or [1]) < 0.6:
             print("écartée (voix) :", i["id"]); continue
-        while par_jour.get(jour.isoformat(), 0) >= 2: jour += datetime.timedelta(days=1)
+        while par_jour.get(jour.isoformat(), 0) >= 4: jour += datetime.timedelta(days=1)
         num += 1; f = f"videos/{num:03d}.mp4"; shutil.copy(d, os.path.join(R, f))
         plan.append({"fichier": f, "date": jour.isoformat(), "titre": i["titre"], "legende": i["legende"], "attendu": i.get("noms", []), "fait": {}, "source": "usine-auto " + i["id"]})
         par_jour[jour.isoformat()] = par_jour.get(jour.isoformat(), 0) + 1; ajout += 1

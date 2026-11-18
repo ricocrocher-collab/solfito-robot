@@ -1,6 +1,6 @@
 """Publication automatique des vidéos (lancé chaque jour par .github/workflows/planning-reseaux.yml).
 Lit outils/reseaux/planning.json : [{fichier, date (AAAA-MM-JJ), titre, legende, fait:{youtube, facebook, instagram}}].
-Publie AU PLUS UNE vidéo par passage (2 passages par jour : 12 h 30 et 17 h 30) : la plus ancienne dont la date est passée et qui n'est pas encore faite partout.
+Publie AU PLUS UNE vidéo par passage (4 passages par jour : 12 h 30, 15 h 30, 17 h 30, 20 h 30) : la plus ancienne dont la date est passée et qui n'est pas encore faite partout.
 Chaque réseau est noté dans « fait » dès qu'il a réussi (un réseau en panne est retenté le lendemain, sans republier les autres).
 Le fichier mis à jour est renvoyé dans le dépôt par le workflow."""
 import json, os, subprocess, sys, datetime, zoneinfo
@@ -25,9 +25,9 @@ if not force:
     h = datetime.datetime.now(zoneinfo.ZoneInfo("Europe/Paris")).hour
     deja_auj = sum(1 for v in plan if auj in v.get("fait", {}).values())
     neuve = lambda v: not v.get("fait")
-    if h < 12 or h >= 22: dues = [v for v in dues if not neuve(v)]
-    elif h < 17 and deja_auj >= 1: dues = [v for v in dues if not neuve(v)]
-    elif deja_auj >= 2: dues = [v for v in dues if not neuve(v)]
+    # 18 nov. : 4 vidéos par jour (12 h 30, 15 h 30, 17 h 30, 20 h 30) : au plus 1 avant 15 h, 2 avant 17 h, 3 avant 20 h, 4 dans la journée
+    permis = 0 if (h < 12 or h >= 22) else 1 if h < 15 else 2 if h < 17 else 3 if h < 20 else 4
+    if deja_auj >= permis: dues = [v for v in dues if not neuve(v)]
 if not dues:
     print("Rien à publier maintenant (" + auj + ")."); sys.exit(0)
 x = sorted(dues, key=lambda v: v["date"])[0]
