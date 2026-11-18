@@ -43,7 +43,11 @@
   "date": "2026-11-18",
   "titre": "Ce signe, c'est quoi ?",
   "legende": "Ce signe, c'est quoi ? 🤫 Réponds en commentaire 👇 #solfège #rythme #piano #apprendrelapiano #musique #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "2026-11-18",
+   "facebook": "2026-11-18",
+   "instagram": "2026-11-18"
+  },
   "verif": {
    "ok": true,
    "note": 9.5,
@@ -52,6 +56,11 @@
    ],
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
+  },
+  "yt_trad": "2026-11-18",
+  "com": {
+   "youtube": "2026-11-18",
+   "facebook": "2026-11-18"
   }
  },
  {
