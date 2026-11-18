@@ -26,7 +26,8 @@ if not force:
     deja_auj = sum(1 for v in plan if auj in v.get("fait", {}).values())
     neuve = lambda v: not v.get("fait")
     # 18 nov. : 4 vidéos par jour (12 h 30, 15 h 30, 17 h 30, 20 h 30) : au plus 1 avant 15 h, 2 avant 17 h, 3 avant 20 h, 4 dans la journée
-    permis = 0 if (h < 12 or h >= 22) else 1 if h < 15 else 2 if h < 17 else 3 if h < 20 else 4
+    # 18 nov. (demande du propriétaire : « espacer beaucoup plus ») : UNE seule vidéo neuve par jour, à partir de 17 h 30
+    permis = 0 if (h < 17 or h >= 22) else 1
     if deja_auj >= permis: dues = [v for v in dues if not neuve(v)]
 if not dues:
     print("Rien à publier maintenant (" + auj + ")."); sys.exit(0)
