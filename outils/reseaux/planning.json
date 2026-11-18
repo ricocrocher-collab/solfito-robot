@@ -20,13 +20,22 @@
   "date": "2026-11-18",
   "titre": "Test d'oreille ? 90 % ratent la 3ᵉ",
   "legende": "Test d'oreille ? 90 % ratent la 3ᵉ 🎧 Le 2ᵉ son est plus aigu ou plus grave ? Ton score sur 3 en commentaire 👇 #solfège #oreillemusicale #piano #testauditif #musique #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "2026-11-18",
+   "facebook": "2026-11-18",
+   "instagram": "2026-11-18"
+  },
   "verif": {
    "ok": true,
    "note": 10,
    "problemes": [],
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
+  },
+  "yt_trad": "2026-11-18",
+  "com": {
+   "youtube": "2026-11-18",
+   "facebook": "2026-11-18"
   }
  },
  {
