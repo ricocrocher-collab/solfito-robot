@@ -149,8 +149,11 @@
   "titre": "Pourquoi on dit DO RÉ MI ? Un moine l'a inventé",
   "legende": "Pourquoi on dit DO RÉ MI ?\nDo, ré, mi viennent d'un hymne latin du Moyen Âge (Guido d'Arezzo).\n#musique #anecdote #solfito #solfege #histoiredelamusique",
   "type": "anecdote",
-  "fait": {},
-  "source": "Wikipédia « Guido d'Arezzo » / « Solfège » ; hymne Ut queant laxis"
+  "fait": {
+   "youtube": "2026-11-19"
+  },
+  "source": "Wikipédia « Guido d'Arezzo » / « Solfège » ; hymne Ut queant laxis",
+  "yt_trad": "2026-11-19"
  },
  {
   "fichier": "site/videos/reseaux/04.mp4",
