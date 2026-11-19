@@ -186,7 +186,9 @@
   "date": "2026-11-19",
   "titre": "90 % des débutants se trompent sur cette note",
   "legende": "90 % des débutants se trompent sur cette note 🎼 Et toi, tu avais trouvé ? Dis-moi en commentaire 👇 #solfège #piano #apprendrelapiano #clédefa #musique #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "note": 9,
@@ -195,6 +197,10 @@
    ],
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -211,13 +217,19 @@
   "date": "2026-11-20",
   "titre": "Joyeux ou triste ?",
   "legende": "Joyeux ou triste ? 🎧 Mets le son et dis-moi en commentaire lequel est majeur 👇 #solfège #piano #accords #oreille #apprendrelapiano #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "note": 10,
    "problemes": [],
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -225,13 +237,19 @@
   "date": "2026-11-20",
   "titre": "Tu sais compter cette note ?",
   "legende": "Tu sais compter cette note ? 🥁 Elle dure combien de temps ? Réponds en commentaire 👇 #solfège #rythme #piano #apprendrelapiano #musique #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "note": 10,
    "problemes": [],
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -248,13 +266,19 @@
   "date": "2026-11-21",
   "titre": "L'astuce pour trouver le Do en 2 secondes",
   "legende": "L'astuce pour trouver le Do en 2 secondes 🎹 Tu la connaissais ? #piano #solfège #musique #lirelesnotes #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "note": 10,
    "problemes": [],
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -262,13 +286,19 @@
   "date": "2026-11-21",
   "titre": "Tu sais lire ce symbole ?",
   "legende": "Tu sais lire ce symbole ? 🎼 Dis-moi en commentaire 👇 #solfège #piano #dièse #apprendrelapiano #musique #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "note": 10,
    "problemes": [],
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -285,13 +315,19 @@
   "date": "2026-11-22",
   "titre": "Teste ton oreille",
   "legende": "Teste ton oreille 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #musique #piano #solfège #defi #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "note": 10,
    "problemes": [],
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -299,13 +335,19 @@
   "date": "2026-11-22",
   "titre": "Ce petit point change tout",
   "legende": "Ce petit point change tout 👀 Tu l'avais vu ? 👇 #solfège #rythme #piano #apprendrelapiano #musique #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "note": 10,
    "problemes": [],
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -322,13 +364,19 @@
   "date": "2026-11-23",
   "titre": "Tout le monde dit Ré… et toi ?",
   "legende": "Tout le monde dit Ré… et toi ? 🤔 Tu avais dit quoi ? 👇 #solfège #lirelesnotes #piano #piège #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "note": 10,
    "problemes": [],
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -336,13 +384,19 @@
   "date": "2026-11-23",
   "titre": "Cette note n'a même pas de ligne… tu sais laquelle c'est ?",
   "legende": "Cette note n'a même pas de ligne… tu sais laquelle c'est ? 🎼 Dis-moi en commentaire 👇 #solfège #piano #do #apprendrelapiano #musique #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "note": 10,
    "problemes": [],
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -359,7 +413,9 @@
   "date": "2026-11-24",
   "titre": "Test d'oreille",
   "legende": "Test d'oreille 🎧 Quelle note est la plus aiguë ? Mets le son et réponds en commentaire 👇 #solfège #oreille #piano #apprendrelapiano #musique #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "note": 2,
@@ -373,6 +429,10 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -380,7 +440,9 @@
   "date": "2026-11-24",
   "titre": "Calcul de musicien ? 3 secondes",
   "legende": "Calcul de musicien ? 3 secondes ⏱️ Tu as trouvé à temps ? 👇 #solfège #rythme #piano #apprendrelapiano #musique #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "doute": true,
@@ -391,6 +453,10 @@
    "voix": "Calcule de musicien 3 secondes. Combien de noirs dans une ronde ? 2 ? 4 ! Une noire, c'est un temps. La ronde en vaut 4. Tu as trouvé à temps ?",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -407,7 +473,9 @@
   "date": "2026-11-25",
   "titre": "Même place sur la portée… mais pas la même note",
   "legende": "Même place sur la portée… mais pas la même note 🤯 L’astuce pour ne plus jamais te tromper en clé de fa 👇 #solfito #solfege #piano #astucemusique",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "doute": true,
@@ -420,6 +488,10 @@
    "voix": "Sous-titres réalisés par l'Amara.org",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -427,7 +499,9 @@
   "date": "2026-11-25",
   "titre": "Fa♯, Si♭… et la 3e est un vrai piège",
   "legende": "Fa♯, Si♭… et la 3e est un vrai piège 😈 (oui, ça existe vraiment) Combien sur 3 ? #solfege #dieses #solfito #theoriemusicale",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "note": 2,
@@ -441,6 +515,10 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -457,7 +535,9 @@
   "date": "2026-11-26",
   "titre": "Toi aussi tu bloques toujours au même endroit ?",
   "legende": "Toi aussi tu bloques toujours au même endroit ? 😅🎹Dis-moi en commentaire la chanson qui te fait ça 👇 #piano #apprendrelepiano #solfège #pianodebutant #musique #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "doute": true,
@@ -468,6 +548,10 @@
    "voix": "Toi aussi, ça t'arrive d'oublier des notes ? Avec Solfito, apprends une cinquantaine de chansons dans ton téléphone. Essaye Solfito !",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -475,7 +559,9 @@
   "date": "2026-11-26",
   "titre": "Tu dis RÉ ou FA ? Écris ta réponse en commentaire",
   "legende": "Tu dis RÉ ou FA ? Écris ta réponse en commentaire 👇 #solfito #solfège #apprendrepiano",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "doute": true,
@@ -488,6 +574,10 @@
    "voix": "Tu dis « ré » ou « fa » ? Regarde bien, c'est la clé de « fa » et la note, c'est un « ré ».",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -504,7 +594,9 @@
   "date": "2026-11-27",
   "titre": "Il a dit Si… et toi ?",
   "legende": "Il a dit Si… et toi ? 😅 Regarde bien la clé ! Ta réponse en commentaire 👇 #solfège #cledefa #piano #apprendrelapiano #musique #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "note": 2,
@@ -515,6 +607,10 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
@@ -522,7 +618,9 @@
   "date": "2026-11-27",
   "titre": "Cette note fait peur à tous les débutants",
   "legende": "Cette note fait peur à tous les débutants 👻 Tu l'avais trouvée ? Dis-le en commentaire 👇 #solfège #piano #lirelesnotes #musique #solfito",
-  "fait": {},
+  "fait": {
+   "youtube": "non (déjà sur la chaîne)"
+  },
   "verif": {
    "ok": true,
    "doute": true,
@@ -533,6 +631,10 @@
    "voix": "Cette note fait peur à tous les débutants. Tu sais la lire ? C'est un LA ! L'astuce. Do, si, la, tu descends. C'est tout. Passiez frayant, hein ? Viens jouer sur Solfito.",
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
+  },
+  "yt_trad": "non",
+  "com": {
+   "youtube": "non"
   }
  },
  {
