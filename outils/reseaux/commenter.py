@@ -53,7 +53,10 @@ if tok and (afaire("facebook") or afaire("instagram")):
                 print("Facebook", x["fichier"], r.status_code, "" if r.ok else r.text[:200])
                 if r.ok: noter(x, "facebook")
                 else: break
-        if ig and afaire("instagram"):
+        # 19 nov. : commentaires Instagram COUPÉS (Instagram a masqué nos commentaires comme spam après le bug de répétition).
+        # Les remettre (IG_COMMENTER = True) dans 1 à 2 semaines si on veut.
+        IG_COMMENTER = False
+        if IG_COMMENTER and ig and afaire("instagram"):
             med = requests.get(f"{G}/{ig}/media", params={"fields": "id,caption", "limit": 50, "access_token": tok}, timeout=30).json().get("data", [])
             for x in afaire("instagram"):
                 m = next((m for m in med if debut(m.get("caption")) == debut(x["legende"])), None)
