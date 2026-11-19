@@ -57,9 +57,19 @@ if tok and (afaire("facebook") or afaire("instagram")):
             for x in afaire("instagram"):
                 m = next((m for m in med if debut(m.get("caption")) == debut(x["legende"])), None)
                 if not m: continue
+                # 19 nov. : anti-doublon. Instagram publiait le commentaire mais il n'était jamais noté (il revenait à chaque passage) :
+                # on regarde d'abord les commentaires déjà présents, on supprime les doublons, et on note « fait » s'il y en a un.
+                def les_notres():
+                    c = requests.get(f"{G}/{m['id']}/comments", params={"fields": "id,text,timestamp", "limit": 100, "access_token": tok}, timeout=30).json().get("data", [])
+                    return sorted([k for k in c if (k.get("text") or "").strip() == COMMENTAIRE], key=lambda k: k.get("timestamp", ""))
+                notres = les_notres()
+                for k in notres[1:]:
+                    d = requests.delete(f"{G}/{k['id']}", params={"access_token": tok}, timeout=30)
+                    print("Instagram : doublon supprimé", x["fichier"], d.status_code)
+                if notres: noter(x, "instagram"); continue
                 r = requests.post(f"{G}/{m['id']}/comments", data={"message": COMMENTAIRE, "access_token": tok}, timeout=30)
                 print("Instagram", x["fichier"], r.status_code, "" if r.ok else r.text[:200])
-                if r.ok: noter(x, "instagram")
+                if r.ok or les_notres(): noter(x, "instagram")
                 else: break
     except Exception as e:
         import traceback; traceback.print_exc(); print("Meta : commentaire impossible", e)
