@@ -198,14 +198,6 @@
   "source": "Gymnopédie n°1 — Satie (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-02.mp4",
-  "date": "2026-11-20",
-  "titre": "Le SI vient d'un saint ! L'origine de la 7e note",
-  "legende": "Le SI, il vient d'où ?\nLe si vient des initiales de Sancte Iohannes (saint Jean).\n#musique #anecdote #solfito #solfege #notes",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "site/videos/reseaux/06.mp4",
   "date": "2026-11-20",
   "titre": "Joyeux ou triste ?",
@@ -241,14 +233,6 @@
   "type": "tuto",
   "fait": {},
   "source": "Clair de lune — Debussy (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-03.mp4",
-  "date": "2026-11-21",
-  "titre": "Pourquoi « piano » ? Le nom cache un secret",
-  "legende": "Pourquoi « PIANO » ?\nPiano vient de « gravicembalo col piano e forte » (Cristofori, vers 1700).\n#musique #anecdote #solfito #piano #histoiredelamusique",
-  "type": "anecdote",
-  "fait": {}
  },
  {
   "fichier": "site/videos/reseaux/08.mp4",
@@ -288,14 +272,6 @@
   "source": "Prélude en do — Bach (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-04.mp4",
-  "date": "2026-11-22",
-  "titre": "Un piano, combien de touches ? Pas 100 !",
-  "legende": "Un piano, combien de touches ?\n52 touches blanches + 36 noires = 88 touches.\n#musique #anecdote #solfito #piano #apprendrelepiano",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "site/videos/reseaux/10.mp4",
   "date": "2026-11-22",
   "titre": "Teste ton oreille",
@@ -333,14 +309,6 @@
   "source": "Menuet en sol — Petzold / Bach (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-05.mp4",
-  "date": "2026-11-23",
-  "titre": "Le LA vibre combien de fois par seconde ?",
-  "legende": "Le LA, il vibre combien ?\nLe la de référence vibre 440 fois par seconde (440 Hz), normalisé en 1939.\n#musique #anecdote #solfito #solfege #accordage",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "site/videos/reseaux/12.mp4",
   "date": "2026-11-23",
   "titre": "Tout le monde dit Ré… et toi ?",
@@ -376,14 +344,6 @@
   "type": "tuto",
   "fait": {},
   "source": "Marche turque — Mozart (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-06.mp4",
-  "date": "2026-11-24",
-  "titre": "Beethoven était SOURD quand il a écrit ça",
-  "legende": "Beethoven sourd, il compose ?\nLa 9e symphonie (1824) a été créée alors que Beethoven était presque totalement sourd.\n#musique #anecdote #solfito #beethoven #classique",
-  "type": "anecdote",
-  "fait": {}
  },
  {
   "fichier": "site/videos/reseaux/14.mp4",
@@ -432,14 +392,6 @@
   "type": "tuto",
   "fait": {},
   "source": "The Entertainer — Joplin (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-07.mp4",
-  "date": "2026-11-25",
-  "titre": "Un Stradivarius vaut combien ? Le prix est fou",
-  "legende": "Un Stradivarius, ça vaut combien ?\nEn 2011, le Stradivarius « Lady Blunt » est parti à près de 10 millions de livres.\n#musique #anecdote #solfito #violon #stradivarius",
-  "type": "anecdote",
-  "fait": {}
  },
  {
   "fichier": "site/videos/reseaux/16.mp4",
@@ -492,14 +444,6 @@
   "source": "Maple Leaf Rag — Joplin (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-08.mp4",
-  "date": "2026-11-26",
-  "titre": "Bach a eu combien d'enfants ? Tu vas être surpris",
-  "legende": "Bach, combien d'enfants ?\nBach a eu 20 enfants (7 + 13) ; plusieurs sont devenus compositeurs.\n#musique #anecdote #solfito #bach #classique",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "site/videos/reseaux/18.mp4",
   "date": "2026-11-26",
   "titre": "Toi aussi tu bloques toujours au même endroit ?",
@@ -547,14 +491,6 @@
   "source": "Arabesque n°1 — Debussy (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-09.mp4",
-  "date": "2026-11-27",
-  "titre": "Où est le violon de Paganini ? Dans une mairie !",
-  "legende": "Le violon de Paganini : où ?\nLe violon « Il Cannone » de Paganini est légué à Gênes, où il est conservé (et parfois joué).\n#musique #anecdote #solfito #violon #paganini",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "site/videos/reseaux/20.mp4",
   "date": "2026-11-27",
   "titre": "Il a dit Si… et toi ?",
@@ -598,14 +534,6 @@
   "type": "tuto",
   "fait": {},
   "source": "Valse minute — Chopin (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-10.mp4",
-  "date": "2026-11-28",
-  "titre": "Le piano préféré de Chopin ? Une marque française",
-  "legende": "Le piano préféré de Chopin ?\nChopin jouait surtout sur des pianos Pleyel, jusqu'à son dernier concert parisien (1848).\n#musique #anecdote #solfito #chopin #piano",
-  "type": "anecdote",
-  "fait": {}
  },
  {
   "fichier": "videos/v2-22.mp4",
@@ -658,14 +586,6 @@
   "source": "Prélude op. 28 n°4 — Chopin (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-11.mp4",
-  "date": "2026-11-29",
-  "titre": "Qui a inventé le « récital » ? Un pianiste star",
-  "legende": "Qui a inventé le « récital » ?\nFranz Liszt a popularisé le récital de piano solo (Londres, 1840).\n#musique #anecdote #solfito #liszt #piano",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "videos/v2-24.mp4",
   "date": "2026-11-29",
   "titre": "Rythme : 3/3 ?",
@@ -716,14 +636,6 @@
   "type": "tuto",
   "fait": {},
   "source": "Rêverie — Schumann (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-12.mp4",
-  "date": "2026-11-30",
-  "titre": "Pourquoi Vivaldi s'appelait « le prêtre roux » ?",
-  "legende": "Vivaldi, pourquoi le « prêtre roux » ?\nVivaldi, prêtre aux cheveux roux, était surnommé « il prete rosso ».\n#musique #anecdote #solfito #vivaldi #classique",
-  "type": "anecdote",
-  "fait": {}
  },
  {
   "fichier": "videos/v2-27.mp4",
@@ -781,14 +693,6 @@
   "type": "tuto",
   "fait": {},
   "source": "Sonate Pathétique — Beethoven (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-13.mp4",
-  "date": "2026-12-01",
-  "titre": "Haydn te fait sursauter avec un seul accord",
-  "legende": "Haydn cache une surprise ?\nLa symphonie nº 94 de Haydn s'appelle « La Surprise » : un accord très fort dans un passage très doux.\n#musique #anecdote #solfito #haydn #classique",
-  "type": "anecdote",
-  "fait": {}
  },
  {
   "fichier": "videos/v2-29.mp4",
@@ -851,14 +755,6 @@
   "source": "Prélude op. 28 n°20 — Chopin (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-14.mp4",
-  "date": "2026-12-02",
-  "titre": "Satie a écrit un morceau à répéter 840 fois",
-  "legende": "Un morceau à jouer 840 fois ?\n« Vexations » de Satie se répète 840 fois ; la 1re exécution complète (1963) a duré plus de 18 h.\n#musique #anecdote #solfito #satie #musiquebizarre",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "videos/v2-31.mp4",
   "date": "2026-12-02",
   "titre": "3 notes. Tu tiens ?",
@@ -919,14 +815,6 @@
   "source": "Gymnopédie n°2 — Satie (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-15.mp4",
-  "date": "2026-12-03",
-  "titre": "« Brille, petite étoile » : le vrai compositeur ?",
-  "legende": "« Brille, petite étoile » : de qui ?\nLa mélodie est une chanson française de 1761 d'auteur inconnu ; Mozart en a fait 12 variations.\n#musique #anecdote #solfito #mozart #chansonenfant",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "videos/v2-33.mp4",
   "date": "2026-12-03",
   "titre": "Ça dure combien ?",
@@ -983,14 +871,6 @@
   "type": "tuto",
   "fait": {},
   "source": "Gymnopédie n°3 — Satie (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-16.mp4",
-  "date": "2026-12-04",
-  "titre": "Un morceau de silence ? C'est vrai, il existe",
-  "legende": "Un morceau de silence ?\n« 4′33″ » de John Cage (1952) : quatre minutes trente-trois de silence au piano.\n#musique #anecdote #solfito #johncage #musiquebizarre",
-  "type": "anecdote",
-  "fait": {}
  },
  {
   "fichier": "videos/v2-35.mp4",
@@ -1056,14 +936,6 @@
   "source": "Menuet en sol mineur — Bach (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-17.mp4",
-  "date": "2026-12-05",
-  "titre": "La symphonie de Schubert jouée 43 ans plus tard",
-  "legende": "La symphonie inachevée : créée quand ?\nL'« Inachevée » de Schubert (1822) n'est créée qu'en 1865, 37 ans après sa mort.\n#musique #anecdote #solfito #schubert #classique",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "videos/v2-37.mp4",
   "date": "2026-12-05",
   "titre": "3 notes. Tu tiens ?",
@@ -1124,14 +996,6 @@
   "source": "Musette en ré — Bach (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-18.mp4",
-  "date": "2026-12-06",
-  "titre": "Le métronome existe depuis quand ? Beethoven l'a adopté",
-  "legende": "Le métronome, c'est de quand ?\nLe métronome est breveté par Mälzel en 1815 ; Beethoven l'utilise dès 1817.\n#musique #anecdote #solfito #metronome #tempo",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "videos/v2-39.mp4",
   "date": "2026-12-06",
   "titre": "Combien de temps ?",
@@ -1190,14 +1054,6 @@
   "type": "tuto",
   "fait": {},
   "source": "Ave Maria — Schubert (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-19.mp4",
-  "date": "2026-12-07",
-  "titre": "Qui donne le LA à tout l'orchestre ? Pas le violon",
-  "legende": "Qui donne le LA à l'orchestre ?\nDans un orchestre, c'est le hautbois qui donne le la pour l'accordage.\n#musique #anecdote #solfito #orchestre #hautbois",
-  "type": "anecdote",
-  "fait": {}
  },
  {
   "fichier": "videos/v2-41.mp4",
@@ -1263,14 +1119,6 @@
   "source": "Berceuse — Schubert (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-20.mp4",
-  "date": "2026-12-08",
-  "titre": "Un chef d'orchestre mort à cause de sa canne !",
-  "legende": "Un chef d'orchestre tué par sa canne ?\nLully s'est blessé le pied avec sa canne de direction ; la plaie infectée l'a tué (1687).\n#musique #anecdote #solfito #lully #histoiredelamusique",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "videos/v2-43.mp4",
   "date": "2026-12-08",
   "titre": "Tu sais lire ÇA ?",
@@ -1334,14 +1182,6 @@
   "source": "Valse op. 39 n°15 — Brahms (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-21.mp4",
-  "date": "2026-12-09",
-  "titre": "Haendel a fait jouer un orchestre sur la Tamise",
-  "legende": "Haendel joue sur un bateau ?\nEn 1717, Haendel a présenté sa « Water Music » depuis une barge sur la Tamise, pour le roi George Ier.\n#musique #anecdote #solfito #haendel #baroque",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "videos/v2-45.mp4",
   "date": "2026-12-09",
   "titre": "Rythme : 3/3 ?",
@@ -1397,14 +1237,6 @@
   "type": "tuto",
   "fait": {},
   "source": "Fantaisie-Impromptu — Chopin (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-22.mp4",
-  "date": "2026-12-10",
-  "titre": "Clair de lune de Debussy : d'où vient le titre ?",
-  "legende": "Qui a inspiré Clair de lune ?\nLe titre « Clair de lune » vient d'un poème de Paul Verlaine.\n#musique #anecdote #solfito #debussy #piano",
-  "type": "anecdote",
-  "fait": {}
  },
  {
   "fichier": "videos/v2-47.mp4",
@@ -1468,14 +1300,6 @@
   "source": "Marche des soldats de bois — Tchaïkovski (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-23.mp4",
-  "date": "2026-12-11",
-  "titre": "Qui est « Élise » dans Pour Élise ? Personne ne sait",
-  "legende": "Qui est Élise ?\nPour Élise est publiée en 1867, 40 ans après la mort de Beethoven ; l'identité d'Élise reste un mystère.\n#musique #anecdote #solfito #beethoven #piano",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "videos/v2-50.mp4",
   "date": "2026-12-11",
   "titre": "Monte ou descend ? Écoute",
@@ -1529,14 +1353,6 @@
   "type": "tuto",
   "fait": {},
   "source": "Lettre à Élise (suite) — Beethoven (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-24.mp4",
-  "date": "2026-12-12",
-  "titre": "De vrais canons dans une œuvre de Tchaïkovski !",
-  "legende": "De vrais canons dans l'orchestre ?\nL'Ouverture 1812 de Tchaïkovski (1880) demande des coups de canon dans la partition.\n#musique #anecdote #solfito #tchaikovski #classique",
-  "type": "anecdote",
-  "fait": {}
  },
  {
   "fichier": "videos/v2-52.mp4",
@@ -1601,14 +1417,6 @@
   "source": "Les Saisons : janvier — Tchaïkovski (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-25.mp4",
-  "date": "2026-12-13",
-  "titre": "La plus vieille flûte du monde a 40 000 ans",
-  "legende": "La plus vieille flûte du monde ?\nUne flûte en os de vautour, trouvée à Hohle Fels (Allemagne), a environ 40 000 ans.\n#musique #anecdote #solfito #prehistoire #flute",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "videos/v2-54.mp4",
   "date": "2026-12-13",
   "titre": "Combien de temps ?",
@@ -1667,14 +1475,6 @@
   "type": "tuto",
   "fait": {},
   "source": "Sonate Pathétique (rondo) — Beethoven (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-26.mp4",
-  "date": "2026-12-14",
-  "titre": "Un morceau qui dure 639 ans : il joue en ce moment",
-  "legende": "Un morceau qui dure 639 ans ?\nORGAN²/ASLSP de John Cage se joue à Halberstadt depuis 2001 et finira en 2640 (639 ans).\n#musique #anecdote #solfito #johncage #musiquebizarre",
-  "type": "anecdote",
-  "fait": {}
  },
  {
   "fichier": "videos/v2-56.mp4",
@@ -1736,14 +1536,6 @@
   "type": "tuto",
   "fait": {},
   "source": "Sonate La Tempête — Beethoven (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-27.mp4",
-  "date": "2026-12-15",
-  "titre": "Le Requiem de Mozart : qui l'a terminé ?",
-  "legende": "Le Requiem de Mozart, qui l'a fini ?\nLe Requiem, laissé inachevé à la mort de Mozart (1791), est terminé par son élève Franz Xaver Süssmayr.\n#musique #anecdote #solfito #mozart #requiem",
-  "type": "anecdote",
-  "fait": {}
  },
  {
   "fichier": "videos/v2-58.mp4",
@@ -1811,14 +1603,6 @@
   "source": "Wall Street Rag — Joplin (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-28.mp4",
-  "date": "2026-12-16",
-  "titre": "La clé de sol, c'est en fait une lettre",
-  "legende": "La clé de SOL, c'est quoi ?\nLa clé de sol est un G décoré (et la clé de fa un F décoré).\n#musique #anecdote #solfito #solfege #clefdesol",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "videos/v2-60.mp4",
   "date": "2026-12-16",
   "titre": "Joyeux ou triste ?",
@@ -1884,14 +1668,6 @@
   "source": "Intermezzo op. 118 n°2 — Brahms (domaine public)"
  },
  {
-  "fichier": "videos/anecdote-29.mp4",
-  "date": "2026-12-17",
-  "titre": "Un piano a combien de cordes ? Bien plus que 88",
-  "legende": "Un piano, combien de cordes ?\nUn piano a environ 230 cordes (jusqu'à 3 par note aiguë).\n#musique #anecdote #solfito #piano #apprendrelepiano",
-  "type": "anecdote",
-  "fait": {}
- },
- {
   "fichier": "videos/v2-62.mp4",
   "date": "2026-12-17",
   "titre": "Écoute cet accord",
@@ -1954,14 +1730,6 @@
   "type": "tuto",
   "fait": {},
   "source": "La Mort d'Åse — Grieg (domaine public)"
- },
- {
-  "fichier": "videos/anecdote-30.mp4",
-  "date": "2026-12-18",
-  "titre": "Les 4 Saisons de Vivaldi cachent des poèmes",
-  "legende": "Les 4 Saisons : des poèmes cachés ?\nChaque concerto des Quatre Saisons est accompagné d'un sonnet qui décrit orages, oiseaux, chien qui aboie…\n#musique #anecdote #solfito #vivaldi #baroque",
-  "type": "anecdote",
-  "fait": {}
  },
  {
   "fichier": "videos/v2-64.mp4",
