@@ -3,6 +3,7 @@ Lancé par planning.py. Retrouve la vidéo par son titre / sa légende, poste CO
 et le note dans planning.json (x["com"][réseau] = date). Un réseau qui refuse (droits manquants) est simplement sauté.
 YouTube : le jeton doit avoir le droit youtube.force-ssl ; Meta : pages_manage_engagement / instagram_manage_comments."""
 import json, os, sys, datetime, zoneinfo, requests
+COMMENTAIRE_IG = "Ta réponse ici 👇 Tu l'avais trouvée ? 🎹"   # Instagram : sans lien (les liens dans les commentaires passent pour du spam)
 COMMENTAIRE = "Ta réponse ici 👇 Et pour t'entraîner à lire les notes en jouant : solfito.com 🎹"
 P = "outils/reseaux/planning.json"
 plan = json.load(open(P, encoding="utf-8"))
@@ -61,16 +62,17 @@ if tok and (afaire("facebook") or afaire("instagram")):
                 # on regarde d'abord les commentaires déjà présents, on supprime les doublons, et on note « fait » s'il y en a un.
                 def les_notres():
                     c = requests.get(f"{G}/{m['id']}/comments", params={"fields": "id,text,timestamp", "limit": 100, "access_token": tok}, timeout=30).json().get("data", [])
-                    return sorted([k for k in c if (k.get("text") or "").strip() == COMMENTAIRE], key=lambda k: k.get("timestamp", ""))
+                    return sorted([k for k in c if (k.get("text") or "").strip() in (COMMENTAIRE, COMMENTAIRE_IG)], key=lambda k: k.get("timestamp", ""))
                 notres = les_notres()
                 for k in notres[1:]:
                     d = requests.delete(f"{G}/{k['id']}", params={"access_token": tok}, timeout=30)
                     print("Instagram : doublon supprimé", x["fichier"], d.status_code)
                 if notres: noter(x, "instagram"); continue
-                r = requests.post(f"{G}/{m['id']}/comments", data={"message": COMMENTAIRE, "access_token": tok}, timeout=30)
+                r = requests.post(f"{G}/{m['id']}/comments", data={"message": COMMENTAIRE_IG, "access_token": tok}, timeout=30)
                 print("Instagram", x["fichier"], r.status_code, "" if r.ok else r.text[:200])
-                if r.ok or les_notres(): noter(x, "instagram")
-                else: break
+                # 19 nov. : Instagram bloque un commentaire répété avec un lien (anti-spam) : on n'insiste JAMAIS, on note la vidéo
+                # comme traitée (sinon le robot recommencerait toutes les 30 min).
+                noter(x, "instagram")
     except Exception as e:
         import traceback; traceback.print_exc(); print("Meta : commentaire impossible", e)
 json.dump(plan, open(P, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
