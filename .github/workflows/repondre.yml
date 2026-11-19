@@ -14,12 +14,12 @@ jobs:
       - uses: actions/checkout@v4
       - run: pip install -q requests google-auth
       - uses: actions/cache@v4
-        with: {path: ~/.ollama/models, key: ollama-qwen2.5-3b}
-      - name: IA gratuite (Ollama + Qwen 2.5 3B)
+        with: {path: ~/.ollama/models, key: ollama-qwen2.5-7b}
+      - name: IA gratuite de secours (Ollama + Qwen 2.5 7B, seulement sans GEMINI_API_KEY)
         run: |
           curl -fsSL https://ollama.com/install.sh | sh >/dev/null 2>&1
           (ollama serve >/dev/null 2>&1 &) ; sleep 5
-          ollama pull qwen2.5:3b >/dev/null 2>&1 && echo "IA prête"
+          ollama pull qwen2.5:7b >/dev/null 2>&1 && echo "IA prête"
       - run: python outils/reseaux/repondre.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

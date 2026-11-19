@@ -9,80 +9,156 @@ fait = json.load(open(F, encoding="utf-8")) if os.path.exists(F) else {}
 plan = json.load(open(P, encoding="utf-8")) if os.path.exists(P) else []
 MAX = 25; n = 0
 G = "https://graph.facebook.com/v21.0"
-MODELES = ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash"]
+MODELES = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.5-flash-lite"]
+MODELE_LOCAL = "qwen2.5:7b"   # 19 nov. : 3B écrivait trop mal ; 7B (gratuit, sans clé) seulement si GEMINI_API_KEY est absent
 
-CONSIGNE = """Tu es l'équipe de Solfito (ne dis jamais que tu es une IA ou un assistant). Tu gères Solfito (appli et site solfito.com pour apprendre le solfège et le piano en jouant, avec Mélo, la petite note violette).
-Tu réponds à un {quoi}. Règles :
-- réponds dans la langue du message, tutoiement, 1 ou 2 phrases courtes, chaleureux et naturel, 1 émoji au plus ;
-- si c'est une réponse au quiz de la vidéo, dis si c'est juste en t'appuyant sur les bonnes réponses données ci-dessous (ne les invente jamais) ;
-- si c'est une critique, reste calme, poli, factuel, remercie ; ne te dispute jamais ; en solfège sois rigoureux (clé de sol par défaut) ;
-- n'invente aucune fonction, prix, promotion ou date ; ne parle jamais d'essai gratuit ; pas de lien sauf « solfito.com » si c'est utile ;
-- avis Google Play : remercie ; si un problème est décrit, excuse-toi et propose d'écrire à contact@solfito.com ;
-- si le message est du spam, une arnaque, haineux, sexuel, ou n'appelle aucune réponse, réponds exactement : SKIP
+# ---------- 19 nov. : réponses refaites (le propriétaire les trouvait « très nulles ») ----------
+# 1) langue du commentaire détectée → réponses toutes faites dans la bonne langue (avant : toujours en français) ;
+# 2) consigne beaucoup plus précise + exemples : répondre à CE QUE la personne a dit, jamais « Merci pour ton commentaire ! » ;
+# 3) contrôle de qualité : une réponse plate, trop longue, dans une autre langue ou avec un lien est refusée, on réessaie une fois,
+#    sinon on NE répond PAS (mieux vaut pas de réponse qu'une réponse nulle).
+MOTS_LANGUE = {
+    "fr": " je tu il le la les un une des et est pas trop super merci bravo trop c'est j'ai ça avec pour sur dans vidéo ",
+    "en": " the you i is it and this that what my so love thanks thank great nice cool wow can how video got out of all ",
+    "es": " el la los que es y muy gracias hola me mi una por qué como bien jaja ",
+    "pt": " o a os que é e muito obrigado obrigada oi eu meu uma não por que como bem kkk ",
+    "de": " der die das und ist ich du nicht sehr danke ein eine wie gut toll super ",
+    "it": " il la che e è non molto grazie ciao io mi un una per come bene bravo ",
+}
+def langue(t, defaut="fr"):
+    import re
+    if re.search(r"[¡¿ñ]", t or ""): return "es"
+    if re.search(r"[ãõ]", t or ""): return "pt"
+    if re.search(r"[ßäöü]", (t or "").lower()): return "de"
+    t = re.sub(r"\b(do|ré|re|mi|fa|sol|la|si|[a-g])\b", " ", (t or "").lower())   # les noms de notes ne comptent pas
+    t = " " + "".join(c if c.isalpha() or c in "'" else " " for c in t) + " "
+    sc = {l: sum(1 for w in set(t.split()) if f" {w} " in m) for l, m in MOTS_LANGUE.items()}
+    l = max(sc, key=sc.get)
+    return l if sc[l] >= 1 else defaut
+
+import random
+TOUT_FAIT = {   # réponses toutes faites, plusieurs variantes par langue
+    "3/3": {"fr": ["3 sur 3, trop fort ! 🎉 Tu lis les notes comme un pro.", "Sans faute ! 🎉 La prochaine sera plus dure, prépare-toi 😏", "3/3 👏 Rien ne t'échappe !"],
+            "en": ["3 out of 3, amazing! 🎉 You read notes like a pro.", "Perfect score! 🎉 The next one will be harder 😏"],
+            "es": ["¡3 de 3, increíble! 🎉 Lees las notas como un pro."], "pt": ["3 de 3, incrível! 🎉 Você lê as notas como um profissional."],
+            "de": ["3 von 3, super! 🎉 Du liest Noten wie ein Profi."], "it": ["3 su 3, fortissimo! 🎉 Leggi le note come un professionista."]},
+    "2/3": {"fr": ["2 sur 3, tout près ! 👏 Laquelle t'a piégé ?", "Presque parfait 👏 La 3e était sournoise, hein ?"],
+            "en": ["2 out of 3, so close! 👏 Which one tricked you?"], "es": ["¡2 de 3, casi! 👏 ¿Cuál te engañó?"],
+            "pt": ["2 de 3, quase! 👏 Qual te enganou?"], "de": ["2 von 3, fast! 👏 Welche hat dich reingelegt?"], "it": ["2 su 3, quasi! 👏 Quale ti ha ingannato?"]},
+    "1/3": {"fr": ["1 sur 3, c'est un début 💪 Astuce : repère d'abord la note sur la 2e ligne, c'est le Sol !", "On progresse 💪 Retente la prochaine, tu vas voir !"],
+            "en": ["1 out of 3, that's a start 💪 Tip: find the 2nd line first, it's G!"], "es": ["1 de 3, ¡es un comienzo! 💪"],
+            "pt": ["1 de 3, é um começo! 💪"], "de": ["1 von 3, ein Anfang! 💪"], "it": ["1 su 3, è un inizio! 💪"]},
+    "0/3": {"fr": ["Pas facile du tout celle-là 😄 Avec un peu d'entraînement, ça viendra vite !"], "en": ["That one was tough 😄 A little practice and you'll get it!"],
+            "es": ["¡Esa era difícil! 😄 Con práctica lo lograrás."], "pt": ["Essa era difícil! 😄 Com prática você consegue."],
+            "de": ["Die war echt schwer 😄 Mit etwas Übung klappt's!"], "it": ["Era difficile! 😄 Con un po' di pratica ci riuscirai."]},
+    "emoji": {"fr": ["🎹💜", "😍🎶", "🙌🎵"], "en": ["🎹💜", "🙌🎵"], "es": ["🎹💜"], "pt": ["🎹💜"], "de": ["🎹💜"], "it": ["🎹💜"]},
+}
+def tf(cle, lg): return random.choice(TOUT_FAIT[cle].get(lg) or TOUT_FAIT[cle]["fr"])
+
+CONSIGNE = """Tu es la personne qui gère les réseaux de Solfito (jamais « IA », « assistant », « bot »). Solfito : appli (Android, iPhone) et site solfito.com pour apprendre le solfège et le piano en jouant, de 7 à 77 ans, avec Mélo, une petite note violette. Gratuit : lecture de notes, rythme, débuts au piano. Premium : oreille musicale, théorie, toutes les chansons. 7 langues.
+Les vidéos sont des petits quiz : on montre des notes sur une portée et on demande de les lire, puis on donne la réponse.
+
+Tu réponds à un {quoi}. Langue de réponse OBLIGATOIRE : {langue}.
+Comment bien répondre :
+- réagis à CE QUE la personne a écrit (reprends un détail de son message) ; une réponse qui irait sous n'importe quel commentaire est INTERDITE ;
+- 1 ou 2 phrases courtes, ton complice et enthousiaste, tutoiement, au plus 1 émoji ;
+- jamais : « Merci pour ton commentaire », « N'hésite pas », « Super commentaire », « Nous sommes ravis » ;
+- s'il a répondu au quiz : dis s'il a juste avec les bonnes réponses ci-dessous (ne les invente JAMAIS) et félicite ou encourage ;
+- s'il pose une question sur la musique : réponds vraiment, juste et simplement (clé de sol par défaut) ;
+- s'il dit qu'il apprend / débute : encourage avec un petit conseil concret ;
+- critique : calme, poli, reconnais le point, sans te justifier longuement ;
+- tu peux finir par une petite question pour continuer la discussion (une fois sur deux) ;
+- n'invente aucune fonction, prix, promo, date ; ne parle pas d'essai gratuit ; aucun lien sauf « solfito.com » si on te demande où trouver l'appli ;
+- avis Google Play : remercie pour un point précis de l'avis ; si un problème est décrit, excuse-toi et propose d'écrire à contact@solfito.com ;
+- spam, arnaque, insulte, sexuel, ou rien à répondre : écris exactement SKIP
+
+Exemples (style à imiter, pas à recopier) :
+« j'ai eu 2/3 j'ai confondu le la et le si » → « 2 sur 3, pas mal ! Le La et le Si sont voisins, astuce : le Si est sur la 3e ligne 😉 »
+« trop dur pour moi je débute » → « Tout le monde a commencé là ! Commence par repérer le Sol sur la 2e ligne, le reste suit 💪 »
+« c'est quoi l'appli ? » → « C'est Solfito, sur Android, iPhone ou solfito.com : des petits jeux pour lire les notes 🎹 »
+« I got all of them!! » → « All three, nice! 🎉 Ready for a harder one next time? »
+
 Contexte : {contexte}
 Message de {auteur} : « {texte} »
-Écris seulement la réponse."""
+Écris seulement la réponse, sans guillemets."""
 
+NOMS_LANGUE = {"fr": "français", "en": "anglais", "es": "espagnol", "pt": "portugais (Brésil)", "de": "allemand", "it": "italien"}
 NOTES = ["DO", "RE", "MI", "FA", "SOL", "LA", "SI"]
-def notes_de(t):   # noms de notes écrits dans un commentaire (« mi ré la », « Mi-Ré-La »…)
+def notes_de(t):   # noms de notes écrits dans un commentaire (« mi ré la », « Mi-Ré-La »… ou « E D A »)
     import re, unicodedata
     t = "".join(c for c in unicodedata.normalize("NFD", t.upper()) if unicodedata.category(c) != "Mn")
-    return [m for m in re.findall(r"\b(DO|RE|MI|FA|SOL|LA|SI)\b", t)]
+    fr = re.findall(r"\b(DO|RE|MI|FA|SOL|LA|SI)\b", t)
+    if len(fr) >= 2: return fr
+    en = re.findall(r"\b([A-G])\b", t)
+    return [{"C": "DO", "D": "RE", "E": "MI", "F": "FA", "G": "SOL", "A": "LA", "B": "SI"}[x] for x in en] if len(en) >= 2 else fr
 
-def quiz(texte, contexte):   # réponse sûre (sans IA) quand quelqu'un donne des notes à un quiz « lis ces notes »
+def quiz(texte, contexte, lg):   # réponse sûre (sans IA) quand quelqu'un donne des notes à un quiz « lis ces notes »
     if "bonnes réponses dans l'ordre : " not in (contexte or ""): return None
     att = [notes_de(a)[0] if notes_de(a) else None for a in contexte.split("bonnes réponses dans l'ordre : ")[1].split(", ")]
     if None in att: return None
     dit = notes_de(texte)
     if len(dit) < 2: return None
     bon = sum(1 for a, b in zip(att, dit) if a == b)
-    sol = ", ".join(a.replace("RE", "RÉ") for a in att)
-    if bon == len(att): return "Bravo, 3 sur 3 ! 🎉 Tu lis super bien les notes."
-    if bon: return f"Presque ! {bon} sur {len(att)} 👏 Les bonnes réponses : {sol}."
-    return f"Bien essayé ! Les bonnes réponses : {sol} 🎹 Tu feras mieux à la prochaine !"
+    EN = {"DO": "C", "RE": "D", "MI": "E", "FA": "F", "SOL": "G", "LA": "A", "SI": "B"}
+    sol = ", ".join((EN[a] if lg in ("en", "de") else a.replace("RE", "RÉ").capitalize() if lg == "fr" else a.capitalize()) for a in att)
+    if bon == len(att): return tf("3/3", lg)
+    if bon: return tf("2/3" if bon == 2 else "1/3", lg).split(" 👏")[0].split(" 💪")[0] + (" 👏 " if bon == 2 else " 💪 ") + {"fr": "Les bonnes réponses : ", "en": "The answers: ", "es": "Respuestas: ", "pt": "Respostas: ", "de": "Lösung: ", "it": "Risposte: "}.get(lg, "") + sol + "."
+    return tf("0/3", lg).split(" 😄")[0] + " 😄 " + {"fr": "Les bonnes réponses : ", "en": "The answers: ", "es": "Respuestas: ", "pt": "Respostas: ", "de": "Lösung: ", "it": "Risposte: "}.get(lg, "") + sol + "."
 
-def local(invite):   # IA gratuite sans clé : Qwen 2.5 (3B) avec Ollama, sur la machine GitHub (dépôt public = gratuit)
+def local(invite):   # IA gratuite sans clé (Ollama, sur la machine GitHub ; dépôt public = gratuit)
     try:
-        r = requests.post("http://localhost:11434/api/generate", json={"model": "qwen2.5:3b", "prompt": invite, "stream": False,
-                          "options": {"temperature": 0.5, "num_predict": 120}}, timeout=300)
+        r = requests.post("http://localhost:11434/api/generate", json={"model": MODELE_LOCAL, "prompt": invite, "stream": False,
+                          "options": {"temperature": 0.7, "num_predict": 110}}, timeout=400)
         return r.json().get("response", "").strip() if r.status_code == 200 else None
     except Exception as e:
         print("IA locale indisponible :", e); return None
 
-def court(texte, contexte):   # réponses très courtes (« 1 », « 3/3 🎉 », « 2 ») : réponse toute faite, sans IA
+def court(texte, contexte, lg):   # réponses très courtes (« 3/3 », « 2 », émojis) : réponse toute faite, sans IA
     import re
     t = texte.strip()
-    m = re.fullmatch(r"\D{0,6}([0-3])\s*/\s*3\D{0,6}", t)
-    if m: return {"3": "Bravo, 3 sur 3 ! 🎉", "2": "2 sur 3, bien joué ! 👏 Tu y es presque.", "1": "1 sur 3, c'est un début ! 💪 Tu feras mieux à la prochaine.",
-                  "0": "Pas facile, hein ? 😄 Retente ta chance à la prochaine vidéo !"}[m.group(1)]
-    if re.fullmatch(r"\W*[1-4]\W*", t): return "Merci d'avoir joué ! 🎹 La réponse est à la fin de la vidéo 😉"
-    if not re.search(r"[A-Za-zÀ-ÿ]{2}", t): return None if not re.search(r"\S", t) else "Merci ! 🎹"
+    m = re.fullmatch(r"\D{0,16}([0-3])\s*(/|sur|out of|de|von|su)\s*3\D{0,10}", t, re.I)
+    if m: return tf(m.group(1) + "/3", lg)
+    m = re.fullmatch(r"\W*([0-3])\W*", t)
+    if m: return tf(m.group(1) + "/3", lg) if "bonnes réponses" in (contexte or "") else None
+    if not re.search(r"[A-Za-zÀ-ÿ]{2}", t): return None if not re.search(r"\S", t) else tf("emoji", lg)
     return False
 
-MOTS_INTERDITS = ("qwen", "alibaba", "assistant", "intelligence artificielle", " ia ", "je ne peux pas", "i cannot", "as an ai", "modèle de langage")
+MOTS_INTERDITS = ("qwen", "alibaba", "assistant", "intelligence artificielle", " ia ", " ai ", "je ne peux pas", "i cannot", "as an ai", "modèle de langage",
+                  "merci pour ton commentaire", "merci pour votre commentaire", "thanks for your comment", "thank you for your comment",
+                  "n'hésite pas", "nous sommes ravis", "super commentaire", "http", "www.", "@")
+
+def correcte(t, lg):
+    if not t or len(t) > 260 or t.count("\n") > 1: return False
+    if any(m in " " + t.lower() + " " for m in MOTS_INTERDITS): return False
+    if sum(1 for c in t if ord(c) > 0x2000 and not c.isalpha()) > 3: return False   # trop d'émojis
+    if lg != "fr" and langue(t, lg) == "fr" and len(t) > 25: return False          # répond en français à un étranger
+    return True
 
 def ia(quoi, texte, auteur, contexte):
-    q = quiz(texte, contexte)
+    lg = langue(texte, "fr")
+    q = quiz(texte, contexte, lg)
     if q: return q
-    c = court(texte, contexte)
+    c = court(texte, contexte, lg)
     if c is not False: return c
+    inv = CONSIGNE.format(quoi=quoi, texte=texte[:1500], auteur=auteur or "quelqu'un", contexte=contexte or "aucun", langue=NOMS_LANGUE.get(lg, "la langue du message"))
     cle = os.environ.get("GEMINI_API_KEY", "")
-    if not cle:
-        t = local(CONSIGNE.format(quoi=quoi, texte=texte[:1500], auteur=auteur or "quelqu'un", contexte=contexte or "aucun"))
+    for essai in range(2):
+        t = None
+        if cle:
+            corps = {"contents": [{"parts": [{"text": inv}]}], "generationConfig": {"temperature": 0.8, "maxOutputTokens": 200}}
+            for m in MODELES:
+                r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent?key={cle}", json=corps, timeout=60)
+                if r.status_code == 200:
+                    try: t = r.json()["candidates"][0]["content"]["parts"][0]["text"]; break
+                    except Exception: continue
+                print("Gemini", m, r.status_code, r.text[:120], flush=True); time.sleep(2)
+        if t is None: t = local(inv)
         if t is None: return False
-        t = t.strip().strip('"«» ')
-        if any(m in " " + t.lower() + " " for m in MOTS_INTERDITS): print("réponse de l'IA écartée :", t[:120]); return None
-        return None if (not t or "SKIP" in t[:8].upper()) else t[:600]
-    corps = {"contents": [{"parts": [{"text": CONSIGNE.format(quoi=quoi, texte=texte[:1500], auteur=auteur or "quelqu'un", contexte=contexte or "aucun")}]}],
-             "generationConfig": {"temperature": 0.6, "maxOutputTokens": 300}}
-    for m in MODELES:
-        r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent?key={cle}", json=corps, timeout=60)
-        if r.status_code == 200:
-            try: t = r.json()["candidates"][0]["content"]["parts"][0]["text"].strip().strip('"«» ')
-            except Exception: continue
-            return None if (not t or "SKIP" in t[:8]) else t[:900]
-        print("Gemini", m, r.status_code, r.text[:120], flush=True); time.sleep(2)
-    return False
+        t = t.strip().strip('"«»“” ').strip()
+        if "SKIP" in t[:8].upper(): return None
+        if correcte(t, lg): return t
+        print("réponse refusée (qualité) :", t[:140], flush=True)
+    return None   # deux réponses ratées : on ne répond pas
 
 def contexte_video(titre):
     titre = (titre or "").replace(" #Shorts", "").strip().lower()
