@@ -150,12 +150,15 @@
   "legende": "Pourquoi on dit DO RÉ MI ?\nDo, ré, mi viennent d'un hymne latin du Moyen Âge (Guido d'Arezzo).\n#musique #anecdote #solfito #solfege #histoiredelamusique",
   "type": "anecdote",
   "fait": {
-   "youtube": "2026-11-19"
+   "youtube": "2026-11-19",
+   "facebook": "2026-11-19",
+   "instagram": "2026-11-19"
   },
   "source": "Wikipédia « Guido d'Arezzo » / « Solfège » ; hymne Ut queant laxis",
   "yt_trad": "2026-11-19",
   "com": {
-   "youtube": "2026-11-19"
+   "youtube": "2026-11-19",
+   "facebook": "2026-11-19"
   }
  },
  {
@@ -163,13 +166,19 @@
   "date": "2026-11-19",
   "titre": "Devine la chanson avec seulement 8 notes",
   "legende": "Devine la chanson avec seulement 8 notes 🎶 Tu l’as trouvée en combien de secondes ? #devinelachanson #piano #solfito #solfege",
-  "fait": {},
+  "fait": {
+   "youtube": "2026-11-19"
+  },
   "verif": {
    "ok": true,
    "note": 10,
    "problemes": [],
    "le": "2026-11-17",
    "modele": "gemini-3.8-flash"
+  },
+  "yt_trad": "2026-11-19",
+  "com": {
+   "youtube": "2026-11-19"
   }
  },
  {
