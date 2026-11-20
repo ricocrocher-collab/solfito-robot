@@ -2718,5 +2718,68 @@
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   },
   "voix": "benjamin-26s-un-seul-coup"
+ },
+ {
+  "fichier": "videos/anecdote-002.mp4",
+  "date": "2026-11-21",
+  "titre": "Le SI vient d'un saint ! L'origine de la 7e note",
+  "legende": "Le SI, il vient d'où ?\nLe si vient des initiales de Sancte Iohannes (saint Jean).\n#musique #anecdote #solfito #solfege #notes",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Wikipédia « Solfège » ; hymne Ut queant laxis"
+ },
+ {
+  "fichier": "videos/anecdote-003.mp4",
+  "date": "2026-11-22",
+  "titre": "Pourquoi « piano » ? Le nom cache un secret",
+  "legende": "Pourquoi « PIANO » ?\nPiano vient de « gravicembalo col piano e forte » (Cristofori, vers 1700).\n#musique #anecdote #solfito #piano #histoiredelamusique",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Wikipédia « Bartolomeo Cristofori », « Piano »"
+ },
+ {
+  "fichier": "videos/anecdote-004.mp4",
+  "date": "2026-11-23",
+  "titre": "Un piano, combien de touches ? Pas 100 !",
+  "legende": "Un piano, combien de touches ?\n52 touches blanches + 36 noires = 88 touches.\n#musique #anecdote #solfito #piano #apprendrelepiano",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Wikipédia « Piano » (clavier de 88 touches, standard depuis la fin du XIXe siècle)"
+ },
+ {
+  "fichier": "videos/anecdote-005.mp4",
+  "date": "2026-11-24",
+  "titre": "Le LA vibre combien de fois par seconde ?",
+  "legende": "Le LA, il vibre combien ?\nLe la de référence vibre 440 fois par seconde (440 Hz), normalisé en 1939.\n#musique #anecdote #solfito #solfege #accordage",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Wikipédia « La 440 » (conférence de Londres, 1939 ; ISO 16)"
+ },
+ {
+  "fichier": "videos/anecdote-006.mp4",
+  "date": "2026-11-25",
+  "titre": "Beethoven était SOURD quand il a écrit ça",
+  "legende": "Beethoven sourd, il compose ?\nLa 9e symphonie (1824) a été créée alors que Beethoven était presque totalement sourd.\n#musique #anecdote #solfito #beethoven #classique",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Wikipédia « Symphonie nº 9 (Beethoven) », « Ludwig van Beethoven »"
+ },
+ {
+  "fichier": "videos/anecdote-007.mp4",
+  "date": "2026-11-26",
+  "titre": "Un Stradivarius vaut combien ? Le prix est fou",
+  "legende": "Un Stradivarius, ça vaut combien ?\nEn 2011, le Stradivarius « Lady Blunt » est parti à près de 10 millions de livres.\n#musique #anecdote #solfito #violon #stradivarius",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Tarisio, vente du 20 juin 2011 (Lady Blunt, 1721, 9,8 M£) ; Wikipédia « Antonio Stradivari »"
+ },
+ {
+  "fichier": "videos/anecdote-008.mp4",
+  "date": "2026-11-27",
+  "titre": "Bach a eu combien d'enfants ? Tu vas être surpris",
+  "legende": "Bach, combien d'enfants ?\nBach a eu 20 enfants (7 + 13) ; plusieurs sont devenus compositeurs.\n#musique #anecdote #solfito #bach #classique",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Wikipédia « Jean-Sébastien Bach » (famille : Maria Barbara, Anna Magdalena)"
  }
 ]
