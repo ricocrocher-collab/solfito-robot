@@ -209,8 +209,11 @@
   "titre": "Gymnopédie n°1 de Satie 🎹 Le plus apaisant ?",
   "legende": "Gymnopédie n°1 (Satie). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
   "type": "tuto",
-  "fait": {},
-  "source": "Gymnopédie n°1 — Satie (domaine public)"
+  "fait": {
+   "youtube": "2026-11-20"
+  },
+  "source": "Gymnopédie n°1 — Satie (domaine public)",
+  "yt_trad": "2026-11-20"
  },
  {
   "fichier": "site/videos/reseaux/06.mp4",
