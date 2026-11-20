@@ -167,7 +167,9 @@
   "titre": "Devine la chanson avec seulement 8 notes",
   "legende": "Devine la chanson avec seulement 8 notes 🎶 Tu l’as trouvée en combien de secondes ? #devinelachanson #piano #solfito #solfege",
   "fait": {
-   "youtube": "2026-11-19"
+   "youtube": "2026-11-19",
+   "facebook": "2026-11-20",
+   "instagram": "2026-11-20"
   },
   "verif": {
    "ok": true,
@@ -178,7 +180,8 @@
   },
   "yt_trad": "2026-11-19",
   "com": {
-   "youtube": "2026-11-19"
+   "youtube": "2026-11-19",
+   "facebook": "2026-11-20"
   }
  },
  {
@@ -264,8 +267,14 @@
   "titre": "Clair de lune de Debussy 🌙 Ça te donne des frissons ?",
   "legende": "Clair de lune (Debussy). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
   "type": "tuto",
-  "fait": {},
-  "source": "Clair de lune — Debussy (domaine public)"
+  "fait": {
+   "youtube": "2026-11-20"
+  },
+  "source": "Clair de lune — Debussy (domaine public)",
+  "yt_trad": "2026-11-20",
+  "com": {
+   "youtube": "2026-11-20"
+  }
  },
  {
   "fichier": "site/videos/reseaux/08.mp4",
