@@ -11,7 +11,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 55   # 21 nov. : 1er envoi des ~3 300 fichiers de la mise à jour fichier par fichier de l'appli (ensuite seulement les fichiers changés)
     defaults: {run: {working-directory: src}}
     steps:
       - uses: actions/checkout@v5
