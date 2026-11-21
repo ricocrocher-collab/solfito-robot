@@ -9,5 +9,6 @@
   "satie-vexations",
   "brille-etoile"
  ],
- "recupere": false
+ "recupere": true,
+ "ajoutees": 6
 }
