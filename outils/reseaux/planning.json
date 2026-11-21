@@ -190,7 +190,9 @@
   "titre": "90 % des débutants se trompent sur cette note",
   "legende": "90 % des débutants se trompent sur cette note 🎼 Et toi, tu avais trouvé ? Dis-moi en commentaire 👇 #solfège #piano #apprendrelapiano #clédefa #musique #solfito",
   "fait": {
-   "youtube": "non (déjà sur la chaîne)"
+   "youtube": "non (déjà sur la chaîne)",
+   "facebook": "2026-11-21",
+   "instagram": "2026-11-21"
   },
   "verif": {
    "ok": true,
@@ -203,7 +205,8 @@
   },
   "yt_trad": "non",
   "com": {
-   "youtube": "non"
+   "youtube": "non",
+   "facebook": "2026-11-21"
   }
  },
  {
@@ -2746,8 +2749,14 @@
   "titre": "Le SI vient d'un saint ! L'origine de la 7e note",
   "legende": "Le SI, il vient d'où ?\nLe si vient des initiales de Sancte Iohannes (saint Jean).\n#musique #anecdote #solfito #solfege #notes",
   "type": "anecdote",
-  "fait": {},
-  "source": "Wikipédia « Solfège » ; hymne Ut queant laxis"
+  "fait": {
+   "youtube": "2026-11-21"
+  },
+  "source": "Wikipédia « Solfège » ; hymne Ut queant laxis",
+  "yt_trad": "2026-11-21",
+  "com": {
+   "youtube": "2026-11-21"
+  }
  },
  {
   "fichier": "videos/anecdote-003.mp4",
