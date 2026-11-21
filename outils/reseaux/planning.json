@@ -2856,5 +2856,35 @@
   "type": "anecdote",
   "fait": {},
   "source": "Wikipédia « Ah ! vous dirai-je, maman »"
+ },
+ {
+  "fichier": "videos/noel-1-avent.mp4",
+  "date": "2026-12-01",
+  "titre": "Ouvre une case par jour ! 🎁",
+  "legende": "Ouvre une case par jour ! 🎁 Le calendrier de l'Avent de Solfito : du 1er au 24 décembre, une porte et des pièces chaque jour… mais une case ratée reste fermée ! #noël #calendrierdelavent #solfège #piano #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
+  "type": "noel",
+  "prio": true,
+  "fait": {},
+  "source": "solfito: outils/video-hyperframes/noel-avent + voix Kaggle (kaggle-voix-noel.py) + mixer-voix-noel.py"
+ },
+ {
+  "fichier": "videos/noel-2-bonnet.mp4",
+  "date": "2026-12-02",
+  "titre": "Gagne le bonnet de Noël ? 🎅",
+  "legende": "Gagne le bonnet de Noël ? 🎅 En décembre, joue 12 jours différents sur Solfito et le bonnet de Noël musical est à toi, exclusif ! #noël #solfège #piano #apprendrelapiano #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
+  "type": "noel",
+  "prio": true,
+  "fait": {},
+  "source": "solfito: outils/video-hyperframes/noel-bonnet + voix Kaggle (kaggle-voix-noel.py) + mixer-voix-noel.py"
+ },
+ {
+  "fichier": "videos/noel-3-quiz.mp4",
+  "date": "2026-12-03",
+  "titre": "Reconnais ce chant de Noël ? 🎄",
+  "legende": "Reconnais ce chant de Noël ? 🎄 Mi, mi, mi… Ta réponse en commentaire 👇 #noël #quizmusical #piano #solfège #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
+  "type": "noel",
+  "prio": true,
+  "fait": {},
+  "source": "solfito: outils/video-hyperframes/noel-quiz + voix Kaggle (kaggle-voix-noel.py) + mixer-voix-noel.py"
  }
 ]

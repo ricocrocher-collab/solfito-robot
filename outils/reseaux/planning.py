@@ -37,7 +37,7 @@ ok, rien = True, True
 for res in RESEAUX:
     deja = sum(1 for v in plan if v.get("fait", {}).get(res) == auj)
     if deja >= permis(res): continue
-    cand = sorted([v for v in plan if prete(v) and res not in v.get("fait", {})], key=lambda v: v["date"])
+    cand = sorted([v for v in plan if prete(v) and res not in v.get("fait", {})], key=lambda v: (not v.get("prio"), v["date"]))   # 21 nov. : « prio » = passe devant le retard dès sa date (vidéos d'événement, ex. Noël)
     if not cand: continue
     x = cand[0]; x.setdefault("fait", {}); rien = False
     print(res, ":", x["fichier"], "|", x["titre"]); fichier_local(x)
