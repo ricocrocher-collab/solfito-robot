@@ -322,8 +322,11 @@
   "titre": "Prélude en do de Bach 🎹 Joue ça en 20 secondes",
   "legende": "Prélude en do (Bach). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
   "type": "tuto",
-  "fait": {},
-  "source": "Prélude en do — Bach (domaine public)"
+  "fait": {
+   "youtube": "2026-11-21"
+  },
+  "source": "Prélude en do — Bach (domaine public)",
+  "yt_trad": "2026-11-21"
  },
  {
   "fichier": "site/videos/reseaux/10.mp4",
