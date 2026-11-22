@@ -380,8 +380,11 @@
   "titre": "Menuet en sol 🎹 Niveau facile ou difficile ?",
   "legende": "Menuet en sol (Petzold / Bach). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
   "type": "tuto",
-  "fait": {},
-  "source": "Menuet en sol — Petzold / Bach (domaine public)"
+  "fait": {
+   "youtube": "2026-11-22"
+  },
+  "source": "Menuet en sol — Petzold / Bach (domaine public)",
+  "yt_trad": "2026-11-22"
  },
  {
   "fichier": "site/videos/reseaux/12.mp4",
