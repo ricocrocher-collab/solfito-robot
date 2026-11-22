@@ -216,12 +216,15 @@
   "legende": "Gymnopédie n°1 (Satie). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
   "type": "tuto",
   "fait": {
-   "youtube": "2026-11-20"
+   "youtube": "2026-11-20",
+   "facebook": "2026-11-22",
+   "instagram": "2026-11-22"
   },
   "source": "Gymnopédie n°1 — Satie (domaine public)",
   "yt_trad": "2026-11-20",
   "com": {
-   "youtube": "2026-11-20"
+   "youtube": "2026-11-20",
+   "facebook": "2026-11-22"
   }
  },
  {
@@ -2770,8 +2773,14 @@
   "titre": "Pourquoi « piano » ? Le nom cache un secret",
   "legende": "Pourquoi « PIANO » ?\nPiano vient de « gravicembalo col piano e forte » (Cristofori, vers 1700).\n#musique #anecdote #solfito #piano #histoiredelamusique",
   "type": "anecdote",
-  "fait": {},
-  "source": "Wikipédia « Bartolomeo Cristofori », « Piano »"
+  "fait": {
+   "youtube": "2026-11-22"
+  },
+  "source": "Wikipédia « Bartolomeo Cristofori », « Piano »",
+  "yt_trad": "2026-11-22",
+  "com": {
+   "youtube": "2026-11-22"
+  }
  },
  {
   "fichier": "videos/anecdote-004.mp4",
