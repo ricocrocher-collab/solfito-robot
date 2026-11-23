@@ -233,7 +233,9 @@
   "titre": "Joyeux ou triste ?",
   "legende": "Joyeux ou triste ? 🎧 Mets le son et dis-moi en commentaire lequel est majeur 👇 #solfège #piano #accords #oreille #apprendrelapiano #solfito",
   "fait": {
-   "youtube": "non (déjà sur la chaîne)"
+   "youtube": "non (déjà sur la chaîne)",
+   "facebook": "2026-11-23",
+   "instagram": "2026-11-23"
   },
   "verif": {
    "ok": true,
@@ -244,7 +246,8 @@
   },
   "yt_trad": "non",
   "com": {
-   "youtube": "non"
+   "youtube": "non",
+   "facebook": "2026-11-23"
   }
  },
  {
@@ -2794,8 +2797,14 @@
   "titre": "Un piano, combien de touches ? Pas 100 !",
   "legende": "Un piano, combien de touches ?\n52 touches blanches + 36 noires = 88 touches.\n#musique #anecdote #solfito #piano #apprendrelepiano",
   "type": "anecdote",
-  "fait": {},
-  "source": "Wikipédia « Piano » (clavier de 88 touches, standard depuis la fin du XIXe siècle)"
+  "fait": {
+   "youtube": "2026-11-23"
+  },
+  "source": "Wikipédia « Piano » (clavier de 88 touches, standard depuis la fin du XIXe siècle)",
+  "yt_trad": "2026-11-23",
+  "com": {
+   "youtube": "2026-11-23"
+  }
  },
  {
   "fichier": "videos/anecdote-005.mp4",
