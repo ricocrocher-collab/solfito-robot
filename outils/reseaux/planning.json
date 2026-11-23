@@ -438,8 +438,11 @@
   "titre": "Marche turque de Mozart 🎹 Tu suis le rythme ?",
   "legende": "Marche turque (Mozart). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
   "type": "tuto",
-  "fait": {},
-  "source": "Marche turque — Mozart (domaine public)"
+  "fait": {
+   "youtube": "2026-11-23"
+  },
+  "source": "Marche turque — Mozart (domaine public)",
+  "yt_trad": "2026-11-23"
  },
  {
   "fichier": "site/videos/reseaux/14.mp4",
