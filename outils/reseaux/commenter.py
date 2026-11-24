@@ -5,6 +5,13 @@ YouTube : le jeton doit avoir le droit youtube.force-ssl ; Meta : pages_manage_e
 import json, os, sys, datetime, zoneinfo, requests
 COMMENTAIRE_IG = "Ta réponse ici 👇 Tu l'avais trouvée ? 🎹"   # Instagram : sans lien (les liens dans les commentaires passent pour du spam)
 COMMENTAIRE = "Ta réponse ici 👇 Et pour t'entraîner à lire les notes en jouant : solfito.com 🎹"
+# 24 nov. (propriétaire : « Ta réponse ici » n'a pas de sens sous une vidéo info/tuto) :
+# « Ta réponse ici » seulement pour les QUIZ (légende qui demande une réponse en commentaire) ; sinon un commentaire info.
+COMMENTAIRE_INFO = "Pour apprendre à lire les notes en jouant, gratuitement : solfito.com 🎹"
+COMMENTAIRE_TUTO = "Envie de la jouer ? Apprends à lire les notes en jouant, gratuitement : solfito.com 🎹"
+import re
+def est_quiz(x): return bool(re.search(r"commentaire|ta réponse|réponds", x.get("legende", ""), re.I))
+def texte(x): return COMMENTAIRE if est_quiz(x) else (COMMENTAIRE_TUTO if x.get("type") == "tuto" else COMMENTAIRE_INFO)
 P = "outils/reseaux/planning.json"
 plan = json.load(open(P, encoding="utf-8"))
 auj = datetime.datetime.now(zoneinfo.ZoneInfo("Europe/Paris")).date().isoformat()
@@ -24,7 +31,7 @@ if afaire("youtube") and os.environ.get("YT_REFRESH_TOKEN"):
             vid = ids.get((x["titre"] + " #Shorts")[:100])
             if not vid: continue
             r = requests.post(API + "commentThreads?part=snippet", headers={**h, "Content-Type": "application/json"},
-                              data=json.dumps({"snippet": {"videoId": vid, "topLevelComment": {"snippet": {"textOriginal": COMMENTAIRE}}}}), timeout=30)
+                              data=json.dumps({"snippet": {"videoId": vid, "topLevelComment": {"snippet": {"textOriginal": texte(x)}}}}), timeout=30)
             print("YouTube", x["fichier"], r.status_code, "" if r.ok else r.text[:200])
             if r.ok: noter(x, "youtube")
             elif r.status_code == 403: break
@@ -49,7 +56,7 @@ if tok and (afaire("facebook") or afaire("instagram")):
             for x in afaire("facebook"):
                 v = next((v for v in vids if debut(v.get("description")) == debut(x["legende"])), None)
                 if not v: continue
-                r = requests.post(f"{G}/{v['id']}/comments", data={"message": COMMENTAIRE, "access_token": tok}, timeout=30)
+                r = requests.post(f"{G}/{v['id']}/comments", data={"message": texte(x), "access_token": tok}, timeout=30)
                 print("Facebook", x["fichier"], r.status_code, "" if r.ok else r.text[:200])
                 if r.ok: noter(x, "facebook")
                 else: break
@@ -65,13 +72,13 @@ if tok and (afaire("facebook") or afaire("instagram")):
                 # on regarde d'abord les commentaires déjà présents, on supprime les doublons, et on note « fait » s'il y en a un.
                 def les_notres():
                     c = requests.get(f"{G}/{m['id']}/comments", params={"fields": "id,text,timestamp", "limit": 100, "access_token": tok}, timeout=30).json().get("data", [])
-                    return sorted([k for k in c if (k.get("text") or "").strip() in (COMMENTAIRE, COMMENTAIRE_IG)], key=lambda k: k.get("timestamp", ""))
+                    return sorted([k for k in c if (k.get("text") or "").strip() in (COMMENTAIRE, COMMENTAIRE_IG, "Elle te plaît ? 🎹", "Tu le savais ? 🎹")], key=lambda k: k.get("timestamp", ""))
                 notres = les_notres()
                 for k in notres[1:]:
                     d = requests.delete(f"{G}/{k['id']}", params={"access_token": tok}, timeout=30)
                     print("Instagram : doublon supprimé", x["fichier"], d.status_code)
                 if notres: noter(x, "instagram"); continue
-                r = requests.post(f"{G}/{m['id']}/comments", data={"message": COMMENTAIRE_IG, "access_token": tok}, timeout=30)
+                r = requests.post(f"{G}/{m['id']}/comments", data={"message": COMMENTAIRE_IG if est_quiz(x) else ("Elle te plaît ? 🎹" if x.get("type") == "tuto" else "Tu le savais ? 🎹"), "access_token": tok}, timeout=30)
                 print("Instagram", x["fichier"], r.status_code, "" if r.ok else r.text[:200])
                 # 19 nov. : Instagram bloque un commentaire répété avec un lien (anti-spam) : on n'insiste JAMAIS, on note la vidéo
                 # comme traitée (sinon le robot recommencerait toutes les 30 min).
