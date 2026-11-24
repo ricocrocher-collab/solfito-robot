@@ -256,7 +256,9 @@
   "titre": "Tu sais compter cette note ?",
   "legende": "Tu sais compter cette note ? 🥁 Elle dure combien de temps ? Réponds en commentaire 👇 #solfège #rythme #piano #apprendrelapiano #musique #solfito",
   "fait": {
-   "youtube": "non (déjà sur la chaîne)"
+   "youtube": "non (déjà sur la chaîne)",
+   "facebook": "2026-11-24",
+   "instagram": "2026-11-24"
   },
   "verif": {
    "ok": true,
@@ -267,7 +269,8 @@
   },
   "yt_trad": "non",
   "com": {
-   "youtube": "non"
+   "youtube": "non",
+   "facebook": "2026-11-24"
   }
  },
  {
@@ -2818,8 +2821,14 @@
   "titre": "Le LA vibre combien de fois par seconde ?",
   "legende": "Le LA, il vibre combien ?\nLe la de référence vibre 440 fois par seconde (440 Hz), normalisé en 1939.\n#musique #anecdote #solfito #solfege #accordage",
   "type": "anecdote",
-  "fait": {},
-  "source": "Wikipédia « La 440 » (conférence de Londres, 1939 ; ISO 16)"
+  "fait": {
+   "youtube": "2026-11-24"
+  },
+  "source": "Wikipédia « La 440 » (conférence de Londres, 1939 ; ISO 16)",
+  "yt_trad": "2026-11-24",
+  "com": {
+   "youtube": "2026-11-24"
+  }
  },
  {
   "fichier": "videos/anecdote-006.mp4",
