@@ -507,8 +507,11 @@
   "titre": "The Entertainer au piano 🎹 Tu reconnais cet air ?",
   "legende": "The Entertainer (Joplin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
   "type": "tuto",
-  "fait": {},
-  "source": "The Entertainer — Joplin (domaine public)"
+  "fait": {
+   "youtube": "2026-11-24"
+  },
+  "source": "The Entertainer — Joplin (domaine public)",
+  "yt_trad": "2026-11-24"
  },
  {
   "fichier": "site/videos/reseaux/16.mp4",
