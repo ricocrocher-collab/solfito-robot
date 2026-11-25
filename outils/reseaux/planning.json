@@ -578,8 +578,11 @@
   "titre": "Maple Leaf Rag de Joplin 🎹 Trop rapide pour toi ?",
   "legende": "Maple Leaf Rag (Joplin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
   "type": "tuto",
-  "fait": {},
-  "source": "Maple Leaf Rag — Joplin (domaine public)"
+  "fait": {
+   "youtube": "2026-11-25"
+  },
+  "source": "Maple Leaf Rag — Joplin (domaine public)",
+  "yt_trad": "2026-11-25"
  },
  {
   "fichier": "site/videos/reseaux/18.mp4",
