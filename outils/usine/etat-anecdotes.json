@@ -1,14 +1,13 @@
 {
- "lance": "2026-11-20",
+ "lance": "2026-11-25",
  "ids": [
-  "paganini-violon",
-  "chopin-pleyel",
-  "liszt-recital",
   "vivaldi-roux",
-  "haydn-surprise",
-  "satie-vexations",
-  "brille-etoile"
+  "cage-silence",
+  "schubert-inacheve",
+  "metronome",
+  "hautbois-la",
+  "lully-canne",
+  "haendel-water"
  ],
- "recupere": true,
- "ajoutees": 6
+ "recupere": false
 }
