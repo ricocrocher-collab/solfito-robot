@@ -280,12 +280,15 @@
   "legende": "Clair de lune (Debussy). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
   "type": "tuto",
   "fait": {
-   "youtube": "2026-11-20"
+   "youtube": "2026-11-20",
+   "facebook": "2026-11-25",
+   "instagram": "2026-11-25"
   },
   "source": "Clair de lune — Debussy (domaine public)",
   "yt_trad": "2026-11-20",
   "com": {
-   "youtube": "2026-11-20"
+   "youtube": "2026-11-20",
+   "facebook": "2026-11-25"
   }
  },
  {
@@ -2842,8 +2845,14 @@
   "titre": "Beethoven était SOURD quand il a écrit ça",
   "legende": "Beethoven sourd, il compose ?\nLa 9e symphonie (1824) a été créée alors que Beethoven était presque totalement sourd.\n#musique #anecdote #solfito #beethoven #classique",
   "type": "anecdote",
-  "fait": {},
-  "source": "Wikipédia « Symphonie nº 9 (Beethoven) », « Ludwig van Beethoven »"
+  "fait": {
+   "youtube": "2026-11-25"
+  },
+  "source": "Wikipédia « Symphonie nº 9 (Beethoven) », « Ludwig van Beethoven »",
+  "yt_trad": "2026-11-25",
+  "com": {
+   "youtube": "2026-11-25"
+  }
  },
  {
   "fichier": "videos/anecdote-007.mp4",
