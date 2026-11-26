@@ -646,8 +646,11 @@
   "titre": "Arabesque n°1 de Debussy 🎹 Tu oses essayer ?",
   "legende": "Arabesque n°1 (Debussy). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
   "type": "tuto",
-  "fait": {},
-  "source": "Arabesque n°1 — Debussy (domaine public)"
+  "fait": {
+   "youtube": "2026-11-26"
+  },
+  "source": "Arabesque n°1 — Debussy (domaine public)",
+  "yt_trad": "2026-11-26"
  },
  {
   "fichier": "site/videos/reseaux/20.mp4",
