@@ -297,7 +297,9 @@
   "titre": "L'astuce pour trouver le Do en 2 secondes",
   "legende": "L'astuce pour trouver le Do en 2 secondes 🎹 Tu la connaissais ? #piano #solfège #musique #lirelesnotes #solfito",
   "fait": {
-   "youtube": "non (déjà sur la chaîne)"
+   "youtube": "non (déjà sur la chaîne)",
+   "facebook": "2026-11-26",
+   "instagram": "2026-11-26"
   },
   "verif": {
    "ok": true,
@@ -308,7 +310,8 @@
   },
   "yt_trad": "non",
   "com": {
-   "youtube": "non"
+   "youtube": "non",
+   "facebook": "2026-11-26"
   }
  },
  {
@@ -2866,8 +2869,14 @@
   "titre": "Un Stradivarius vaut combien ? Le prix est fou",
   "legende": "Un Stradivarius, ça vaut combien ?\nEn 2011, le Stradivarius « Lady Blunt » est parti à près de 10 millions de livres.\n#musique #anecdote #solfito #violon #stradivarius",
   "type": "anecdote",
-  "fait": {},
-  "source": "Tarisio, vente du 20 juin 2011 (Lady Blunt, 1721, 9,8 M£) ; Wikipédia « Antonio Stradivari »"
+  "fait": {
+   "youtube": "2026-11-26"
+  },
+  "source": "Tarisio, vente du 20 juin 2011 (Lady Blunt, 1721, 9,8 M£) ; Wikipédia « Antonio Stradivari »",
+  "yt_trad": "2026-11-26",
+  "com": {
+   "youtube": "2026-11-26"
+  }
  },
  {
   "fichier": "videos/anecdote-008.mp4",
