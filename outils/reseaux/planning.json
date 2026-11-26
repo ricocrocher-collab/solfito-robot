@@ -2955,5 +2955,59 @@
   "prio": true,
   "fait": {},
   "source": "solfito: outils/video-hyperframes/noel-quiz + voix Kaggle (kaggle-voix-noel.py) + mixer-voix-noel.py"
+ },
+ {
+  "fichier": "videos/anecdote-016.mp4",
+  "date": "2026-12-04",
+  "titre": "Un morceau de silence ? C'est vrai, il existe",
+  "legende": "Un morceau de silence ?\n« 4′33″ » de John Cage (1952) : quatre minutes trente-trois de silence au piano.\n#musique #anecdote #solfito #johncage #musiquebizarre",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Wikipédia « 4′33″ » (création : David Tudor, Woodstock, 29 août 1952)"
+ },
+ {
+  "fichier": "videos/anecdote-017.mp4",
+  "date": "2026-12-05",
+  "titre": "La symphonie de Schubert jouée 43 ans plus tard",
+  "legende": "La symphonie inachevée : créée quand ?\nL'« Inachevée » de Schubert (1822) n'est créée qu'en 1865, 37 ans après sa mort.\n#musique #anecdote #solfito #schubert #classique",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Wikipédia « Symphonie nº 8 (Schubert) » (création Vienne, 17 décembre 1865)"
+ },
+ {
+  "fichier": "videos/anecdote-018.mp4",
+  "date": "2026-12-06",
+  "titre": "Le métronome existe depuis quand ? Beethoven l'a adopté",
+  "legende": "Le métronome, c'est de quand ?\nLe métronome est breveté par Mälzel en 1815 ; Beethoven l'utilise dès 1817.\n#musique #anecdote #solfito #metronome #tempo",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Wikipédia « Métronome » (brevet de Mälzel, 1815 ; Beethoven, 1817)"
+ },
+ {
+  "fichier": "videos/anecdote-019.mp4",
+  "date": "2026-12-07",
+  "titre": "Qui donne le LA à tout l'orchestre ? Pas le violon",
+  "legende": "Qui donne le LA à l'orchestre ?\nDans un orchestre, c'est le hautbois qui donne le la pour l'accordage.\n#musique #anecdote #solfito #orchestre #hautbois",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Wikipédia « Accord (musique) », « Hautbois » (usage d'orchestre)"
+ },
+ {
+  "fichier": "videos/anecdote-020.mp4",
+  "date": "2026-12-08",
+  "titre": "Un chef d'orchestre mort à cause de sa canne !",
+  "legende": "Un chef d'orchestre tué par sa canne ?\nLully s'est blessé le pied avec sa canne de direction ; la plaie infectée l'a tué (1687).\n#musique #anecdote #solfito #lully #histoiredelamusique",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Wikipédia « Jean-Baptiste Lully » (mort le 22 mars 1687)"
+ },
+ {
+  "fichier": "videos/anecdote-021.mp4",
+  "date": "2026-12-09",
+  "titre": "Haendel a fait jouer un orchestre sur la Tamise",
+  "legende": "Haendel joue sur un bateau ?\nEn 1717, Haendel a présenté sa « Water Music » depuis une barge sur la Tamise, pour le roi George Ier.\n#musique #anecdote #solfito #haendel #baroque",
+  "type": "anecdote",
+  "fait": {},
+  "source": "Wikipédia « Water Music » (Londres, 17 juillet 1717)"
  }
 ]

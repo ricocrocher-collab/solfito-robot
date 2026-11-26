@@ -9,5 +9,6 @@
   "lully-canne",
   "haendel-water"
  ],
- "recupere": false
+ "recupere": true,
+ "ajoutees": 6
 }
