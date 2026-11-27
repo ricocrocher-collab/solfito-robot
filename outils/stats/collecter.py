@@ -84,7 +84,9 @@ if gsc:
         from google.oauth2 import service_account
         from google.auth.transport.requests import AuthorizedSession
         s = AuthorizedSession(service_account.Credentials.from_service_account_info(json.loads(gsc), scopes=["https://www.googleapis.com/auth/webmasters.readonly"]))
-        Q = "https://www.googleapis.com/webmasters/v3/sites/sc-domain%3Asolfito.com/searchAnalytics/query"
+        import urllib.parse   # 27 nov. : le site est une propriété « https://solfito.com/ » (pas sc-domain) : on prend celle que Google donne
+        sites = [x["siteUrl"] for x in s.get("https://www.googleapis.com/webmasters/v3/sites").json().get("siteEntry", []) if "solfito.com" in x["siteUrl"]] or ["sc-domain:solfito.com"]
+        Q = "https://www.googleapis.com/webmasters/v3/sites/" + urllib.parse.quote(sites[0], safe="") + "/searchAnalytics/query"
         d0 = (auj - datetime.timedelta(days=10)).isoformat()
         for r in s.post(Q, json={"startDate": d0, "endDate": J, "dimensions": ["date"]}).json().get("rows", []):   # Google a 2-3 jours de retard
             ligne("google", "clics", r["clicks"], {"imp": r["impressions"], "pos": round(r["position"], 1)}, jour=r["keys"][0])

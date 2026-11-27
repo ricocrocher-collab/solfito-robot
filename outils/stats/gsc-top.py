@@ -8,7 +8,10 @@ for nom in ("GSC_SERVICE_ACCOUNT", "GOOGLE_PLAY_JSON"):
     info = json.loads(v); print(nom, ":", info.get("client_email"))
     s = AuthorizedSession(service_account.Credentials.from_service_account_info(info, scopes=["https://www.googleapis.com/auth/webmasters.readonly"]))
     print("  sites :", s.get("https://www.googleapis.com/webmasters/v3/sites").json())
-    Q = "https://www.googleapis.com/webmasters/v3/sites/sc-domain%3Asolfito.com/searchAnalytics/query"
+    import urllib.parse
+    sites = [x["siteUrl"] for x in s.get("https://www.googleapis.com/webmasters/v3/sites").json().get("siteEntry", []) if "solfito.com" in x["siteUrl"]]
+    if not sites: continue
+    Q = "https://www.googleapis.com/webmasters/v3/sites/" + urllib.parse.quote(sites[0], safe="") + "/searchAnalytics/query"
     auj = datetime.date.today(); d0 = (auj - datetime.timedelta(days=28)).isoformat(); J = auj.isoformat()
     for dims in (["page"], ["query"], ["country"], ["page", "query"]):
         r = s.post(Q, json={"startDate": d0, "endDate": J, "dimensions": dims, "rowLimit": 40}).json()
