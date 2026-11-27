@@ -1,0 +1,67 @@
+# Détecteur de français oublié : après chaque mise en ligne réussie (deploy-site), ouvre l'appli dans les 9 langues,
+# parcourt les écrans avec les robots de solfito/outils/i18n/robots/ et liste les textes restés en français.
+# Rapport : (1) onglet Admin (stats-robot, source « traductions »), (2) résumé de l'action, (3) l'action passe au ROUGE s'il manque
+# NOUVEAUX textes => GitHub envoie un e-mail au propriétaire. Rien du tout si 0 texte manquant (action verte, pas d'e-mail).
+name: Vérif des traductions
+on:
+  workflow_run:
+    workflows: ["Mise en ligne de solfito.com"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      langues: {description: "Langues (séparées par des espaces), vide = les 9", required: false, default: ""}
+permissions:
+  contents: read
+  id-token: write   # jeton OIDC pour la fonction Supabase stats-robot (aucun secret)
+concurrency: {group: verif-traductions, cancel-in-progress: true}
+jobs:
+  verif:
+    # à la main, ou seulement si la mise en ligne a réussi
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with: {repository: ricocrocher-collab/solfito, token: "${{ secrets.SOLFITO_PAT }}", path: src}
+      - uses: actions/setup-node@v4
+        with: {node-version: 20}
+      - name: Installer Playwright + Chromium
+        run: |
+          npm i --no-save --no-audit --no-fund playwright
+          npx playwright install --with-deps chromium
+      - name: Chercher le français oublié
+        id: verif
+        run: |
+          set +e
+          SRC="$PWD/src" LIMITE_MIN=38 node outils/traductions/verifier.js ${{ github.event.inputs.langues }}
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+      # 27 nov. : on ne prévient (action rouge = e-mail) que pour les NOUVEAUX oublis, pas à chaque mise en ligne
+      - name: Résultat précédent
+        uses: actions/cache/restore@v4
+        with:
+          path: precedent
+          key: verif-trad-${{ github.run_id }}
+          restore-keys: verif-trad-
+      - name: Nouveaux textes manquants ?
+        id: nouv
+        if: steps.verif.outputs.code == '3' || steps.verif.outputs.code == '0'
+        run: node outils/traductions/nouveaux.js precedent
+      - name: Garder le résultat pour la prochaine fois
+        if: steps.verif.outputs.code == '3' || steps.verif.outputs.code == '0'
+        uses: actions/cache/save@v4
+        with:
+          path: precedent
+          key: verif-trad-${{ github.run_id }}
+      - name: Envoyer le rapport (onglet Admin) et le résumé
+        if: steps.verif.outputs.code == '3'
+        run: |
+          node outils/traductions/envoyer-rapport.js
+          { echo '### Textes restés en français'; echo '```'; cat outils/traductions/rapport.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - name: Prévenir le propriétaire (action rouge = e-mail GitHub)
+        if: steps.verif.outputs.code != '0' && !(steps.verif.outputs.code == '3' && steps.nouv.outputs.n == '0')
+        run: |
+          if [ "${{ steps.verif.outputs.code }}" = "3" ]; then echo "::error::Il manque des traductions : voir le résumé de l'action."; else echo "::error::Le détecteur de traductions a lui-même planté (code ${{ steps.verif.outputs.code }})."; fi
+          exit 1
