@@ -1,0 +1,16 @@
+name: Prix Google Play par pays (à la main)
+on:
+  workflow_dispatch:
+    inputs:
+      mode: {description: "voir (ne change rien) ou appliquer", required: true, default: "voir"}
+permissions:
+  contents: read
+jobs:
+  prix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests google-auth
+      - run: python outils/play/prix.py "${{ inputs.mode }}"
+        env:
+          GOOGLE_PLAY_JSON: ${{ secrets.GOOGLE_PLAY_JSON }}
