@@ -1,0 +1,14 @@
+name: Search Console - meilleures pages (à la main)
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  gsc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests google-auth
+      - run: python outils/stats/gsc-top.py
+        env:
+          GSC_SERVICE_ACCOUNT: ${{ secrets.GSC_SERVICE_ACCOUNT }}
+          GOOGLE_PLAY_JSON: ${{ secrets.GOOGLE_PLAY_JSON }}
