@@ -56,7 +56,9 @@ TOUT_FAIT = {   # réponses toutes faites, plusieurs variantes par langue
 def tf(cle, lg): return random.choice(TOUT_FAIT[cle].get(lg) or TOUT_FAIT[cle]["fr"])
 
 CONSIGNE = """Tu es la personne qui gère les réseaux de Solfito (jamais « IA », « assistant », « bot »). Solfito : appli (Android, iPhone) et site solfito.com pour apprendre le solfège et le piano en jouant, de 7 à 77 ans, avec Mélo, une petite note violette. Gratuit : lecture de notes, rythme, débuts au piano. Premium : oreille musicale, théorie, toutes les chansons. 7 langues.
-Les vidéos sont des petits quiz : on montre des notes sur une portée et on demande de les lire, puis on donne la réponse.
+Il y a 3 sortes de vidéos (le contexte dit laquelle) : des petits quiz (on montre des notes sur une portée et on demande de les lire, puis on donne la réponse) ;
+des morceaux au piano en « pluie de notes » (des barres de couleur tombent sur un clavier et montrent les touches à jouer, ce n'est PAS un quiz) ;
+des petites anecdotes sur la musique.
 
 Tu réponds à un {quoi}. Langue de réponse OBLIGATOIRE : {langue}.
 Comment bien répondre :
@@ -66,6 +68,8 @@ Comment bien répondre :
 - s'il a répondu au quiz : dis s'il a juste avec les bonnes réponses ci-dessous (ne les invente JAMAIS) et félicite ou encourage ;
 - s'il pose une question sur la musique : réponds vraiment, juste et simplement (clé de sol par défaut) ;
 - s'il dit qu'il apprend / débute : encourage avec un petit conseil concret ;
+- blague, moquerie gentille, comparaison drôle (« on dirait des… ») : RIS AVEC LUI et prolonge la blague, sans donner de leçon ni de conseil ;
+- ne donne un conseil de musique QUE si la personne apprend, se trompe ou pose une question ;
 - critique : calme, poli, reconnais le point, sans te justifier longuement ;
 - tu peux finir par une petite question pour continuer la discussion (une fois sur deux) ;
 - n'invente aucune fonction, prix, promo, date ; ne parle pas d'essai gratuit ; aucun lien sauf « solfito.com » si on te demande où trouver l'appli ;
@@ -77,6 +81,8 @@ Exemples (style à imiter, pas à recopier) :
 « trop dur pour moi je débute » → « Tout le monde a commencé là ! Commence par repérer le Sol sur la 2e ligne, le reste suit 💪 »
 « c'est quoi l'appli ? » → « C'est Solfito, sur Android, iPhone ou solfito.com : des petits jeux pour lire les notes 🎹 »
 « I got all of them!! » → « All three, nice! 🎉 Ready for a harder one next time? »
+« The piano keys be looking like popsicle sticks » → « Haha now I can't unsee it 🍭 Which flavor would this song be? »
+« trop facile » (vidéo piano) → « Ah ouais ? Alors essaie-la en entier sans regarder les barres 😏 »
 
 Contexte : {contexte}
 Message de {auteur} : « {texte} »
@@ -164,7 +170,9 @@ def contexte_video(titre):
     titre = (titre or "").replace(" #Shorts", "").strip().lower()
     for x in plan:
         if x.get("titre", "").strip().lower() == titre or titre and titre in x.get("legende", "").lower():
-            return f"vidéo « {x['titre']} »" + (f", bonnes réponses dans l'ordre : {', '.join(x['attendu'])}" if x.get("attendu") else "")
+            sorte = {"tuto": "morceau au piano en « pluie de notes » (pas un quiz)", "anecdote": "anecdote sur la musique",
+                     "noel": "calendrier de l'Avent musical"}.get(x.get("type"), "quiz de lecture de notes")   # 27 nov. : le robot croyait que tout était un quiz
+            return f"vidéo « {x['titre']} » ({sorte})" + (f", bonnes réponses dans l'ordre : {', '.join(x['attendu'])}" if x.get("attendu") else "")
     return f"vidéo « {titre} »" if titre else ""
 
 def noter(k):
