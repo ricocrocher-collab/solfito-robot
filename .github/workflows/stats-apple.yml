@@ -2,7 +2,7 @@ name: Stats Apple (installations App Store)
 on:
   workflow_dispatch:
     inputs:
-      vendor: {description: "Numéro de fournisseur App Store Connect (facultatif si secret ASC_VENDOR)", type: string, default: ""}
+      vendor: {description: "Numéro de fournisseur App Store Connect (facultatif si secret ASC_VENDOR)", type: string, default: "95052417"}
 jobs:
   stats:
     runs-on: ubuntu-latest
