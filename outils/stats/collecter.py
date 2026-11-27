@@ -136,6 +136,8 @@ if os.environ.get("ASC_KEY_P8", "").strip() and os.environ.get("ASC_VENDOR", "")
 # ex. pubsite_prod_rev_01234567890123456789 ; à copier dans Play Console → Télécharger des rapports → Statistiques → « Copier l'URI »).
 # Le compte de service GOOGLE_PLAY_JSON doit avoir le droit « Afficher les informations sur l'appli et télécharger les rapports groupés ».
 bucket = os.environ.get("PLAY_BUCKET", "").strip().replace("gs://", "").strip("/")
+DEV = "8682673135227089026"   # ID du compte développeur Play (pas un secret, visible dans la Play Console)
+if gsc and not bucket: bucket = "?"
 if gsc and bucket:
     try:
         import csv, io
@@ -148,6 +150,12 @@ if gsc and bucket:
             r.raise_for_status(); b = r.content
             txt = b.decode("utf-16") if b[:2] in (b"\xff\xfe", b"\xfe\xff") else b.decode("utf-8-sig")
             return list(csv.DictReader(io.StringIO(txt)))
+        if bucket == "?":   # adresse pas donnée : on essaie les noms habituels de Google
+            for b in (f"pubsite_prod_rev_{DEV}", f"pubsite_prod_{DEV}"):
+                r = st.get(f"https://storage.googleapis.com/storage/v1/b/{b}/o?prefix=stats/installs/&maxResults=3", timeout=60)
+                print("Google Play : essai", b, r.status_code, r.text[:160].replace("\n", " "))
+                if r.ok: bucket = b; break
+            if bucket == "?": raise RuntimeError("adresse des rapports introuvable (secret PLAY_BUCKET)")
         mois = sorted({(auj - datetime.timedelta(days=k)).strftime("%Y%m") for k in (0, 35)})
         jours = {}
         for m in mois:
