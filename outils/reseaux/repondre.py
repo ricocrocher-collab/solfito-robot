@@ -27,6 +27,10 @@ MOTS_LANGUE = {
 }
 def langue(t, defaut="fr"):
     import re
+    if re.search(r"[\u3040-\u30ff]", t or ""): return "ja"
+    if re.search(r"[\uac00-\ud7af]", t or ""): return "ko"
+    if re.search(r"[\u4e00-\u9fff]", t or ""): return "zh"
+    if re.search(r"[\u0600-\u06ff]", t or ""): return "ar"
     if re.search(r"[¡¿ñ]", t or ""): return "es"
     if re.search(r"[ãõ]", t or ""): return "pt"
     if re.search(r"[ßäöü]", (t or "").lower()): return "de"
@@ -73,7 +77,7 @@ Comment bien répondre :
 - critique : calme, poli, reconnais le point, sans te justifier longuement ;
 - tu peux finir par une petite question pour continuer la discussion (une fois sur deux) ;
 - n'invente aucune fonction, prix, promo, date ; ne parle pas d'essai gratuit ; aucun lien sauf « solfito.com » si on te demande où trouver l'appli ;
-- avis Google Play : remercie pour un point précis de l'avis ; si un problème est décrit, excuse-toi et propose d'écrire à contact@solfito.com ;
+- avis Google Play ou App Store : remercie pour un point précis de l'avis ; si un problème est décrit, excuse-toi et propose d'écrire à contact@solfito.com ;
 - spam, arnaque, insulte, sexuel, ou rien à répondre : écris exactement SKIP
 
 Exemples (style à imiter, pas à recopier) :
@@ -88,7 +92,8 @@ Contexte : {contexte}
 Message de {auteur} : « {texte} »
 Écris seulement la réponse, sans guillemets."""
 
-NOMS_LANGUE = {"fr": "français", "en": "anglais", "es": "espagnol", "pt": "portugais (Brésil)", "de": "allemand", "it": "italien"}
+NOMS_LANGUE = {"fr": "français", "en": "anglais", "es": "espagnol", "pt": "portugais (Brésil)", "de": "allemand", "it": "italien",
+               "ja": "japonais", "ko": "coréen", "zh": "chinois traditionnel (Taïwan)", "ar": "arabe"}
 NOTES = ["DO", "RE", "MI", "FA", "SOL", "LA", "SI"]
 def notes_de(t):   # noms de notes écrits dans un commentaire (« mi ré la », « Mi-Ré-La »… ou « E D A »)
     import re, unicodedata
@@ -126,7 +131,7 @@ def court(texte, contexte, lg):   # réponses très courtes (« 3/3 », « 2 »,
     if m: return tf(m.group(1) + "/3", lg)
     m = re.fullmatch(r"\W*([0-3])\W*", t)
     if m: return tf(m.group(1) + "/3", lg) if "bonnes réponses" in (contexte or "") else None
-    if not re.search(r"[A-Za-zÀ-ÿ]{2}", t): return None if not re.search(r"\S", t) else tf("emoji", lg)
+    if not re.search(r"[A-Za-zÀ-ÿ\u0600-\u06ff\u3040-\u30ff\u4e00-\u9fff\uac00-\ud7af]{2}", t): return None if not re.search(r"\S", t) else tf("emoji", lg)
     return False
 
 MOTS_INTERDITS = ("qwen", "alibaba", "assistant", "intelligence artificielle", " ia ", " ai ", "je ne peux pas", "i cannot", "as an ai", "modèle de langage",
@@ -264,7 +269,34 @@ def play():
         env = lambda rep, rid=rv["reviewId"]: requests.post(f"{A}/{rid}:reply", headers=h, json={"replyText": rep[:350]}, timeout=30).status_code == 200
         traiter("play:" + rv["reviewId"], f"avis Google Play ({u.get('starRating')} étoiles sur 5)", u.get("text", ""), rv.get("authorName"), "", env)
 
-for f in (youtube, meta, play):
+def appstore():   # 27 nov. : avis App Store (iPhone), même IA et mêmes règles que Google Play
+    kid, iss, p8 = (os.environ.get(k, "").strip() for k in ("ASC_KEY_ID", "ASC_ISSUER_ID", "ASC_KEY_P8"))
+    if not (kid and iss and p8): print("App Store : secrets ASC_KEY_ID / ASC_ISSUER_ID / ASC_KEY_P8 absents"); return
+    import jwt, re, base64
+    corps = re.sub(r"-----[A-Z ]*-----|\s", "", p8)
+    try:
+        dec = base64.b64decode(corps).decode("utf-8", "ignore")
+        if "BEGIN PRIVATE KEY" in dec: corps = re.sub(r"-----[A-Z ]*-----|\s", "", dec)   # clé collée encodée en base64
+    except Exception: pass
+    cle = "-----BEGIN PRIVATE KEY-----\n" + "\n".join(corps[i:i + 64] for i in range(0, len(corps), 64)) + "\n-----END PRIVATE KEY-----\n"
+    t = jwt.encode({"iss": iss, "iat": int(time.time()), "exp": int(time.time()) + 1100, "aud": "appstoreconnect-v1"}, cle, algorithm="ES256", headers={"kid": kid, "typ": "JWT"})
+    h = {"Authorization": "Bearer " + t}; A = "https://api.appstoreconnect.apple.com"
+    r = requests.get(A + "/v1/apps", headers=h, params={"filter[bundleId]": "com.solfito.app"}, timeout=30)
+    if r.status_code != 200: print("App Store :", r.status_code, r.text[:200]); return
+    aid = r.json()["data"][0]["id"]
+    r = requests.get(f"{A}/v1/apps/{aid}/customerReviews", headers=h, params={"sort": "-createdDate", "limit": 50, "include": "response"}, timeout=30)
+    if r.status_code != 200: print("App Store :", r.status_code, r.text[:200]); return
+    avis = r.json().get("data", []); print("App Store : connecté,", len(avis), "avis récents")
+    for rv in avis:
+        if ((rv.get("relationships") or {}).get("response") or {}).get("data"): continue   # déjà une réponse
+        at = rv.get("attributes", {}); texte = " ".join(x for x in (at.get("title"), at.get("body")) if x)
+        def env(rep, rid=rv["id"]):
+            c = {"data": {"type": "customerReviewResponses", "attributes": {"responseBody": rep[:1000]},
+                          "relationships": {"review": {"data": {"type": "customerReviews", "id": rid}}}}}
+            return requests.post(A + "/v1/customerReviewResponses", headers={**h, "Content-Type": "application/json"}, json=c, timeout=30).status_code in (200, 201)
+        traiter("appstore:" + rv["id"], f"avis App Store ({at.get('rating')} étoiles sur 5)", texte, at.get("reviewerNickname"), "", env)
+
+for f in (youtube, meta, play, appstore):
     try: f()
     except Exception as e: print(f.__name__, "erreur :", e)
 json.dump(fait, open(F, "w", encoding="utf-8"), ensure_ascii=False, indent=0)

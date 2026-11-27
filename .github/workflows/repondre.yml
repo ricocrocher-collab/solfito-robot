@@ -1,4 +1,4 @@
-name: Réponses automatiques (commentaires + avis Google Play)
+name: Réponses automatiques (commentaires + avis Google Play et App Store)
 on:
   # 18 nov. : lancé à l'heure exacte par Supabase (pg_cron « robot-repondre », fonction robot_lancer) ; plus d'horaire GitHub.
   workflow_dispatch:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: pip install -q requests google-auth
+      - run: pip install -q requests google-auth pyjwt cryptography
       - uses: actions/cache@v4
         with: {path: ~/.ollama/models, key: ollama-qwen2.5-7b}
       - name: IA gratuite de secours (Ollama + Qwen 2.5 7B, seulement sans GEMINI_API_KEY)
@@ -28,6 +28,9 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
           GOOGLE_PLAY_JSON: ${{ secrets.GOOGLE_PLAY_JSON }}
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
           ESSAI: ${{ inputs.essai && '1' || '' }}
       - if: always()
         run: |
