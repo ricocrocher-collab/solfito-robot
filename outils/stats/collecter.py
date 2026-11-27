@@ -151,7 +151,7 @@ if gsc and bucket:
             txt = b.decode("utf-16") if b[:2] in (b"\xff\xfe", b"\xfe\xff") else b.decode("utf-8-sig")
             return list(csv.DictReader(io.StringIO(txt)))
         if bucket == "?":   # adresse pas donnée : on essaie les noms habituels de Google
-            for b in (f"pubsite_prod_rev_{DEV}", f"pubsite_prod_{DEV}"):
+            for b in (f"pubsite_prod_{DEV}", f"pubsite_prod_rev_{DEV}"):   # 27 nov. : pubsite_prod_{DEV} existe (403 = droit manquant)
                 r = st.get(f"https://storage.googleapis.com/storage/v1/b/{b}/o?prefix=stats/installs/&maxResults=3", timeout=60)
                 print("Google Play : essai", b, r.status_code, r.text[:160].replace("\n", " "))
                 if r.ok: bucket = b; break
