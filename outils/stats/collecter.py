@@ -87,13 +87,13 @@ if gsc:
         import urllib.parse   # 27 nov. : le site est une propriété « https://solfito.com/ » (pas sc-domain) : on prend celle que Google donne
         sites = [x["siteUrl"] for x in s.get("https://www.googleapis.com/webmasters/v3/sites").json().get("siteEntry", []) if "solfito.com" in x["siteUrl"]] or ["sc-domain:solfito.com"]
         Q = "https://www.googleapis.com/webmasters/v3/sites/" + urllib.parse.quote(sites[0], safe="") + "/searchAnalytics/query"
-        d0 = (auj - datetime.timedelta(days=10)).isoformat()
+        d0 = (auj - datetime.timedelta(days=95)).isoformat()   # 27 nov. : 3 mois d'historique (onglet Admin → Google)
         for r in s.post(Q, json={"startDate": d0, "endDate": J, "dimensions": ["date"]}).json().get("rows", []):   # Google a 2-3 jours de retard
             ligne("google", "clics", r["clicks"], {"imp": r["impressions"], "pos": round(r["position"], 1)}, jour=r["keys"][0])
         d28 = (auj - datetime.timedelta(days=28)).isoformat()
-        for dim, cle in (("query", "requetes"), ("country", "pays"), ("page", "pages")):
-            rows = s.post(Q, json={"startDate": d28, "endDate": J, "dimensions": [dim], "rowLimit": 25}).json().get("rows", [])
-            ligne("google", cle, len(rows), [{"k": r["keys"][0].replace("https://solfito.com", "")[:80], "c": r["clicks"], "i": r["impressions"]} for r in rows])
+        for dim, cle in (("query", "requetes"), ("country", "pays"), ("page", "pages"), ("device", "appareils")):
+            rows = s.post(Q, json={"startDate": d28, "endDate": J, "dimensions": [dim], "rowLimit": 50}).json().get("rows", [])
+            ligne("google", cle, len(rows), [{"k": r["keys"][0].replace("https://solfito.com", "")[:80], "c": r["clicks"], "i": r["impressions"], "p": round(r["position"], 1)} for r in rows])
         print("Google : OK")
     except Exception as e: print("Google : impossible", e)
 
