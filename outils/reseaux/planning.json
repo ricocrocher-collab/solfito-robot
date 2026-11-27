@@ -320,7 +320,9 @@
   "titre": "Tu sais lire ce symbole ?",
   "legende": "Tu sais lire ce symbole ? 🎼 Dis-moi en commentaire 👇 #solfège #piano #dièse #apprendrelapiano #musique #solfito",
   "fait": {
-   "youtube": "non (déjà sur la chaîne)"
+   "youtube": "non (déjà sur la chaîne)",
+   "facebook": "2026-11-27",
+   "instagram": "2026-11-27"
   },
   "verif": {
    "ok": true,
@@ -331,7 +333,8 @@
   },
   "yt_trad": "non",
   "com": {
-   "youtube": "non"
+   "youtube": "non",
+   "facebook": "2026-11-27"
   }
  },
  {
@@ -2890,8 +2893,14 @@
   "titre": "Bach a eu combien d'enfants ? Tu vas être surpris",
   "legende": "Bach, combien d'enfants ?\nBach a eu 20 enfants (7 + 13) ; plusieurs sont devenus compositeurs.\n#musique #anecdote #solfito #bach #classique",
   "type": "anecdote",
-  "fait": {},
-  "source": "Wikipédia « Jean-Sébastien Bach » (famille : Maria Barbara, Anna Magdalena)"
+  "fait": {
+   "youtube": "2026-11-27"
+  },
+  "source": "Wikipédia « Jean-Sébastien Bach » (famille : Maria Barbara, Anna Magdalena)",
+  "yt_trad": "2026-11-27",
+  "com": {
+   "youtube": "2026-11-27"
+  }
  },
  {
   "fichier": "videos/anecdote-009.mp4",
