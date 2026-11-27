@@ -1,0 +1,16 @@
+name: Plan du site → Google (après chaque mise en ligne)
+on:
+  workflow_run:
+    workflows: ["Mise en ligne de solfito.com"]
+    types: [completed]
+  workflow_dispatch:
+jobs:
+  sitemap:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q google-auth requests
+      - run: python outils/google/sitemap.py
+        env:
+          GOOGLE_PLAY_JSON: ${{ secrets.GOOGLE_PLAY_JSON }}
