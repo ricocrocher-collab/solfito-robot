@@ -97,6 +97,76 @@ if gsc:
         print("Google : OK")
     except Exception as e: print("Google : impossible", e)
 
+# ---- App Store (iPhone) : téléchargements par jour et pays (27 nov., onglet Admin « Stores ») ----
+# Rapports de ventes App Store Connect (clés ASC_*), 1 à 2 jours de retard. 1 = 1er téléchargement, 3 = re-téléchargement, 7 = mise à jour.
+if os.environ.get("ASC_KEY_P8", "").strip() and os.environ.get("ASC_VENDOR", "").strip():
+    try:
+        import time, gzip, io, re, base64, jwt
+        p8 = os.environ["ASC_KEY_P8"].strip(); corps = re.sub(r"-----[A-Z ]*-----|\s", "", p8)
+        try:
+            dec = base64.b64decode(corps).decode("utf-8", "ignore")
+            if "BEGIN PRIVATE KEY" in dec: corps = re.sub(r"-----[A-Z ]*-----|\s", "", dec)
+        except Exception: pass
+        pem = "-----BEGIN PRIVATE KEY-----\n" + "\n".join(corps[i:i+64] for i in range(0, len(corps), 64)) + "\n-----END PRIVATE KEY-----\n"
+        tk = jwt.encode({"iss": os.environ["ASC_ISSUER_ID"].strip(), "iat": int(time.time()), "exp": int(time.time()) + 1100, "aud": "appstoreconnect-v1"},
+                        pem, algorithm="ES256", headers={"kid": os.environ["ASC_KEY_ID"].strip(), "typ": "JWT"})
+        n_ok = 0
+        for i in range(1, 36):
+            d = (auj - datetime.timedelta(days=i)).isoformat()
+            r = requests.get("https://api.appstoreconnect.apple.com/v1/salesReports", headers={"Authorization": "Bearer " + tk}, timeout=60,
+                             params={"filter[frequency]": "DAILY", "filter[reportType]": "SALES", "filter[reportSubType]": "SUMMARY",
+                                     "filter[vendorNumber]": os.environ["ASC_VENDOR"].strip(), "filter[reportDate]": d, "filter[version]": "1_0"})
+            if r.status_code == 404: continue   # rapport pas encore prêt (ou aucune vente ce jour-là)
+            if r.status_code != 200: print("App Store", d, r.status_code, r.text[:150]); continue
+            lignes = gzip.GzipFile(fileobj=io.BytesIO(r.content)).read().decode().splitlines()
+            h = lignes[0].split("\t"); t = {"n": 0, "re": 0, "maj": 0}; pays = {}
+            for l in lignes[1:]:
+                c = dict(zip(h, l.split("\t")))
+                if c.get("Apple Identifier") != "6827552782": continue
+                u = int(float(c.get("Units", "0") or 0)); typ = c.get("Product Type Identifier", "")
+                if typ.startswith("1"): t["n"] += u; pays[c.get("Country Code", "?")] = pays.get(c.get("Country Code", "?"), 0) + u
+                elif typ.startswith("3"): t["re"] += u
+                elif typ.startswith("7"): t["maj"] += u
+            ligne("apple", "telechargements", t["n"], {"re": t["re"], "maj": t["maj"], "pays": pays}, jour=d); n_ok += 1
+        print("App Store : OK,", n_ok, "jours")
+    except Exception as e: print("App Store : impossible", e)
+
+# ---- Google Play (Android) : installations par jour et pays ----
+# Rapports « Statistiques » de la Play Console, rangés par Google dans un espace Cloud Storage « pubsite_prod_… » (secret PLAY_BUCKET,
+# ex. pubsite_prod_rev_01234567890123456789 ; à copier dans Play Console → Télécharger des rapports → Statistiques → « Copier l'URI »).
+# Le compte de service GOOGLE_PLAY_JSON doit avoir le droit « Afficher les informations sur l'appli et télécharger les rapports groupés ».
+bucket = os.environ.get("PLAY_BUCKET", "").strip().replace("gs://", "").strip("/")
+if gsc and bucket:
+    try:
+        import csv, io
+        from google.oauth2 import service_account
+        from google.auth.transport.requests import AuthorizedSession
+        st = AuthorizedSession(service_account.Credentials.from_service_account_info(json.loads(gsc), scopes=["https://www.googleapis.com/auth/devstorage.read_only"]))
+        def lire(nom):
+            r = st.get(f"https://storage.googleapis.com/storage/v1/b/{bucket}/o/" + requests.utils.quote(nom, safe="") + "?alt=media", timeout=60)
+            if r.status_code == 404: return []
+            r.raise_for_status(); b = r.content
+            txt = b.decode("utf-16") if b[:2] in (b"\xff\xfe", b"\xfe\xff") else b.decode("utf-8-sig")
+            return list(csv.DictReader(io.StringIO(txt)))
+        mois = sorted({(auj - datetime.timedelta(days=k)).strftime("%Y%m") for k in (0, 35)})
+        jours = {}
+        for m in mois:
+            for c in lire(f"stats/installs/installs_com.solfito.app_{m}_overview.csv"):
+                d = c.get("Date", "")[:10]
+                if not d: continue
+                g = lambda k: int(float(c.get(k) or 0))
+                jours[d] = {"n": g("Daily User Installs"), "app": g("Daily Device Installs"), "des": g("Daily User Uninstalls"),
+                            "actifs": g("Active Device Installs"), "total": g("Total User Installs"), "maj": g("Daily Device Upgrades"), "pays": {}}
+            for c in lire(f"stats/installs/installs_com.solfito.app_{m}_country.csv"):
+                d = c.get("Date", "")[:10]; u = int(float(c.get("Daily User Installs") or 0))
+                if d in jours and u: jours[d]["pays"][c.get("Country", "?")] = u
+        for d, v in jours.items():
+            if d >= (auj - datetime.timedelta(days=40)).isoformat():
+                ligne("android", "telechargements", v.pop("n"), v, jour=d)
+        print("Google Play : OK,", len(jours), "jours")
+    except Exception as e: print("Google Play : impossible", e)
+elif gsc: print("Google Play : secret PLAY_BUCKET absent (installations Android sautées)")
+
 # ---- Envoi dans Supabase ----
 print(len(L), "lignes")
 if not CLE:   # solfito-robot : pas de clé, on prouve qui on est avec le jeton OIDC signé par GitHub (fonction Supabase stats-robot)
