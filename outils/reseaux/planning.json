@@ -712,8 +712,11 @@
   "titre": "Valse minute de Chopin 🎹 Ça va trop vite ?",
   "legende": "Valse minute (Chopin). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique #apprendrelepiano",
   "type": "tuto",
-  "fait": {},
-  "source": "Valse minute — Chopin (domaine public)"
+  "fait": {
+   "youtube": "2026-11-27"
+  },
+  "source": "Valse minute — Chopin (domaine public)",
+  "yt_trad": "2026-11-27"
  },
  {
   "fichier": "videos/v2-22.mp4",
