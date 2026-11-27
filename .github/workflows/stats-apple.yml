@@ -1,0 +1,17 @@
+name: Stats Apple (installations App Store)
+on:
+  workflow_dispatch:
+    inputs:
+      vendor: {description: "Numéro de fournisseur App Store Connect (facultatif si secret ASC_VENDOR)", type: string, default: ""}
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q requests pyjwt cryptography
+      - run: python outils/stats/apple-installs.py
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+          ASC_VENDOR: ${{ inputs.vendor != '' && inputs.vendor || secrets.ASC_VENDOR }}
