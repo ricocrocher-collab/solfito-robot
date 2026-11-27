@@ -18,14 +18,14 @@ for (const f of ['robot-ecrans.js', 'robot-boutons.js', 'robot-joueur.js']) {
 }
 // ---- anti-bruit : on garde seulement ce qui ressemble vraiment à du français ----
 const NOTE = /^(do|ré|re|mi|fa|sol|la|si|[a-g])\s*[#♯♭b]?\s*\d*$/i;
-const FRANC = /[àâçéèêëîïôûùüœ«»]|(^|[\s'’(])(le|la|les|des|du|une|un|et|est|pour|avec|tu|ton|ta|tes|pas|sur|dans|de|ce|cette|vous|nous|ou|que|qui|ne|plus|mon|ma|mes)(?=$|[\s,.!?:;'’)])/i;
+const FRANC = /(^|[\s(])(les|des|du|aux|une|est|et|pour|avec|ton|tes|pas|dans|cette|vous|nous|mon|mes|sur|ce|sont|être|très|ça|déjà|aussi|votre|notre|leur|leurs|quelqu|chaque|encore|toujours|bravo|joue|reviens)(?=$|[\s,.!?:;'’)])|(^|[\s(])(qu|j|c|n|s)['’]|œ/i;   // 27 nov. : mots SEULEMENT français (avant : la, de, un, accents… → espagnol, portugais, italien pris pour du français)
 function garde(t, L) {
   t = String(t).replace(/\s+/g, ' ').trim();
   let s = t.replace(/solfito|m[ée]lo|[0-9]+|[♯♭#%+\-–—·•×x/:.,;!?()'’"«»]/gi, ' ').replace(/\s+/g, ' ').trim();
   if (s.length < 4 || NOTE.test(s) || /^(fran[cç]ais|portugu[eê]s|english|espa[nñ]ol|deutsch|italiano)$/i.test(s)) return null;   // noms des langues (sélecteur de langue)
   if (!/[a-zàâçéèêëîïôûùüœ]{3,}/i.test(s)) return null;
   if (['ja', 'ko', 'zh', 'ar'].includes(L) && /[؀-ۿ぀-ヿ㐀-鿿가-힯]/.test(t)) return null; // phrase déjà dans la langue (mélange : trop bruyant)
-  if (!FRANC.test(s)) return null;
+  if (!FRANC.test(t)) return null;
   return t.slice(0, 110);
 }
 const lance = (f, args, cwd, ms) => new Promise(res => {
