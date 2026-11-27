@@ -13,7 +13,7 @@ on:
 permissions:
   contents: read
   id-token: write   # jeton OIDC pour la fonction Supabase stats-robot (aucun secret)
-concurrency: {group: verif-traductions, cancel-in-progress: true}
+concurrency: {group: verif-traductions, cancel-in-progress: false}   # 27 nov. : laisser finir (sinon annulé à chaque mise en ligne)
 jobs:
   verif:
     # à la main, ou seulement si la mise en ligne a réussi
