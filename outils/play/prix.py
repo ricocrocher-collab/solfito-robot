@@ -49,6 +49,11 @@ for s in subs:
             print(f"   {cc} : {avant:g} -> {cible:g} {cur} (x{COEF[cc]})")
             r["price"] = mk(cur, cible); chg = True
     if chg and MODE == "appliquer":
-        u = ok(requests.patch(f"{B}/subscriptions/{pid}", headers=H, params={"updateMask": "basePlans", "regionsVersion.version": "2022/02", "latencyTolerance": "PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT"}, json=s, timeout=120), f"mise à jour {pid}")
-        print(f"  -> {pid} mis à jour")
+        # version de la liste des pays de Google : on essaie de la plus récente à la plus ancienne
+        for ver in ["2026/01", "2025/07", "2025/03", "2025/01", "2024/07", "2024/01", "2023/07", "2023/01", "2022/02"]:
+            r = requests.patch(f"{B}/subscriptions/{pid}", headers=H, params={"updateMask": "basePlans", "regionsVersion.version": ver, "latencyTolerance": "PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT"}, json=s, timeout=120)
+            if r.status_code < 300: print(f"  -> {pid} mis à jour (pays {ver})"); break
+            if "version" in r.text.lower(): print(f"   (pays {ver} : {r.json().get('error',{}).get('message','')[:120]})"); continue
+            ok(r, f"mise à jour {pid}")
+        else: sys.exit(f"aucune version des pays acceptée pour {pid}")
 print("\nMode :", MODE, "(rien n'a été changé)" if MODE != "appliquer" else "")
