@@ -1,0 +1,40 @@
+e2|Öğrenci başına yılda 10 € · 15 öğrenciden itibaren · otomatik yenileme yok
+e3|Solfito başlatılamadı
+e4|Bağlantını kontrol et ve tekrar dene. İlerlemen kaydedildi.
+e5|Tekrar dene
+e6|Ayrıntı:
+e7|Ayrıntı: Hiçbir hata bildirilmedi
+e11|Piyano sesleri kullanılamıyor (siteyi bir web sunucusu üzerinden aç):
+e12|{} anahtarında dizek: {}
+e13|{} anahtarında dizek
+e14|Dinle
+e16|İpucu: Fa anahtarı 4. çizgiyi, yani Fa çizgisini çevreler.
+e17|İpucu: Sol anahtarı 2. çizginin, yani Sol çizgisinin etrafında kıvrılır.
+e18|Dizekteki notaların adları
+e19|{} Notalar her seferinde bir basamak çıkar: çizgi, aralık, çizgi…
+e20|Ritim
+e21|🐢 Çok yavaş
+e22|Yavaş
+e23|Normal
+e24|Tempo {}
+e25|Hız
+e26|<0>Hız</0> {} <1>{}</1>
+e27|Sekizlik
+e28|Dörtlük
+e29|İkilik
+e30|Birlik
+e31|Virtüöz
+e32|Maestro
+e33|Nota okuma
+e34|Sol ve fa anahtarında notaları oku.
+e35|Metronomla ritimleri oku ve tanı.
+e36|Müzik kulağı
+e37|Ses yüksekliklerini, aralıkları, akorları ve melodileri tanı.
+e38|Teori
+e39|Aralıklar, akorlar, tonlar ve terimler.
+e40|Dörtlük ve ikilikler
+e41|Birlikler ve dörtlük esler
+e42|Sekizlik notalar
+e43|Noktalı dörtlük
+e44|6/8'lik bileşik ölçü
+e45|Küçük ikili
