@@ -2,6 +2,7 @@
 tr
 pl
 nl
+vi
 # À L'ASSEMBLAGE (Claude) : le robot ne traduit que l'inventaire (appli + Premium). Restent à faire à la main pour chaque langue :
 # 1) les ~16 fichiers site/js avec leurs propres dictionnaires (chercher les fichiers qui ont « id:{ » / « ar:{ ») ;
 # 2) e-mails de Mélo (supabase/functions/emails-auto/*-<l>.ts) et pages Google /<l>/ (outils/seo) : voir docs/passation/plan-indonesien.md ;
