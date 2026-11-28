@@ -729,7 +729,9 @@
   "date": "2026-11-28",
   "titre": "Et en clé de FA ?",
   "legende": "Et en clé de FA ? 🎼 Ton score sur 3 en commentaire 👇 #solfège #piano #apprendrelapiano #clédefa #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
-  "fait": {},
+  "fait": {
+   "youtube": "2026-11-28"
+  },
   "verif": {
    "ok": true,
    "doute": true,
@@ -741,7 +743,8 @@
    "le": "2026-11-17",
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   },
-  "voix": "benjamin-26s-un-seul-coup"
+  "voix": "benjamin-26s-un-seul-coup",
+  "yt_trad": "2026-11-28"
  },
  {
   "fichier": "videos/v2-23.mp4",
