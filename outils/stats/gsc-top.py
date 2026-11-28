@@ -18,3 +18,15 @@ for nom in ("GSC_SERVICE_ACCOUNT", "GOOGLE_PLAY_JSON"):
         if "error" in r: print("  ERREUR", dims, r["error"].get("message")); continue
         print(f"\n== {'+'.join(dims)} ({len(r.get('rows', []))})")
         for x in r.get("rows", []): print(f"  {x['clicks']:4.0f} clics {x['impressions']:6.0f} vues pos {x['position']:5.1f}  {' | '.join(k.replace('https://solfito.com','') for k in x['keys'])}")
+
+    # 28 nov. : « presque en 1re page » (positions 6 à 25), triées par affichages : les cibles du travail SEO
+    r = s.post(Q, json={"startDate": d0, "endDate": J, "dimensions": ["page", "query"], "rowLimit": 5000}).json()
+    rows = [x for x in r.get("rows", []) if 5.5 <= x["position"] <= 25]
+    rows.sort(key=lambda x: -x["impressions"])
+    print(f"\n== PROCHES DE LA 1re PAGE ({len(rows)} couples page+recherche, 150 premiers)")
+    for x in rows[:150]: print(f"  {x['clicks']:4.0f} clics {x['impressions']:6.0f} vues pos {x['position']:5.1f}  {' | '.join(k.replace('https://solfito.com','') for k in x['keys'])}")
+    r = s.post(Q, json={"startDate": d0, "endDate": J, "dimensions": ["page"], "rowLimit": 1000}).json()
+    rows = sorted(r.get("rows", []), key=lambda x: -x["impressions"])
+    print(f"\n== TOUTES LES PAGES PAR AFFICHAGES ({len(rows)}, 120 premières)")
+    for x in rows[:120]: print(f"  {x['clicks']:4.0f} clics {x['impressions']:6.0f} vues ctr {100*x['ctr']:4.1f}% pos {x['position']:5.1f}  {x['keys'][0].replace('https://solfito.com','')}")
+    break
