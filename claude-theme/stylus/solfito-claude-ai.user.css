@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         Solfito pour claude.ai
 @namespace    solfito
-@version      0.3.0
+@version      0.4.0
 @description  Couleurs de l'appli Solfito (nuit violette, bulles jaune doré) sur claude.ai et claude.ai/code. Fait pour le mode SOMBRE.
 @updateURL    https://raw.githubusercontent.com/ricocrocher-collab/solfito-robot/main/claude-theme/stylus/solfito-claude-ai.user.css
 ==/UserStyle== */
@@ -37,9 +37,10 @@
   }
   /* Filet de sécurité : le fond de la page et de la barre de gauche directement */
   html, body { background-color: #17143A !important; }
-  nav, aside { background-color: #120F30 !important; }
+  nav, aside, .z-sidebar, .z-sidebar > *, [class*="sidebar"], [class*="Sidebar"] { background-color: #120F30 !important; }
 
   /* Tes messages : bulle jaune doré */
-  [data-user-message-bubble="true"] { background: #F2C12E !important; }
-  [data-user-message-bubble="true"], [data-user-message-bubble="true"] * { color: #231D5A !important; }
+  [data-user-message-bubble="true"], [data-testid="user-message"], [class*="user-message"], [class*="userMessage"] { background: #F2C12E !important; border-radius: 16px !important; }
+  [data-user-message-bubble="true"] *, [data-testid="user-message"] *, [class*="user-message"] *, [class*="userMessage"] *,
+  [data-user-message-bubble="true"], [data-testid="user-message"], [class*="user-message"], [class*="userMessage"] { color: #231D5A !important; }
 }
