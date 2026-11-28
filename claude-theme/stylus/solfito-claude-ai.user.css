@@ -1,14 +1,13 @@
 /* ==UserStyle==
 @name         Solfito pour claude.ai
 @namespace    solfito
-@version      0.2.0
-@description  Couleurs de l'appli Solfito (nuit violette / lavande, bulles jaune doré) sur claude.ai et claude.ai/code.
+@version      0.3.0
+@description  Couleurs de l'appli Solfito (nuit violette, bulles jaune doré) sur claude.ai et claude.ai/code. Fait pour le mode SOMBRE.
 @updateURL    https://raw.githubusercontent.com/ricocrocher-collab/solfito-robot/main/claude-theme/stylus/solfito-claude-ai.user.css
 ==/UserStyle== */
 @-moz-document domain("claude.ai") {
-  /* ---------- MODE SOMBRE : nuit violette ---------- */
-  [data-mode="dark"] .cds-root:not([data-mode="light"]):not([data-mode="system"]),
-  .cds-root[data-mode="dark"] {
+  /* Le sélecteur * met la couleur sur CHAQUE élément : rien ne peut la remplacer plus bas dans la page. */
+  * {
     --cds-page-bg: #17143A !important;
     --cds-surface-0: #17143A !important;
     --cds-surface-1: #1C1844 !important;
@@ -18,13 +17,8 @@
     --cds-surface-panel: #1C1844 !important;
     --cds-fill-field: #221E4F !important;
     --cds-tooltip-bg: #2C2760 !important;
-  }
-  [data-mode="dark"] [data-frame-mode="code"] {
     --df-bg-page-hsl: 245 49% 15% !important;
     --df-sidebar-bg: #120F30 !important;
-  }
-  [data-mode="dark"] [data-frame-mode="code"] .epitaxy-root,
-  [data-mode="dark"] [data-frame-mode="code"] .epitaxy-prompt {
     --surface-primary: #17143A !important;
     --surface-panel: #1C1844 !important;
     --surface-panel-elevated: #221E4F !important;
@@ -37,42 +31,15 @@
     --prompt-compact-bg: #221E4F !important;
     --prompt-compact-bg-focus: #2C2760 !important;
     --code-theme-dark-bg: #120F30 !important;
+    /* anciens noms (au cas où une partie du site les utilise encore) */
+    --bg-000: 245 45% 21% !important; --bg-100: 245 49% 15% !important; --bg-200: 245 52% 12% !important;
+    --bg-300: 245 52% 10% !important; --bg-400: 246 60% 8% !important; --bg-500: 246 60% 6% !important;
   }
+  /* Filet de sécurité : le fond de la page et de la barre de gauche directement */
+  html, body { background-color: #17143A !important; }
+  nav, aside { background-color: #120F30 !important; }
 
-  /* ---------- MODE CLAIR : lavande ---------- */
-  [data-mode="light"] .cds-root:not([data-mode="dark"]):not([data-mode="system"]),
-  .cds-root[data-mode="light"] {
-    --cds-page-bg: #F3F1FF !important;
-    --cds-surface-0: #F3F1FF !important;
-    --cds-surface-1: #F8F7FF !important;
-    --cds-surface-2: #FFFFFF !important;
-    --cds-surface-3: #E9E6FF !important;
-    --cds-surface-popover: #FFFFFF !important;
-    --cds-surface-panel: #F8F7FF !important;
-    --cds-fill-field: #FFFFFF !important;
-  }
-  [data-mode="light"] [data-frame-mode="code"] {
-    --df-bg-page-hsl: 249 100% 97% !important;
-    --df-sidebar-bg: #E9E6FF !important;
-  }
-  [data-mode="light"] [data-frame-mode="code"] .epitaxy-root,
-  [data-mode="light"] [data-frame-mode="code"] .epitaxy-prompt {
-    --surface-primary: #F3F1FF !important;
-    --surface-panel: #F8F7FF !important;
-    --surface-panel-elevated: #FFFFFF !important;
-    --surface-primary-elevated: #FFFFFF !important;
-    --surface-popover: #FFFFFF !important;
-    --surface-popover-elevated: #FFFFFF !important;
-    --surface-prompt-blur: #FFFFFF !important;
-    --surface-prompt-focus-hover: #F8F7FF !important;
-    --prompt-compact-bg: #FFFFFF !important;
-    --prompt-compact-bg-focus: #F8F7FF !important;
-  }
-
-  /* ---------- Tes messages : bulle jaune doré (les deux modes) ---------- */
-  [data-user-message-bubble="true"] {
-    background: #F2C12E !important;
-    color: #231D5A !important;
-  }
-  [data-user-message-bubble="true"] * { color: #231D5A !important; }
+  /* Tes messages : bulle jaune doré */
+  [data-user-message-bubble="true"] { background: #F2C12E !important; }
+  [data-user-message-bubble="true"], [data-user-message-bubble="true"] * { color: #231D5A !important; }
 }
