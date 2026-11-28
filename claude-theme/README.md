@@ -1,6 +1,6 @@
 # Thème Solfito pour Claude
 
-Les couleurs de l'appli Solfito (violet, orange, doré) dans l'appli Claude, en clair et en sombre.
+Les couleurs de l'appli Solfito (violet, orange, jaune doré : tes messages dans une bulle dorée) dans l'appli Claude, en clair et en sombre.
 
 ## Installer
 
