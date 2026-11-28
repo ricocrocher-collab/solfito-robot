@@ -1,0 +1,5 @@
+{
+  "name": "solfito",
+  "owner": { "name": "Solfito" },
+  "plugins": [{ "name": "solfito-theme", "source": "./claude-theme" }]
+}
