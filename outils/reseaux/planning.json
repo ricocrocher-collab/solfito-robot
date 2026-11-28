@@ -344,12 +344,15 @@
   "legende": "Prélude en do (Bach). Tu veux apprendre à lire la musique et à jouer ? C'est sur solfito.com\n#piano #tutopiano #solfito #musiqueclassique",
   "type": "tuto",
   "fait": {
-   "youtube": "2026-11-21"
+   "youtube": "2026-11-21",
+   "facebook": "2026-11-28",
+   "instagram": "2026-11-28"
   },
   "source": "Prélude en do — Bach (domaine public)",
   "yt_trad": "2026-11-21",
   "com": {
-   "youtube": "2026-11-21"
+   "youtube": "2026-11-21",
+   "facebook": "2026-11-28"
   }
  },
  {
@@ -754,7 +757,9 @@
   "date": "2026-11-28",
   "titre": "Ça monte ou ça descend ?",
   "legende": "Ça monte ou ça descend ? 🎧 Ton score sur 3 en commentaire 👇 #oreillemusicale #solfège #piano #testauditif #musique #solfito (piano : Salamander Grand Piano, CC BY 3.0)",
-  "fait": {},
+  "fait": {
+   "youtube": "2026-11-28"
+  },
   "verif": {
    "ok": true,
    "note": 0,
@@ -769,7 +774,11 @@
    "modele": "kaggle-qwen2.5-vl-3b + whisper",
    "doute": true
   },
-  "voix": "benjamin-26s-un-seul-coup"
+  "voix": "benjamin-26s-un-seul-coup",
+  "yt_trad": "2026-11-28",
+  "com": {
+   "youtube": "2026-11-28"
+  }
  },
  {
   "fichier": "videos/tuto-12.mp4",
