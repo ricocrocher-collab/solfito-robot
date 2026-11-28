@@ -1,0 +1,48 @@
+# Traduction automatique GRATUITE d'une nouvelle langue de l'appli Solfito (Gemini gratuit, lent mais sans surveillance).
+# - Lancer à la main : Actions → « Traduire une langue » → langue (ex. tr), essai = 40 textes seulement.
+# - Chaque nuit : continue les langues listées dans traductions-auto/en-cours.txt (le script reprend où il s'était arrêté,
+#   le quota gratuit du jour de Gemini se remet à zéro chaque jour).
+# - Résultat rangé ICI dans traductions-auto/<langue>/ (textes publics de l'appli) ; Claude le recopie ensuite dans solfito
+#   (outils/i18n/<langue>/), puis construit la langue.
+name: Traduire une langue
+on:
+  workflow_dispatch:
+    inputs:
+      langue: {description: "Code de la langue (ex. tr, pl, nl)", required: true}
+      essai: {description: "Essai sur 40 textes seulement", type: boolean, default: false}
+  schedule:
+    - cron: "17 1 * * *"
+concurrency: {group: traduire-langue, cancel-in-progress: false}
+permissions: {contents: write}
+jobs:
+  traduire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: {repository: ricocrocher-collab/solfito, token: "${{ secrets.SOLFITO_PAT }}", path: src, sparse-checkout: outils/i18n}
+      - uses: actions/setup-node@v4
+        with: {node-version: 22}
+      - name: Traduire
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then LANGS="${{ inputs.langue }}"; else LANGS=$(grep -v '^#' traductions-auto/en-cours.txt | tr -d ' \r' | grep . || true); fi
+          [ -z "$LANGS" ] && { echo "Aucune langue en cours."; exit 0; }
+          (cd src/outils/i18n && npm install --silent --no-audit --no-fund)
+          for L in $LANGS; do
+            echo "== $L"
+            mkdir -p traductions-auto/$L src/outils/i18n/$L
+            cp -r traductions-auto/$L/. src/outils/i18n/$L/ 2>/dev/null || true
+            OPT=""; [ "${{ inputs.essai }}" = "true" ] && OPT="--essai"
+            node src/outils/i18n/traduire-auto.js $L $OPT || echo "arrêt du script (quota du jour ?), on garde ce qui est fait"
+            for d in lots lots-premium traductions traductions-premium; do [ -d src/outils/i18n/$L/$d ] && cp -r src/outils/i18n/$L/$d traductions-auto/$L/; done
+          done
+      - name: Enregistrer
+        if: always()
+        run: |
+          git config user.name "solfito-robot" && git config user.email "actions@users.noreply.github.com"
+          git add traductions-auto
+          git diff --cached --quiet && { echo "Rien de nouveau."; exit 0; }
+          git commit -qm "Traductions automatiques : $(date -u +%F)" && git pull -q --rebase && git push -q
