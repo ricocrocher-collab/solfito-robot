@@ -744,7 +744,10 @@
    "modele": "kaggle-qwen2.5-vl-3b + whisper"
   },
   "voix": "benjamin-26s-un-seul-coup",
-  "yt_trad": "2026-11-28"
+  "yt_trad": "2026-11-28",
+  "com": {
+   "youtube": "2026-11-28"
+  }
  },
  {
   "fichier": "videos/v2-23.mp4",
