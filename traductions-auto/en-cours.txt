@@ -1,1 +1,2 @@
 # Langues traduites chaque nuit par le robot (une par ligne, ex. tr). Retirer la ligne quand c'est fini.
+tr
